@@ -12,6 +12,16 @@ npm run dev
 
 Set `NEXT_PUBLIC_ASSET_BASE_URL` to a public R2 URL containing the `releases/v1/` tree. The `r2.dev` URL is appropriate only for development; use an R2 custom domain for production.
 
+Before R2 is configured, run the app and generated `dist/` assets together with either package manager:
+
+```bash
+npm run dev:local
+# or
+yarn dev:local
+```
+
+This serves the application at `http://127.0.0.1:3000` and injects the local asset origin at `http://127.0.0.1:3101`. Generate the ignored release first with `npm run assets:release` or `yarn assets:release` if `dist/releases/v1` is absent.
+
 ## Content
 
 - `content/tapestries.json` is the public, canonical scene manifest.

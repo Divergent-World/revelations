@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:local": "node scripts/dev-local.mjs",
     "build": "npm run content:validate && next build",
     "start": "node scripts/serve-static.mjs",
     "test": "node --test",
