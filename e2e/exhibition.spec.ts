@@ -17,6 +17,40 @@ test("desktop preserves two authored rows of seven scenes", async ({ page }, tes
   await expect(page.locator('[data-row="bottom"] .scene-card').last()).toHaveAttribute("data-scene-id", "T3-B07");
 });
 
+test("preview frames preserve artwork without elongation or cropping", async ({ page }) => {
+  await page.goto("/tapestries/1/");
+  const geometry = await page.locator('[data-scene-id="T1-T01"]').evaluate((card) => {
+    const button = card.querySelector("button")!;
+    const image = card.querySelector("img")!;
+    const buttonBox = button.getBoundingClientRect();
+    const imageBox = image.getBoundingClientRect();
+    return {
+      buttonRatio: buttonBox.width / buttonBox.height,
+      imageRatio: imageBox.width / imageBox.height,
+      objectFit: getComputedStyle(image).objectFit,
+    };
+  });
+  expect(geometry.buttonRatio).toBeCloseTo(16 / 9, 1);
+  expect(geometry.imageRatio).toBeCloseTo(16 / 9, 1);
+  expect(geometry.objectFit).toBe("contain");
+});
+
+test("reader artwork panel scrolls independently when artwork exceeds its viewport", async ({ page }, testInfo) => {
+  await page.goto("/tapestries/1/?scene=T1-00");
+  const geometry = await page.locator(".dialog-art").evaluate((panel) => {
+    const image = panel.querySelector("img")!;
+    return {
+      overflowY: getComputedStyle(panel).overflowY,
+      scrollHeight: panel.scrollHeight,
+      clientHeight: panel.clientHeight,
+      imageObjectFit: getComputedStyle(image).objectFit,
+    };
+  });
+  expect(geometry.overflowY).toBe("auto");
+  if (testInfo.project.name !== "mobile") expect(geometry.scrollHeight).toBeGreaterThan(geometry.clientHeight);
+  expect(geometry.imageObjectFit).toBe("contain");
+});
+
 test("scene deep links open, navigate, and follow browser history", async ({ page }) => {
   await page.goto("/tapestries/1/?scene=T1-T01");
   await expect(page.getByRole("dialog")).toBeVisible();

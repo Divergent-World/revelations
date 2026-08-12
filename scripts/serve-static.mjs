@@ -3,7 +3,8 @@ import { stat } from "node:fs/promises";
 import { createServer } from "node:http";
 import path from "node:path";
 
-const root = path.resolve(import.meta.dirname, "..", "out");
+const rootIndex = process.argv.indexOf("--root");
+const root = path.resolve(import.meta.dirname, "..", rootIndex >= 0 ? process.argv[rootIndex + 1] : "out");
 const portIndex = process.argv.indexOf("--port");
 const port = Number(portIndex >= 0 ? process.argv[portIndex + 1] : process.env.PORT ?? 3000);
 const types = { ".css": "text/css", ".html": "text/html", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".txt": "text/plain", ".webp": "image/webp" };
@@ -24,4 +25,4 @@ createServer(async (request, response) => {
   }
   response.setHeader("Content-Type", types[path.extname(file)] ?? "application/octet-stream");
   createReadStream(file).pipe(response);
-}).listen(port, "127.0.0.1", () => console.log(`Static export available at http://127.0.0.1:${port}`));
+}).listen(port, "127.0.0.1", () => console.log(`${path.relative(path.resolve(import.meta.dirname, ".."), root)} available at http://127.0.0.1:${port}`));
