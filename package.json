@@ -1,0 +1,31 @@
+{
+  "name": "revelations",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run content:validate && next build",
+    "start": "node scripts/serve-static.mjs",
+    "test": "node --test",
+    "test:e2e": "npm run build && playwright test",
+    "content:generate": "node scripts/generate-content.mjs",
+    "content:validate": "node scripts/validate-content.mjs",
+    "assets:release": "node scripts/build-release.mjs",
+    "assets:validate": "node scripts/validate-release.mjs",
+    "assets:upload": "npm run assets:validate && node scripts/upload-r2.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.864.0",
+    "next": "^16.3.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^22.17.1",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,4999 @@
+{
+  "version": "v1",
+  "tapestries": [
+    {
+      "id": 1,
+      "roman": "I",
+      "summary": "Christ is revealed as king, the Lamb is found worthy, and the opened scroll sets judgment in motion.",
+      "movements": [
+        "Revelation",
+        "Heavenly worship",
+        "The Lamb and the scroll",
+        "Judgment and preservation"
+      ],
+      "leadSceneId": "T1-00",
+      "sceneIds": [
+        "T1-00",
+        "T1-T01",
+        "T1-T02",
+        "T1-T03",
+        "T1-T04",
+        "T1-T05",
+        "T1-T06",
+        "T1-T07",
+        "T1-B01",
+        "T1-B02",
+        "T1-B03",
+        "T1-B04",
+        "T1-B05",
+        "T1-B06",
+        "T1-B07"
+      ]
+    },
+    {
+      "id": 2,
+      "roman": "II",
+      "summary": "God seals the faithful, heaven prepares the trumpets, and creation gives way to escalating judgment.",
+      "movements": [
+        "The faithful sealed",
+        "Trumpets prepared",
+        "Creation struck",
+        "The abyss and war unleashed"
+      ],
+      "leadSceneId": "T2-00",
+      "sceneIds": [
+        "T2-00",
+        "T2-T01",
+        "T2-T02",
+        "T2-T03",
+        "T2-T04",
+        "T2-T05",
+        "T2-T06",
+        "T2-T07",
+        "T2-B01",
+        "T2-B02",
+        "T2-B03",
+        "T2-B04",
+        "T2-B05",
+        "T2-B06",
+        "T2-B07"
+      ]
+    },
+    {
+      "id": 3,
+      "roman": "III",
+      "summary": "The witnesses are vindicated, the dragon fails to destroy the woman, and beastly powers demand worship.",
+      "movements": [
+        "Prophetic witness",
+        "Martyrdom and vindication",
+        "Cosmic war",
+        "The beasts arise"
+      ],
+      "leadSceneId": "T3-00",
+      "sceneIds": [
+        "T3-00",
+        "T3-T01",
+        "T3-T02",
+        "T3-T03",
+        "T3-T04",
+        "T3-T05",
+        "T3-T06",
+        "T3-T07",
+        "T3-B01",
+        "T3-B02",
+        "T3-B03",
+        "T3-B04",
+        "T3-B05",
+        "T3-B06",
+        "T3-B07"
+      ]
+    },
+    {
+      "id": 4,
+      "roman": "IV",
+      "summary": "The beast gathers worship, the Lamb answers, heaven warns, and the world is harvested.",
+      "movements": [
+        "Counterfeit worship",
+        "The Lamb's answer",
+        "Angelic warnings",
+        "Harvest and wrath"
+      ],
+      "leadSceneId": "T4-00",
+      "sceneIds": [
+        "T4-00",
+        "T4-T01",
+        "T4-T02",
+        "T4-T03",
+        "T4-T04",
+        "T4-T05",
+        "T4-T06",
+        "T4-T07",
+        "T4-B01",
+        "T4-B02",
+        "T4-B03",
+        "T4-B04",
+        "T4-B05",
+        "T4-B06",
+        "T4-B07"
+      ]
+    },
+    {
+      "id": 5,
+      "roman": "V",
+      "summary": "The bowls are poured out, Babylon is exposed and destroyed, and the marriage of the Lamb appears.",
+      "movements": [
+        "Bowls of wrath",
+        "Babylon revealed",
+        "Babylon falls",
+        "The true wedding"
+      ],
+      "leadSceneId": "T5-00",
+      "sceneIds": [
+        "T5-00",
+        "T5-T01",
+        "T5-T02",
+        "T5-T03",
+        "T5-T04",
+        "T5-T05",
+        "T5-T06",
+        "T5-T07",
+        "T5-B01",
+        "T5-B02",
+        "T5-B03",
+        "T5-B04",
+        "T5-B05",
+        "T5-B06",
+        "T5-B07"
+      ]
+    },
+    {
+      "id": 6,
+      "roman": "VI",
+      "summary": "Christ returns in victory, evil is judged, and the holy city opens into the life and presence of God.",
+      "movements": [
+        "The victorious rider",
+        "Evil overthrown",
+        "Final judgment",
+        "New Jerusalem and communion"
+      ],
+      "leadSceneId": "T6-00",
+      "sceneIds": [
+        "T6-00",
+        "T6-T01",
+        "T6-T02",
+        "T6-T03",
+        "T6-T04",
+        "T6-T05",
+        "T6-T06",
+        "T6-T07",
+        "T6-B01",
+        "T6-B02",
+        "T6-B03",
+        "T6-B04",
+        "T6-B05",
+        "T6-B06",
+        "T6-B07"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "T1-00",
+      "tapestry": 1,
+      "row": "lead",
+      "position": 0,
+      "title": "Saint John reading the Apocalypse",
+      "scriptureSpans": [
+        {
+          "startChapter": 1,
+          "startVerse": 1,
+          "endChapter": 1,
+          "endVerse": 11
+        }
+      ],
+      "displayReference": "Revelation 1:1–11",
+      "passages": [
+        {
+          "reference": "Revelation 1:1–11",
+          "verses": [
+            {
+              "chapter": 1,
+              "verse": 1,
+              "text": "This is the Revelation of Jesus Christ, which God gave him to show to his servants the things which must happen soon, which he sent and made known by his angel to his servant, John,"
+            },
+            {
+              "chapter": 1,
+              "verse": 2,
+              "text": "who testified to God’s word and of the testimony of Jesus Christ, about everything that he saw."
+            },
+            {
+              "chapter": 1,
+              "verse": 3,
+              "text": "Blessed is he who reads and those who hear the words of the prophecy, and keep the things that are written in it, for the time is near."
+            },
+            {
+              "chapter": 1,
+              "verse": 4,
+              "text": "John, to the seven assemblies that are in Asia: Grace to you and peace from God, who is and who was and who is to come; and from the seven Spirits who are before his throne;"
+            },
+            {
+              "chapter": 1,
+              "verse": 5,
+              "text": "and from Jesus Christ, the faithful witness, the firstborn of the dead, and the ruler of the kings of the earth. To him who loves us, and washed us from our sins by his blood—"
+            },
+            {
+              "chapter": 1,
+              "verse": 6,
+              "text": "and he made us to be a Kingdom, priests to his God and Father—to him be the glory and the dominion forever and ever. Amen."
+            },
+            {
+              "chapter": 1,
+              "verse": 7,
+              "text": "Behold, he is coming with the clouds, and every eye will see him, including those who pierced him. All the tribes of the earth will mourn over him. Even so, Amen."
+            },
+            {
+              "chapter": 1,
+              "verse": 8,
+              "text": "“I am the Alpha and the Omega,” says the Lord God, “who is and who was and who is to come, the Almighty.”"
+            },
+            {
+              "chapter": 1,
+              "verse": 9,
+              "text": "I John, your brother and partner with you in the oppression, Kingdom, and perseverance in Christ Jesus, was on the isle that is called Patmos because of God’s Word and the testimony of Jesus Christ."
+            },
+            {
+              "chapter": 1,
+              "verse": 10,
+              "text": "I was in the Spirit on the Lord’s day, and I heard behind me a loud voice, like a trumpet"
+            },
+            {
+              "chapter": 1,
+              "verse": 11,
+              "text": "saying, “What you see, write in a book and send to the seven assemblies: to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, and to Laodicea.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John reading the Apocalypse, illustrating Revelation 1:1–11.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-00.webp",
+        "reader": "releases/v1/web/1920/T1-00.webp",
+        "original": "releases/v1/originals/T1-00.png"
+      },
+      "width": 1024,
+      "height": 1536,
+      "checksum": "77501b12d6139017afd2755fb978f7e41f1e6ef67a6f6f119a3ee66f65ee901b",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-T01",
+      "tapestry": 1,
+      "row": "top",
+      "position": 1,
+      "title": "Seven churches of Asia",
+      "scriptureSpans": [
+        {
+          "startChapter": 1,
+          "startVerse": 11,
+          "endChapter": 1,
+          "endVerse": 11
+        },
+        {
+          "startChapter": 2,
+          "startVerse": 1,
+          "endChapter": 3,
+          "endVerse": null
+        }
+      ],
+      "displayReference": "Revelation 1:11; Revelation 2–3",
+      "passages": [
+        {
+          "reference": "Revelation 1:11",
+          "verses": [
+            {
+              "chapter": 1,
+              "verse": 11,
+              "text": "saying, “What you see, write in a book and send to the seven assemblies: to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, and to Laodicea.”"
+            }
+          ]
+        },
+        {
+          "reference": "Revelation 2–3",
+          "verses": [
+            {
+              "chapter": 2,
+              "verse": 1,
+              "text": "“To the angel of the assembly in Ephesus write: “He who holds the seven stars in his right hand, he who walks among the seven golden lamp stands says these things:"
+            },
+            {
+              "chapter": 2,
+              "verse": 2,
+              "text": "“I know your works, and your toil and perseverance, and that you can’t tolerate evil men, and have tested those who call themselves apostles, and they are not, and found them false."
+            },
+            {
+              "chapter": 2,
+              "verse": 3,
+              "text": "You have perseverance and have endured for my name’s sake, and have not grown weary."
+            },
+            {
+              "chapter": 2,
+              "verse": 4,
+              "text": "But I have this against you, that you left your first love."
+            },
+            {
+              "chapter": 2,
+              "verse": 5,
+              "text": "Remember therefore from where you have fallen, and repent and do the first works; or else I am coming to you swiftly, and will move your lamp stand out of its place, unless you repent."
+            },
+            {
+              "chapter": 2,
+              "verse": 6,
+              "text": "But this you have, that you hate the works of the Nicolaitans, which I also hate."
+            },
+            {
+              "chapter": 2,
+              "verse": 7,
+              "text": "He who has an ear, let him hear what the Spirit says to the assemblies. To him who overcomes I will give to eat from the tree of life, which is in the Paradise of my God."
+            },
+            {
+              "chapter": 2,
+              "verse": 8,
+              "text": "“To the angel of the assembly in Smyrna write: “The first and the last, who was dead, and has come to life says these things:"
+            },
+            {
+              "chapter": 2,
+              "verse": 9,
+              "text": "“I know your works, oppression, and your poverty (but you are rich), and the blasphemy of those who say they are Jews, and they are not, but are a synagogue of Satan."
+            },
+            {
+              "chapter": 2,
+              "verse": 10,
+              "text": "Don’t be afraid of the things which you are about to suffer. Behold, the devil is about to throw some of you into prison, that you may be tested; and you will have oppression for ten days. Be faithful to death, and I will give you the crown of life."
+            },
+            {
+              "chapter": 2,
+              "verse": 11,
+              "text": "He who has an ear, let him hear what the Spirit says to the assemblies. He who overcomes won’t be harmed by the second death."
+            },
+            {
+              "chapter": 2,
+              "verse": 12,
+              "text": "“To the angel of the assembly in Pergamum write: “He who has the sharp two-edged sword says these things:"
+            },
+            {
+              "chapter": 2,
+              "verse": 13,
+              "text": "“I know your works and where you dwell, where Satan’s throne is. You hold firmly to my name, and didn’t deny my faith in the days of Antipas my witness, my faithful one, who was killed among you, where Satan dwells."
+            },
+            {
+              "chapter": 2,
+              "verse": 14,
+              "text": "But I have a few things against you, because you have there some who hold the teaching of Balaam, who taught Balak to throw a stumbling block before the children of Israel, to eat things sacrificed to idols, and to commit sexual immorality."
+            },
+            {
+              "chapter": 2,
+              "verse": 15,
+              "text": "So also you likewise have some who hold to the teaching of the Nicolaitans."
+            },
+            {
+              "chapter": 2,
+              "verse": 16,
+              "text": "Repent therefore, or else I am coming to you quickly and I will make war against them with the sword of my mouth."
+            },
+            {
+              "chapter": 2,
+              "verse": 17,
+              "text": "He who has an ear, let him hear what the Spirit says to the assemblies. To him who overcomes, to him I will give of the hidden manna, and I will give him a white stone, and on the stone a new name written which no one knows but he who receives it."
+            },
+            {
+              "chapter": 2,
+              "verse": 18,
+              "text": "“To the angel of the assembly in Thyatira write: “The Son of God, who has his eyes like a flame of fire, and his feet are like burnished brass, says these things:"
+            },
+            {
+              "chapter": 2,
+              "verse": 19,
+              "text": "“I know your works, your love, faith, service, patient endurance, and that your last works are more than the first."
+            },
+            {
+              "chapter": 2,
+              "verse": 20,
+              "text": "But I have this against you, that you tolerate your woman Jezebel, who calls herself a prophetess. She teaches and seduces my servants to commit sexual immorality and to eat things sacrificed to idols."
+            },
+            {
+              "chapter": 2,
+              "verse": 21,
+              "text": "I gave her time to repent, but she refuses to repent of her sexual immorality."
+            },
+            {
+              "chapter": 2,
+              "verse": 22,
+              "text": "Behold, I will throw her and those who commit adultery with her into a bed of great oppression, unless they repent of her works."
+            },
+            {
+              "chapter": 2,
+              "verse": 23,
+              "text": "I will kill her children with Death, and all the assemblies will know that I am he who searches the minds and hearts. I will give to each one of you according to your deeds."
+            },
+            {
+              "chapter": 2,
+              "verse": 24,
+              "text": "But to you I say, to the rest who are in Thyatira—as many as don’t have this teaching, who don’t know what some call ‘the deep things of Satan’—to you I say, I am not putting any other burden on you."
+            },
+            {
+              "chapter": 2,
+              "verse": 25,
+              "text": "Nevertheless, hold that which you have firmly until I come."
+            },
+            {
+              "chapter": 2,
+              "verse": 26,
+              "text": "He who overcomes, and he who keeps my works to the end, to him I will give authority over the nations."
+            },
+            {
+              "chapter": 2,
+              "verse": 27,
+              "text": "He will rule them with a rod of iron, shattering them like clay pots, as I also have received of my Father;"
+            },
+            {
+              "chapter": 2,
+              "verse": 28,
+              "text": "and I will give him the morning star."
+            },
+            {
+              "chapter": 2,
+              "verse": 29,
+              "text": "He who has an ear, let him hear what the Spirit says to the assemblies."
+            },
+            {
+              "chapter": 3,
+              "verse": 1,
+              "text": "“And to the angel of the assembly in Sardis write: “He who has the seven Spirits of God and the seven stars says these things: “I know your works, that you have a reputation of being alive, but you are dead."
+            },
+            {
+              "chapter": 3,
+              "verse": 2,
+              "text": "Wake up and strengthen the things that remain, which you were about to throw away, for I have found no works of yours perfected before my God."
+            },
+            {
+              "chapter": 3,
+              "verse": 3,
+              "text": "Remember therefore how you have received and heard. Keep it and repent. If therefore you won’t watch, I will come as a thief, and you won’t know what hour I will come upon you."
+            },
+            {
+              "chapter": 3,
+              "verse": 4,
+              "text": "Nevertheless you have a few names in Sardis that didn’t defile their garments. They will walk with me in white, for they are worthy."
+            },
+            {
+              "chapter": 3,
+              "verse": 5,
+              "text": "He who overcomes will be arrayed in white garments, and I will in no way blot his name out of the book of life, and I will confess his name before my Father, and before his angels."
+            },
+            {
+              "chapter": 3,
+              "verse": 6,
+              "text": "He who has an ear, let him hear what the Spirit says to the assemblies."
+            },
+            {
+              "chapter": 3,
+              "verse": 7,
+              "text": "“To the angel of the assembly in Philadelphia write: “He who is holy, he who is true, he who has the key of David, he who opens and no one can shut, and who shuts and no one opens, says these things:"
+            },
+            {
+              "chapter": 3,
+              "verse": 8,
+              "text": "“I know your works (behold, I have set before you an open door, which no one can shut), that you have a little power, and kept my word, and didn’t deny my name."
+            },
+            {
+              "chapter": 3,
+              "verse": 9,
+              "text": "Behold, I make some of the synagogue of Satan, of those who say they are Jews, and they are not, but lie—behold, I will make them to come and worship before your feet, and to know that I have loved you."
+            },
+            {
+              "chapter": 3,
+              "verse": 10,
+              "text": "Because you kept my command to endure, I also will keep you from the hour of testing which is to come on the whole world, to test those who dwell on the earth."
+            },
+            {
+              "chapter": 3,
+              "verse": 11,
+              "text": "I am coming quickly! Hold firmly that which you have, so that no one takes your crown."
+            },
+            {
+              "chapter": 3,
+              "verse": 12,
+              "text": "He who overcomes, I will make him a pillar in the temple of my God, and he will go out from there no more. I will write on him the name of my God and the name of the city of my God, the new Jerusalem, which comes down out of heaven from my God, and my own new name."
+            },
+            {
+              "chapter": 3,
+              "verse": 13,
+              "text": "He who has an ear, let him hear what the Spirit says to the assemblies."
+            },
+            {
+              "chapter": 3,
+              "verse": 14,
+              "text": "“To the angel of the assembly in Laodicea write: “The Amen, the Faithful and True Witness, the Beginning of God’s creation, says these things:"
+            },
+            {
+              "chapter": 3,
+              "verse": 15,
+              "text": "“I know your works, that you are neither cold nor hot. I wish you were cold or hot."
+            },
+            {
+              "chapter": 3,
+              "verse": 16,
+              "text": "So, because you are lukewarm, and neither hot nor cold, I will vomit you out of my mouth."
+            },
+            {
+              "chapter": 3,
+              "verse": 17,
+              "text": "Because you say, ‘I am rich, and have gotten riches, and have need of nothing,’ and don’t know that you are the wretched one, miserable, poor, blind, and naked;"
+            },
+            {
+              "chapter": 3,
+              "verse": 18,
+              "text": "I counsel you to buy from me gold refined by fire, that you may become rich; and white garments, that you may clothe yourself, and that the shame of your nakedness may not be revealed; and eye salve to anoint your eyes, that you may see."
+            },
+            {
+              "chapter": 3,
+              "verse": 19,
+              "text": "As many as I love, I reprove and chasten. Be zealous therefore, and repent."
+            },
+            {
+              "chapter": 3,
+              "verse": 20,
+              "text": "Behold, I stand at the door and knock. If anyone hears my voice and opens the door, then I will come in to him and will dine with him, and he with me."
+            },
+            {
+              "chapter": 3,
+              "verse": 21,
+              "text": "He who overcomes, I will give to him to sit down with me on my throne, as I also overcame and sat down with my Father on his throne."
+            },
+            {
+              "chapter": 3,
+              "verse": 22,
+              "text": "He who has an ear, let him hear what the Spirit says to the assemblies.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Seven churches of Asia, illustrating Revelation 1:11; Revelation 2–3.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-T01.webp",
+        "reader": "releases/v1/web/1920/T1-T01.webp",
+        "original": "releases/v1/originals/T1-T01.png"
+      },
+      "width": 1536,
+      "height": 1024,
+      "checksum": "a271011cc3d0cac291838cd88d65e6042a68f8719236fc7b0876a40e5a0910a3",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-T02",
+      "tapestry": 1,
+      "row": "top",
+      "position": 2,
+      "title": "Vision of the Seven Candlesticks",
+      "scriptureSpans": [
+        {
+          "startChapter": 1,
+          "startVerse": 12,
+          "endChapter": 1,
+          "endVerse": 20
+        }
+      ],
+      "displayReference": "Revelation 1:12–20",
+      "passages": [
+        {
+          "reference": "Revelation 1:12–20",
+          "verses": [
+            {
+              "chapter": 1,
+              "verse": 12,
+              "text": "I turned to see the voice that spoke with me. Having turned, I saw seven golden lamp stands."
+            },
+            {
+              "chapter": 1,
+              "verse": 13,
+              "text": "And among the lamp stands was one like a son of man, clothed with a robe reaching down to his feet, and with a golden sash around his chest."
+            },
+            {
+              "chapter": 1,
+              "verse": 14,
+              "text": "His head and his hair were white as white wool, like snow. His eyes were like a flame of fire."
+            },
+            {
+              "chapter": 1,
+              "verse": 15,
+              "text": "His feet were like burnished brass, as if it had been refined in a furnace. His voice was like the voice of many waters."
+            },
+            {
+              "chapter": 1,
+              "verse": 16,
+              "text": "He had seven stars in his right hand. Out of his mouth proceeded a sharp two-edged sword. His face was like the sun shining at its brightest."
+            },
+            {
+              "chapter": 1,
+              "verse": 17,
+              "text": "When I saw him, I fell at his feet like a dead man. He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,"
+            },
+            {
+              "chapter": 1,
+              "verse": 18,
+              "text": "and the Living one. I was dead, and behold, I am alive forever and ever. Amen. I have the keys of Death and of Hades."
+            },
+            {
+              "chapter": 1,
+              "verse": 19,
+              "text": "Write therefore the things which you have seen, and the things which are, and the things which will happen hereafter."
+            },
+            {
+              "chapter": 1,
+              "verse": 20,
+              "text": "The mystery of the seven stars which you saw in my right hand, and the seven golden lamp stands is this: The seven stars are the angels of the seven assemblies. The seven lamp stands are seven assemblies."
+            }
+          ]
+        }
+      ],
+      "alt": "Vision of the Seven Candlesticks, illustrating Revelation 1:12–20.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-T02.webp",
+        "reader": "releases/v1/web/1920/T1-T02.webp",
+        "original": "releases/v1/originals/T1-T02.png"
+      },
+      "width": 1536,
+      "height": 1024,
+      "checksum": "ce2cc0bed3d54bd4dd9ed7edf7944ec37213bb04e60d4c43fabff5440ac4921d",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-T03",
+      "tapestry": 1,
+      "row": "top",
+      "position": 3,
+      "title": "Vision of Christ in Majesty by Saint John",
+      "scriptureSpans": [
+        {
+          "startChapter": 1,
+          "startVerse": 13,
+          "endChapter": 1,
+          "endVerse": 16
+        }
+      ],
+      "displayReference": "Revelation 1:13–16",
+      "passages": [
+        {
+          "reference": "Revelation 1:13–16",
+          "verses": [
+            {
+              "chapter": 1,
+              "verse": 13,
+              "text": "And among the lamp stands was one like a son of man, clothed with a robe reaching down to his feet, and with a golden sash around his chest."
+            },
+            {
+              "chapter": 1,
+              "verse": 14,
+              "text": "His head and his hair were white as white wool, like snow. His eyes were like a flame of fire."
+            },
+            {
+              "chapter": 1,
+              "verse": 15,
+              "text": "His feet were like burnished brass, as if it had been refined in a furnace. His voice was like the voice of many waters."
+            },
+            {
+              "chapter": 1,
+              "verse": 16,
+              "text": "He had seven stars in his right hand. Out of his mouth proceeded a sharp two-edged sword. His face was like the sun shining at its brightest."
+            }
+          ]
+        }
+      ],
+      "alt": "Vision of Christ in Majesty by Saint John, illustrating Revelation 1:13–16.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-T03.webp",
+        "reader": "releases/v1/web/1920/T1-T03.webp",
+        "original": "releases/v1/originals/T1-T03.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "84a939588d8212701d441969478cbe277232b19617f1da43fdad70ac5f19c0fc",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-T04",
+      "tapestry": 1,
+      "row": "top",
+      "position": 4,
+      "title": "Angel reads the names of the worthy",
+      "scriptureSpans": [
+        {
+          "startChapter": 5,
+          "startVerse": 1,
+          "endChapter": 5,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 5:1–4",
+      "passages": [
+        {
+          "reference": "Revelation 5:1–4",
+          "verses": [
+            {
+              "chapter": 5,
+              "verse": 1,
+              "text": "I saw, in the right hand of him who sat on the throne, a book written inside and outside, sealed shut with seven seals."
+            },
+            {
+              "chapter": 5,
+              "verse": 2,
+              "text": "I saw a mighty angel proclaiming with a loud voice, “Who is worthy to open the book, and to break its seals?”"
+            },
+            {
+              "chapter": 5,
+              "verse": 3,
+              "text": "No one in heaven above, or on the earth, or under the earth, was able to open the book or to look in it."
+            },
+            {
+              "chapter": 5,
+              "verse": 4,
+              "text": "Then I wept much, because no one was found worthy to open the book or to look in it."
+            }
+          ]
+        }
+      ],
+      "alt": "Angel reads the names of the worthy, illustrating Revelation 5:1–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-T04.webp",
+        "reader": "releases/v1/web/1920/T1-T04.webp",
+        "original": "releases/v1/originals/T1-T04.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "dead0a929e94c93028e9d6beb897f88549fdea8dcd308ebdb7f6f8a92f4d39aa",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-T05",
+      "tapestry": 1,
+      "row": "top",
+      "position": 5,
+      "title": "24 Elders of the Apocalypse casting their crowns",
+      "scriptureSpans": [
+        {
+          "startChapter": 4,
+          "startVerse": 10,
+          "endChapter": 4,
+          "endVerse": 10
+        }
+      ],
+      "displayReference": "Revelation 4:10",
+      "passages": [
+        {
+          "reference": "Revelation 4:10",
+          "verses": [
+            {
+              "chapter": 4,
+              "verse": 10,
+              "text": "the twenty-four elders fall down before him who sits on the throne and worship him who lives forever and ever, and throw their crowns before the throne, saying,"
+            }
+          ]
+        }
+      ],
+      "alt": "24 Elders of the Apocalypse casting their crowns, illustrating Revelation 4:10.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-T05.webp",
+        "reader": "releases/v1/web/1920/T1-T05.webp",
+        "original": "releases/v1/originals/T1-T05.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "56f6b6dda6816aba6ae52b89c4fb6cb4a1a3db29387ea3f8e89eb22ccceef507",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-T06",
+      "tapestry": 1,
+      "row": "top",
+      "position": 6,
+      "title": "Adoration of the lamb",
+      "scriptureSpans": [
+        {
+          "startChapter": 5,
+          "startVerse": 8,
+          "endChapter": 5,
+          "endVerse": 14
+        }
+      ],
+      "displayReference": "Revelation 5:8–14",
+      "passages": [
+        {
+          "reference": "Revelation 5:8–14",
+          "verses": [
+            {
+              "chapter": 5,
+              "verse": 8,
+              "text": "Now when he had taken the book, the four living creatures and the twenty-four elders fell down before the Lamb, each one having a harp, and golden bowls full of incense, which are the prayers of the saints."
+            },
+            {
+              "chapter": 5,
+              "verse": 9,
+              "text": "They sang a new song, saying, “You are worthy to take the book and to open its seals, for you were killed, and bought us for God with your blood out of every tribe, language, people, and nation,"
+            },
+            {
+              "chapter": 5,
+              "verse": 10,
+              "text": "and made us kings and priests to our God; and we will reign on the earth.”"
+            },
+            {
+              "chapter": 5,
+              "verse": 11,
+              "text": "I looked, and I heard something like a voice of many angels around the throne, the living creatures, and the elders. The number of them was ten thousands of ten thousands, and thousands of thousands,"
+            },
+            {
+              "chapter": 5,
+              "verse": 12,
+              "text": "saying with a loud voice, “Worthy is the Lamb who has been killed to receive the power, wealth, wisdom, strength, honor, glory, and blessing!”"
+            },
+            {
+              "chapter": 5,
+              "verse": 13,
+              "text": "I heard every created thing which is in heaven, on the earth, under the earth, on the sea, and everything in them, saying, “To him who sits on the throne and to the Lamb be the blessing, the honor, the glory, and the dominion, forever and ever! Amen!”"
+            },
+            {
+              "chapter": 5,
+              "verse": 14,
+              "text": "The four living creatures said, “Amen!” Then the elders fell down and worshiped."
+            }
+          ]
+        }
+      ],
+      "alt": "Adoration of the lamb, illustrating Revelation 5:8–14.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-T06.webp",
+        "reader": "releases/v1/web/1920/T1-T06.webp",
+        "original": "releases/v1/originals/T1-T06.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "026b4bb76338a353b6de5b1266887d363a1c275953365d9a2c11b08b86046691",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-T07",
+      "tapestry": 1,
+      "row": "top",
+      "position": 7,
+      "title": "Lamb taking the book",
+      "scriptureSpans": [
+        {
+          "startChapter": 5,
+          "startVerse": 7,
+          "endChapter": 5,
+          "endVerse": 7
+        }
+      ],
+      "displayReference": "Revelation 5:7",
+      "passages": [
+        {
+          "reference": "Revelation 5:7",
+          "verses": [
+            {
+              "chapter": 5,
+              "verse": 7,
+              "text": "Then he came, and he took it out of the right hand of him who sat on the throne."
+            }
+          ]
+        }
+      ],
+      "alt": "Lamb taking the book, illustrating Revelation 5:7.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-T07.webp",
+        "reader": "releases/v1/web/1920/T1-T07.webp",
+        "original": "releases/v1/originals/T1-T07.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "53359240b4c7e6df76beac41af049a2f3bc20497dd7fdb285b3a5fd39f064d85",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-B01",
+      "tapestry": 1,
+      "row": "bottom",
+      "position": 1,
+      "title": "First Horseman",
+      "scriptureSpans": [
+        {
+          "startChapter": 6,
+          "startVerse": 1,
+          "endChapter": 6,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 6:1–2",
+      "passages": [
+        {
+          "reference": "Revelation 6:1–2",
+          "verses": [
+            {
+              "chapter": 6,
+              "verse": 1,
+              "text": "I saw that the Lamb opened one of the seven seals, and I heard one of the four living creatures saying, as with a voice of thunder, “Come and see!”"
+            },
+            {
+              "chapter": 6,
+              "verse": 2,
+              "text": "Then a white horse appeared, and he who sat on it had a bow. A crown was given to him, and he came out conquering, and to conquer."
+            }
+          ]
+        }
+      ],
+      "alt": "First Horseman, illustrating Revelation 6:1–2.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B01.webp",
+        "reader": "releases/v1/web/1920/T1-B01.webp",
+        "original": "releases/v1/originals/T1-B01.png"
+      },
+      "width": 1536,
+      "height": 1024,
+      "checksum": "36c184ebd0a168b31f47b2c0842a59c6029e08871fc35d75d709f49aaa254c49",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-B02",
+      "tapestry": 1,
+      "row": "bottom",
+      "position": 2,
+      "title": "Second Horseman",
+      "scriptureSpans": [
+        {
+          "startChapter": 6,
+          "startVerse": 3,
+          "endChapter": 6,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 6:3–4",
+      "passages": [
+        {
+          "reference": "Revelation 6:3–4",
+          "verses": [
+            {
+              "chapter": 6,
+              "verse": 3,
+              "text": "When he opened the second seal, I heard the second living creature saying, “Come!”"
+            },
+            {
+              "chapter": 6,
+              "verse": 4,
+              "text": "Another came out, a red horse. To him who sat on it was given power to take peace from the earth, and that they should kill one another. There was given to him a great sword."
+            }
+          ]
+        }
+      ],
+      "alt": "Second Horseman, illustrating Revelation 6:3–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B02.webp",
+        "reader": "releases/v1/web/1920/T1-B02.webp",
+        "original": "releases/v1/originals/T1-B02.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "a32aa933022d5954db1548dbd728a44c340ca9401094c71de44433ff12c531f4",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-B03",
+      "tapestry": 1,
+      "row": "bottom",
+      "position": 3,
+      "title": "Third Horseman",
+      "scriptureSpans": [
+        {
+          "startChapter": 6,
+          "startVerse": 5,
+          "endChapter": 6,
+          "endVerse": 6
+        }
+      ],
+      "displayReference": "Revelation 6:5–6",
+      "passages": [
+        {
+          "reference": "Revelation 6:5–6",
+          "verses": [
+            {
+              "chapter": 6,
+              "verse": 5,
+              "text": "When he opened the third seal, I heard the third living creature saying, “Come and see!” And behold, a black horse, and he who sat on it had a balance in his hand."
+            },
+            {
+              "chapter": 6,
+              "verse": 6,
+              "text": "I heard a voice in the middle of the four living creatures saying, “A choenix of wheat for a denarius, and three choenix of barley for a denarius! Don’t damage the oil and the wine!”"
+            }
+          ]
+        }
+      ],
+      "alt": "Third Horseman, illustrating Revelation 6:5–6.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B03.webp",
+        "reader": "releases/v1/web/1920/T1-B03.webp",
+        "original": "releases/v1/originals/T1-B03.png"
+      },
+      "width": 1536,
+      "height": 1024,
+      "checksum": "1e3f2f13ca8f37afbbaf24ac42925db3e365d70b444b6292d162a8afdbdbb291",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-B04",
+      "tapestry": 1,
+      "row": "bottom",
+      "position": 4,
+      "title": "Fourth Horseman",
+      "scriptureSpans": [
+        {
+          "startChapter": 6,
+          "startVerse": 7,
+          "endChapter": 6,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 6:7–8",
+      "passages": [
+        {
+          "reference": "Revelation 6:7–8",
+          "verses": [
+            {
+              "chapter": 6,
+              "verse": 7,
+              "text": "When he opened the fourth seal, I heard the fourth living creature saying, “Come and see!”"
+            },
+            {
+              "chapter": 6,
+              "verse": 8,
+              "text": "And behold, a pale horse, and the name of he who sat on it was Death. Hades followed with him. Authority over one fourth of the earth, to kill with the sword, with famine, with death, and by the wild animals of the earth was given to him."
+            }
+          ]
+        }
+      ],
+      "alt": "Fourth Horseman, illustrating Revelation 6:7–8.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B04.webp",
+        "reader": "releases/v1/web/1920/T1-B04.webp",
+        "original": "releases/v1/originals/T1-B04.png"
+      },
+      "width": 5056,
+      "height": 3372,
+      "checksum": "e8749ee15213314d9fcc2f93177a2d37c5649227f5fccae961a9803e14ebaaee",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-B05",
+      "tapestry": 1,
+      "row": "bottom",
+      "position": 5,
+      "title": "Fifth seal: Souls of martyrs",
+      "scriptureSpans": [
+        {
+          "startChapter": 6,
+          "startVerse": 9,
+          "endChapter": 6,
+          "endVerse": 11
+        }
+      ],
+      "displayReference": "Revelation 6:9–11",
+      "passages": [
+        {
+          "reference": "Revelation 6:9–11",
+          "verses": [
+            {
+              "chapter": 6,
+              "verse": 9,
+              "text": "When he opened the fifth seal, I saw underneath the altar the souls of those who had been killed for the Word of God, and for the testimony of the Lamb which they had."
+            },
+            {
+              "chapter": 6,
+              "verse": 10,
+              "text": "They cried with a loud voice, saying, “How long, Master, the holy and true, until you judge and avenge our blood on those who dwell on the earth?”"
+            },
+            {
+              "chapter": 6,
+              "verse": 11,
+              "text": "A long white robe was given to each of them. They were told that they should rest yet for a while, until their fellow servants and their brothers, who would also be killed even as they were, should complete their course."
+            }
+          ]
+        }
+      ],
+      "alt": "Fifth seal: Souls of martyrs, illustrating Revelation 6:9–11.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B05.webp",
+        "reader": "releases/v1/web/1920/T1-B05.webp",
+        "original": "releases/v1/originals/T1-B05.png"
+      },
+      "width": 5056,
+      "height": 3372,
+      "checksum": "7deaa06ed0863d8e2da2e86d94465fe23ab2f417de7a0d6f6b2731c1b5df1392",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-B06",
+      "tapestry": 1,
+      "row": "bottom",
+      "position": 6,
+      "title": "Sixth seal",
+      "scriptureSpans": [
+        {
+          "startChapter": 6,
+          "startVerse": 12,
+          "endChapter": 6,
+          "endVerse": 17
+        }
+      ],
+      "displayReference": "Revelation 6:12–17",
+      "passages": [
+        {
+          "reference": "Revelation 6:12–17",
+          "verses": [
+            {
+              "chapter": 6,
+              "verse": 12,
+              "text": "I saw when he opened the sixth seal, and there was a great earthquake. The sun became black as sackcloth made of hair, and the whole moon became as blood."
+            },
+            {
+              "chapter": 6,
+              "verse": 13,
+              "text": "The stars of the sky fell to the earth, like a fig tree dropping its unripe figs when it is shaken by a great wind."
+            },
+            {
+              "chapter": 6,
+              "verse": 14,
+              "text": "The sky was removed like a scroll when it is rolled up. Every mountain and island was moved out of its place."
+            },
+            {
+              "chapter": 6,
+              "verse": 15,
+              "text": "The kings of the earth, the princes, the commanding officers, the rich, the strong, and every slave and free person, hid themselves in the caves and in the rocks of the mountains."
+            },
+            {
+              "chapter": 6,
+              "verse": 16,
+              "text": "They told the mountains and the rocks, “Fall on us, and hide us from the face of him who sits on the throne, and from the wrath of the Lamb,"
+            },
+            {
+              "chapter": 6,
+              "verse": 17,
+              "text": "for the great day of his wrath has come, and who is able to stand?”"
+            }
+          ]
+        }
+      ],
+      "alt": "Sixth seal, illustrating Revelation 6:12–17.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B06.webp",
+        "reader": "releases/v1/web/1920/T1-B06.webp",
+        "original": "releases/v1/originals/T1-B06.png"
+      },
+      "width": 5056,
+      "height": 3372,
+      "checksum": "854e5f005fff3a2d7837bd3f1512f80278a46bb28c4f96aa030e474be3158637",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T1-B07",
+      "tapestry": 1,
+      "row": "bottom",
+      "position": 7,
+      "title": "Sealing of the 144,000",
+      "scriptureSpans": [
+        {
+          "startChapter": 7,
+          "startVerse": 1,
+          "endChapter": 7,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 7:1–8",
+      "passages": [
+        {
+          "reference": "Revelation 7:1–8",
+          "verses": [
+            {
+              "chapter": 7,
+              "verse": 1,
+              "text": "After this, I saw four angels standing at the four corners of the earth, holding the four winds of the earth, so that no wind would blow on the earth, or on the sea, or on any tree."
+            },
+            {
+              "chapter": 7,
+              "verse": 2,
+              "text": "I saw another angel ascend from the sunrise, having the seal of the living God. He cried with a loud voice to the four angels to whom it was given to harm the earth and the sea,"
+            },
+            {
+              "chapter": 7,
+              "verse": 3,
+              "text": "saying, “Don’t harm the earth, the sea, or the trees, until we have sealed the bondservants of our God on their foreheads!”"
+            },
+            {
+              "chapter": 7,
+              "verse": 4,
+              "text": "I heard the number of those who were sealed, one hundred forty-four thousand, sealed out of every tribe of the children of Israel:"
+            },
+            {
+              "chapter": 7,
+              "verse": 5,
+              "text": "of the tribe of Judah twelve thousand were sealed, of the tribe of Reuben twelve thousand, of the tribe of Gad twelve thousand,"
+            },
+            {
+              "chapter": 7,
+              "verse": 6,
+              "text": "of the tribe of Asher twelve thousand, of the tribe of Naphtali twelve thousand, of the tribe of Manasseh twelve thousand,"
+            },
+            {
+              "chapter": 7,
+              "verse": 7,
+              "text": "of the tribe of Simeon twelve thousand, of the tribe of Levi twelve thousand, of the tribe of Issachar twelve thousand,"
+            },
+            {
+              "chapter": 7,
+              "verse": 8,
+              "text": "of the tribe of Zebulun twelve thousand, of the tribe of Joseph twelve thousand, and of the tribe of Benjamin twelve thousand were sealed."
+            }
+          ]
+        }
+      ],
+      "alt": "Sealing of the 144,000, illustrating Revelation 7:1–8.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B07.webp",
+        "reader": "releases/v1/web/1920/T1-B07.webp",
+        "original": "releases/v1/originals/T1-B07.png"
+      },
+      "width": 5056,
+      "height": 3372,
+      "checksum": "ac5fbb11eed91dd2695447a9d22ec147ee030c7c026a5a1e37589d95ec988609",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-00",
+      "tapestry": 2,
+      "row": "lead",
+      "position": 0,
+      "title": "Saint John reading the Apocalypse (Second Vision)",
+      "scriptureSpans": [
+        {
+          "startChapter": 7,
+          "startVerse": 9,
+          "endChapter": 7,
+          "endVerse": 12
+        }
+      ],
+      "displayReference": "Revelation 7:9–12",
+      "passages": [
+        {
+          "reference": "Revelation 7:9–12",
+          "verses": [
+            {
+              "chapter": 7,
+              "verse": 9,
+              "text": "After these things I looked, and behold, a great multitude which no man could count, out of every nation and of all tribes, peoples, and languages, standing before the throne and before the Lamb, dressed in white robes, with palm branches in their hands."
+            },
+            {
+              "chapter": 7,
+              "verse": 10,
+              "text": "They cried with a loud voice, saying, “Salvation be to our God, who sits on the throne, and to the Lamb!”"
+            },
+            {
+              "chapter": 7,
+              "verse": 11,
+              "text": "All the angels were standing around the throne, the elders, and the four living creatures; and they fell on their faces before his throne, and worshiped God,"
+            },
+            {
+              "chapter": 7,
+              "verse": 12,
+              "text": "saying, “Amen! Blessing, glory, wisdom, thanksgiving, honor, power, and might, be to our God forever and ever! Amen.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John reading the Apocalypse (Second Vision), illustrating Revelation 7:9–12.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-00.webp",
+        "reader": "releases/v1/web/1920/T2-00.webp",
+        "original": "releases/v1/originals/T2-00.png"
+      },
+      "width": 1024,
+      "height": 1536,
+      "checksum": "64c16176707e92a883d4b67339c42f95b61986feb51037dc2cd6cfcde4fbb214",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T01",
+      "tapestry": 2,
+      "row": "top",
+      "position": 1,
+      "title": "Adoration of the Lamb by the 144-thousand",
+      "scriptureSpans": [
+        {
+          "startChapter": 7,
+          "startVerse": 9,
+          "endChapter": 7,
+          "endVerse": 17
+        }
+      ],
+      "displayReference": "Revelation 7:9–17",
+      "passages": [
+        {
+          "reference": "Revelation 7:9–17",
+          "verses": [
+            {
+              "chapter": 7,
+              "verse": 9,
+              "text": "After these things I looked, and behold, a great multitude which no man could count, out of every nation and of all tribes, peoples, and languages, standing before the throne and before the Lamb, dressed in white robes, with palm branches in their hands."
+            },
+            {
+              "chapter": 7,
+              "verse": 10,
+              "text": "They cried with a loud voice, saying, “Salvation be to our God, who sits on the throne, and to the Lamb!”"
+            },
+            {
+              "chapter": 7,
+              "verse": 11,
+              "text": "All the angels were standing around the throne, the elders, and the four living creatures; and they fell on their faces before his throne, and worshiped God,"
+            },
+            {
+              "chapter": 7,
+              "verse": 12,
+              "text": "saying, “Amen! Blessing, glory, wisdom, thanksgiving, honor, power, and might, be to our God forever and ever! Amen.”"
+            },
+            {
+              "chapter": 7,
+              "verse": 13,
+              "text": "One of the elders answered, saying to me, “These who are arrayed in the white robes, who are they, and where did they come from?”"
+            },
+            {
+              "chapter": 7,
+              "verse": 14,
+              "text": "I told him, “My lord, you know.” He said to me, “These are those who came out of the great suffering. They washed their robes and made them white in the Lamb’s blood."
+            },
+            {
+              "chapter": 7,
+              "verse": 15,
+              "text": "Therefore they are before the throne of God, and they serve him day and night in his temple. He who sits on the throne will spread his tabernacle over them."
+            },
+            {
+              "chapter": 7,
+              "verse": 16,
+              "text": "They will never be hungry or thirsty any more. The sun won’t beat on them, nor any heat;"
+            },
+            {
+              "chapter": 7,
+              "verse": 17,
+              "text": "for the Lamb who is in the middle of the throne shepherds them and leads them to springs of life-giving waters. And God will wipe away every tear from their eyes.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Adoration of the Lamb by the 144-thousand, illustrating Revelation 7:9–17.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T01.webp",
+        "reader": "releases/v1/web/1920/T2-T01.webp",
+        "original": "releases/v1/originals/T2-T01.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "5ae050a9e722d910b83b7b539b9d18b7ba4569d1b693030c19a9078a574a7d3d",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T02",
+      "tapestry": 2,
+      "row": "top",
+      "position": 2,
+      "title": "Angels receiving seven trumpets",
+      "scriptureSpans": [
+        {
+          "startChapter": 8,
+          "startVerse": 2,
+          "endChapter": 8,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 8:2",
+      "passages": [
+        {
+          "reference": "Revelation 8:2",
+          "verses": [
+            {
+              "chapter": 8,
+              "verse": 2,
+              "text": "I saw the seven angels who stand before God, and seven trumpets were given to them."
+            }
+          ]
+        }
+      ],
+      "alt": "Angels receiving seven trumpets, illustrating Revelation 8:2.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T02.webp",
+        "reader": "releases/v1/web/1920/T2-T02.webp",
+        "original": "releases/v1/originals/T2-T02.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "b1aa162fad1d918df01d163d95efeb311fc8cf293db32c3b028de19ca51db087",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T03",
+      "tapestry": 2,
+      "row": "top",
+      "position": 3,
+      "title": "Angel receiving the incense",
+      "scriptureSpans": [
+        {
+          "startChapter": 8,
+          "startVerse": 3,
+          "endChapter": 8,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 8:3–4",
+      "passages": [
+        {
+          "reference": "Revelation 8:3–4",
+          "verses": [
+            {
+              "chapter": 8,
+              "verse": 3,
+              "text": "Another angel came and stood over the altar, having a golden censer. Much incense was given to him, that he should add it to the prayers of all the saints on the golden altar which was before the throne."
+            },
+            {
+              "chapter": 8,
+              "verse": 4,
+              "text": "The smoke of the incense, with the prayers of the saints, went up before God out of the angel’s hand."
+            }
+          ]
+        }
+      ],
+      "alt": "Angel receiving the incense, illustrating Revelation 8:3–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T03.webp",
+        "reader": "releases/v1/web/1920/T2-T03.webp",
+        "original": "releases/v1/originals/T2-T03.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "f830bedf1e1bdbc6bdb9d2b77b3f237bc3aa2b60b81db888df532824e75fa584",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T04",
+      "tapestry": 2,
+      "row": "top",
+      "position": 4,
+      "title": "Angel empty the incense",
+      "scriptureSpans": [
+        {
+          "startChapter": 8,
+          "startVerse": 5,
+          "endChapter": 8,
+          "endVerse": 5
+        }
+      ],
+      "displayReference": "Revelation 8:5",
+      "passages": [
+        {
+          "reference": "Revelation 8:5",
+          "verses": [
+            {
+              "chapter": 8,
+              "verse": 5,
+              "text": "The angel took the censer, and he filled it with the fire of the altar, then threw it on the earth. Thunders, sounds, lightnings, and an earthquake followed."
+            }
+          ]
+        }
+      ],
+      "alt": "Angel empty the incense, illustrating Revelation 8:5.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T04.webp",
+        "reader": "releases/v1/web/1920/T2-T04.webp",
+        "original": "releases/v1/originals/T2-T04.png"
+      },
+      "width": 1536,
+      "height": 1024,
+      "checksum": "fda2817193eeadf2a30db4b4580d786e4bae8fb2f092856326258c3ed5dba4b0",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T05",
+      "tapestry": 2,
+      "row": "top",
+      "position": 5,
+      "title": "First trumpet",
+      "scriptureSpans": [
+        {
+          "startChapter": 8,
+          "startVerse": 7,
+          "endChapter": 8,
+          "endVerse": 7
+        }
+      ],
+      "displayReference": "Revelation 8:7",
+      "passages": [
+        {
+          "reference": "Revelation 8:7",
+          "verses": [
+            {
+              "chapter": 8,
+              "verse": 7,
+              "text": "The first sounded, and there followed hail and fire, mixed with blood, and they were thrown to the earth. One third of the earth was burned up, and one third of the trees were burned up, and all green grass was burned up."
+            }
+          ]
+        }
+      ],
+      "alt": "First trumpet, illustrating Revelation 8:7.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T05.webp",
+        "reader": "releases/v1/web/1920/T2-T05.webp",
+        "original": "releases/v1/originals/T2-T05.png"
+      },
+      "width": 5464,
+      "height": 3072,
+      "checksum": "4746c6da0e97b1651793f52584a6578b4be4ca09adf7d6c42302760e27b7a393",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T06",
+      "tapestry": 2,
+      "row": "top",
+      "position": 6,
+      "title": "Second Trumpet: fire on the sea",
+      "scriptureSpans": [
+        {
+          "startChapter": 8,
+          "startVerse": 8,
+          "endChapter": 8,
+          "endVerse": 9
+        }
+      ],
+      "displayReference": "Revelation 8:8–9",
+      "passages": [
+        {
+          "reference": "Revelation 8:8–9",
+          "verses": [
+            {
+              "chapter": 8,
+              "verse": 8,
+              "text": "The second angel sounded, and something like a great burning mountain was thrown into the sea. One third of the sea became blood,"
+            },
+            {
+              "chapter": 8,
+              "verse": 9,
+              "text": "and one third of the living creatures which were in the sea died. One third of the ships were destroyed."
+            }
+          ]
+        }
+      ],
+      "alt": "Second Trumpet: fire on the sea, illustrating Revelation 8:8–9.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T06.webp",
+        "reader": "releases/v1/web/1920/T2-T06.webp",
+        "original": "releases/v1/originals/T2-T06.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "46a3457123d3d758d0ac722d1937a1cc11df1b140bc142c97b0f3b61e1440ad2",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T07",
+      "tapestry": 2,
+      "row": "top",
+      "position": 7,
+      "title": "Third Trumpet: Star Wormwood",
+      "scriptureSpans": [
+        {
+          "startChapter": 8,
+          "startVerse": 10,
+          "endChapter": 8,
+          "endVerse": 11
+        }
+      ],
+      "displayReference": "Revelation 8:10–11",
+      "passages": [
+        {
+          "reference": "Revelation 8:10–11",
+          "verses": [
+            {
+              "chapter": 8,
+              "verse": 10,
+              "text": "The third angel sounded, and a great star fell from the sky, burning like a torch, and it fell on one third of the rivers, and on the springs of water."
+            },
+            {
+              "chapter": 8,
+              "verse": 11,
+              "text": "The name of the star is “Wormwood.” One third of the waters became wormwood. Many people died from the waters, because they were made bitter."
+            }
+          ]
+        }
+      ],
+      "alt": "Third Trumpet: Star Wormwood, illustrating Revelation 8:10–11.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T07.webp",
+        "reader": "releases/v1/web/1920/T2-T07.webp",
+        "original": "releases/v1/originals/T2-T07.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "e90d9190276183d2c814d76167201cf51886536e84feb7781e6c8afa2a3890bc",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-B01",
+      "tapestry": 2,
+      "row": "bottom",
+      "position": 1,
+      "title": "Fourth Trumpet: sun and moon are darkened",
+      "scriptureSpans": [
+        {
+          "startChapter": 8,
+          "startVerse": 12,
+          "endChapter": 8,
+          "endVerse": 12
+        }
+      ],
+      "displayReference": "Revelation 8:12",
+      "passages": [
+        {
+          "reference": "Revelation 8:12",
+          "verses": [
+            {
+              "chapter": 8,
+              "verse": 12,
+              "text": "The fourth angel sounded, and one third of the sun was struck, and one third of the moon, and one third of the stars, so that one third of them would be darkened; and the day wouldn’t shine for one third of it, and the night in the same way."
+            }
+          ]
+        }
+      ],
+      "alt": "Fourth Trumpet: sun and moon are darkened, illustrating Revelation 8:12.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-B01.webp",
+        "reader": "releases/v1/web/1920/T2-B01.webp",
+        "original": "releases/v1/originals/T2-B01.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "b21f768b298d3234017743c55a711e298c04e646dce9e02a140ee43795bd6452",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-B02",
+      "tapestry": 2,
+      "row": "bottom",
+      "position": 2,
+      "title": "Fifth Trumpet: Locusts come up from the pit",
+      "scriptureSpans": [
+        {
+          "startChapter": 9,
+          "startVerse": 1,
+          "endChapter": 9,
+          "endVerse": 11
+        }
+      ],
+      "displayReference": "Revelation 9:1–11",
+      "passages": [
+        {
+          "reference": "Revelation 9:1–11",
+          "verses": [
+            {
+              "chapter": 9,
+              "verse": 1,
+              "text": "The fifth angel sounded, and I saw a star from the sky which had fallen to the earth. The key to the pit of the abyss was given to him."
+            },
+            {
+              "chapter": 9,
+              "verse": 2,
+              "text": "He opened the pit of the abyss, and smoke went up out of the pit, like the smoke from a burning furnace. The sun and the air were darkened because of the smoke from the pit."
+            },
+            {
+              "chapter": 9,
+              "verse": 3,
+              "text": "Then out of the smoke came locusts on the earth, and power was given to them, as the scorpions of the earth have power."
+            },
+            {
+              "chapter": 9,
+              "verse": 4,
+              "text": "They were told that they should not hurt the grass of the earth, neither any green thing, neither any tree, but only those people who don’t have God’s seal on their foreheads."
+            },
+            {
+              "chapter": 9,
+              "verse": 5,
+              "text": "They were given power, not to kill them, but to torment them for five months. Their torment was like the torment of a scorpion when it strikes a person."
+            },
+            {
+              "chapter": 9,
+              "verse": 6,
+              "text": "In those days people will seek death, and will in no way find it. They will desire to die, and death will flee from them."
+            },
+            {
+              "chapter": 9,
+              "verse": 7,
+              "text": "The shapes of the locusts were like horses prepared for war. On their heads were something like golden crowns, and their faces were like people’s faces."
+            },
+            {
+              "chapter": 9,
+              "verse": 8,
+              "text": "They had hair like women’s hair, and their teeth were like those of lions."
+            },
+            {
+              "chapter": 9,
+              "verse": 9,
+              "text": "They had breastplates like breastplates of iron. The sound of their wings was like the sound of many chariots and horses rushing to war."
+            },
+            {
+              "chapter": 9,
+              "verse": 10,
+              "text": "They have tails like those of scorpions, with stingers. In their tails they have power to harm men for five months."
+            },
+            {
+              "chapter": 9,
+              "verse": 11,
+              "text": "They have over them as king the angel of the abyss. His name in Hebrew is “Abaddon”, but in Greek, he has the name “Apollyon”."
+            }
+          ]
+        }
+      ],
+      "alt": "Fifth Trumpet: Locusts come up from the pit, illustrating Revelation 9:1–11.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-B02.webp",
+        "reader": "releases/v1/web/1920/T2-B02.webp",
+        "original": "releases/v1/originals/T2-B02.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "fa34d364b19c5e2851dddc2bb41a4083ff5d8b51379b9fcd4a308d13c26ae3f6",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-B03",
+      "tapestry": 2,
+      "row": "bottom",
+      "position": 3,
+      "title": "Sixth Trumpet: Four angels are released",
+      "scriptureSpans": [
+        {
+          "startChapter": 9,
+          "startVerse": 13,
+          "endChapter": 9,
+          "endVerse": 15
+        }
+      ],
+      "displayReference": "Revelation 9:13–15",
+      "passages": [
+        {
+          "reference": "Revelation 9:13–15",
+          "verses": [
+            {
+              "chapter": 9,
+              "verse": 13,
+              "text": "The sixth angel sounded. I heard a voice from the horns of the golden altar which is before God,"
+            },
+            {
+              "chapter": 9,
+              "verse": 14,
+              "text": "saying to the sixth angel who had the trumpet, “Free the four angels who are bound at the great river Euphrates!”"
+            },
+            {
+              "chapter": 9,
+              "verse": 15,
+              "text": "The four angels were freed who had been prepared for that hour and day and month and year, so that they might kill one third of mankind."
+            }
+          ]
+        }
+      ],
+      "alt": "Sixth Trumpet: Four angels are released, illustrating Revelation 9:13–15.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-B03.webp",
+        "reader": "releases/v1/web/1920/T2-B03.webp",
+        "original": "releases/v1/originals/T2-B03.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "d034deb74812b836ccbba8a934a7fcee83bae71c0c3aaa27c3b86dfb8a25be2d",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-B04",
+      "tapestry": 2,
+      "row": "bottom",
+      "position": 4,
+      "title": "Horsemen on Fire-Breathing Horses",
+      "scriptureSpans": [
+        {
+          "startChapter": 9,
+          "startVerse": 16,
+          "endChapter": 9,
+          "endVerse": 19
+        }
+      ],
+      "displayReference": "Revelation 9:16–19",
+      "passages": [
+        {
+          "reference": "Revelation 9:16–19",
+          "verses": [
+            {
+              "chapter": 9,
+              "verse": 16,
+              "text": "The number of the armies of the horsemen was two hundred million. I heard the number of them."
+            },
+            {
+              "chapter": 9,
+              "verse": 17,
+              "text": "Thus I saw the horses in the vision and those who sat on them, having breastplates of fiery red, hyacinth blue, and sulfur yellow; and the horses’ heads resembled lions’ heads. Out of their mouths proceed fire, smoke, and sulfur."
+            },
+            {
+              "chapter": 9,
+              "verse": 18,
+              "text": "By these three plagues, one third of mankind was killed: by the fire, the smoke, and the sulfur, which proceeded out of their mouths."
+            },
+            {
+              "chapter": 9,
+              "verse": 19,
+              "text": "For the power of the horses is in their mouths and in their tails. For their tails are like serpents, and have heads; and with them they harm."
+            }
+          ]
+        }
+      ],
+      "alt": "Horsemen on Fire-Breathing Horses, illustrating Revelation 9:16–19.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-B04.webp",
+        "reader": "releases/v1/web/1920/T2-B04.webp",
+        "original": "releases/v1/originals/T2-B04.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "74b760b3565b0e8b69b92271375fbe3a1b867c30bf39e8f8745d5033b4bb09ce",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-B05",
+      "tapestry": 2,
+      "row": "bottom",
+      "position": 5,
+      "title": "Angel with seven thunders",
+      "scriptureSpans": [
+        {
+          "startChapter": 10,
+          "startVerse": 1,
+          "endChapter": 10,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 10:1–4",
+      "passages": [
+        {
+          "reference": "Revelation 10:1–4",
+          "verses": [
+            {
+              "chapter": 10,
+              "verse": 1,
+              "text": "I saw a mighty angel coming down out of the sky, clothed with a cloud. A rainbow was on his head. His face was like the sun, and his feet like pillars of fire."
+            },
+            {
+              "chapter": 10,
+              "verse": 2,
+              "text": "He had in his hand a little open book. He set his right foot on the sea, and his left on the land."
+            },
+            {
+              "chapter": 10,
+              "verse": 3,
+              "text": "He cried with a loud voice, as a lion roars. When he cried, the seven thunders uttered their voices."
+            },
+            {
+              "chapter": 10,
+              "verse": 4,
+              "text": "When the seven thunders sounded, I was about to write; but I heard a voice from the sky saying, “Seal up the things which the seven thunders said, and don’t write them.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Angel with seven thunders, illustrating Revelation 10:1–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-B05.webp",
+        "reader": "releases/v1/web/1920/T2-B05.webp",
+        "original": "releases/v1/originals/T2-B05.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "47a4aaf07d30efbade8d0e2d1532b3ea8697d4da606eb109be6755a987558255",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-B06",
+      "tapestry": 2,
+      "row": "bottom",
+      "position": 6,
+      "title": "John eating the book",
+      "scriptureSpans": [
+        {
+          "startChapter": 10,
+          "startVerse": 8,
+          "endChapter": 10,
+          "endVerse": 11
+        }
+      ],
+      "displayReference": "Revelation 10:8–11",
+      "passages": [
+        {
+          "reference": "Revelation 10:8–11",
+          "verses": [
+            {
+              "chapter": 10,
+              "verse": 8,
+              "text": "The voice which I heard from heaven, again speaking with me, said, “Go, take the book which is open in the hand of the angel who stands on the sea and on the land.”"
+            },
+            {
+              "chapter": 10,
+              "verse": 9,
+              "text": "I went to the angel, telling him to give me the little book. He said to me, “Take it and eat it. It will make your stomach bitter, but in your mouth it will be as sweet as honey.”"
+            },
+            {
+              "chapter": 10,
+              "verse": 10,
+              "text": "I took the little book out of the angel’s hand, and ate it. It was as sweet as honey in my mouth. When I had eaten it, my stomach was made bitter."
+            },
+            {
+              "chapter": 10,
+              "verse": 11,
+              "text": "They told me, “You must prophesy again over many peoples, nations, languages, and kings.”"
+            }
+          ]
+        }
+      ],
+      "alt": "John eating the book, illustrating Revelation 10:8–11.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-B06.webp",
+        "reader": "releases/v1/web/1920/T2-B06.webp",
+        "original": "releases/v1/originals/T2-B06.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "cfc1691da7a59eddc858a8cf721da1e172b19c52e766c0034952e88c4a4ef374",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-B07",
+      "tapestry": 2,
+      "row": "bottom",
+      "position": 7,
+      "title": "Measuring the Temple",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 1,
+          "endChapter": 11,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 11:1–2",
+      "passages": [
+        {
+          "reference": "Revelation 11:1–2",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 1,
+              "text": "A reed like a rod was given to me. Someone said, “Rise and measure God’s temple, and the altar, and those who worship in it."
+            },
+            {
+              "chapter": 11,
+              "verse": 2,
+              "text": "Leave out the court which is outside of the temple, and don’t measure it, for it has been given to the nations. They will tread the holy city under foot for forty-two months."
+            }
+          ]
+        }
+      ],
+      "alt": "Measuring the Temple, illustrating Revelation 11:1–2.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-B07.webp",
+        "reader": "releases/v1/web/1920/T2-B07.webp",
+        "original": "releases/v1/originals/T2-B07.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "21f3a4977820194e7e7629fbfd1ac5eb6a3ce037297133af45f8c6e8f7ab7ad4",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-00",
+      "tapestry": 3,
+      "row": "lead",
+      "position": 0,
+      "title": "Saint John reading the Apocalypse (Third Vision)",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 1,
+          "endChapter": 11,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 11:1–2",
+      "passages": [
+        {
+          "reference": "Revelation 11:1–2",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 1,
+              "text": "A reed like a rod was given to me. Someone said, “Rise and measure God’s temple, and the altar, and those who worship in it."
+            },
+            {
+              "chapter": 11,
+              "verse": 2,
+              "text": "Leave out the court which is outside of the temple, and don’t measure it, for it has been given to the nations. They will tread the holy city under foot for forty-two months."
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John reading the Apocalypse (Third Vision), illustrating Revelation 11:1–2.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-00.webp",
+        "reader": "releases/v1/web/1920/T3-00.webp",
+        "original": "releases/v1/originals/T3-00.png"
+      },
+      "width": 1024,
+      "height": 1536,
+      "checksum": "2a943d3d522b62bbcb189c41865023fe52046afb0cb753c697626ef24cc9e014",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T01",
+      "tapestry": 3,
+      "row": "top",
+      "position": 1,
+      "title": "Two witnesses",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 3,
+          "endChapter": 11,
+          "endVerse": 6
+        }
+      ],
+      "displayReference": "Revelation 11:3–6",
+      "passages": [
+        {
+          "reference": "Revelation 11:3–6",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 3,
+              "text": "I will give power to my two witnesses, and they will prophesy one thousand two hundred sixty days, clothed in sackcloth.”"
+            },
+            {
+              "chapter": 11,
+              "verse": 4,
+              "text": "These are the two olive trees and the two lamp stands, standing before the Lord of the earth."
+            },
+            {
+              "chapter": 11,
+              "verse": 5,
+              "text": "If anyone desires to harm them, fire proceeds out of their mouth and devours their enemies. If anyone desires to harm them, he must be killed in this way."
+            },
+            {
+              "chapter": 11,
+              "verse": 6,
+              "text": "These have the power to shut up the sky, that it may not rain during the days of their prophecy. They have power over the waters, to turn them into blood, and to strike the earth with every plague, as often as they desire."
+            }
+          ]
+        }
+      ],
+      "alt": "Two witnesses, illustrating Revelation 11:3–6.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T01.webp",
+        "reader": "releases/v1/web/1920/T3-T01.webp",
+        "original": "releases/v1/originals/T3-T01.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "aba5373aadc149db1614fef42fbbc4ecda0d3f983e2b8ce4ca7cce2f35286499",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T02",
+      "tapestry": 3,
+      "row": "top",
+      "position": 2,
+      "title": "Death of Two witnesses",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 7,
+          "endChapter": 11,
+          "endVerse": 7
+        }
+      ],
+      "displayReference": "Revelation 11:7",
+      "passages": [
+        {
+          "reference": "Revelation 11:7",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 7,
+              "text": "When they have finished their testimony, the beast that comes up out of the abyss will make war with them, and overcome them, and kill them."
+            }
+          ]
+        }
+      ],
+      "alt": "Death of Two witnesses, illustrating Revelation 11:7.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T02.webp",
+        "reader": "releases/v1/web/1920/T3-T02.webp",
+        "original": "releases/v1/originals/T3-T02.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "1958171e34baa1b60ebfa0e9ee1751a96f671b2b6095610d0ee14c27819d5ade",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T03",
+      "tapestry": 3,
+      "row": "top",
+      "position": 3,
+      "title": "Unburied Bodies of Two Witnesses",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 8,
+          "endChapter": 11,
+          "endVerse": 10
+        }
+      ],
+      "displayReference": "Revelation 11:8–10",
+      "passages": [
+        {
+          "reference": "Revelation 11:8–10",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 8,
+              "text": "Their dead bodies will be in the street of the great city, which spiritually is called Sodom and Egypt, where also their Lord was crucified."
+            },
+            {
+              "chapter": 11,
+              "verse": 9,
+              "text": "From among the peoples, tribes, languages, and nations, people will look at their dead bodies for three and a half days, and will not allow their dead bodies to be laid in a tomb."
+            },
+            {
+              "chapter": 11,
+              "verse": 10,
+              "text": "Those who dwell on the earth will rejoice over them, and they will be glad. They will give gifts to one another, because these two prophets tormented those who dwell on the earth."
+            }
+          ]
+        }
+      ],
+      "alt": "Unburied Bodies of Two Witnesses, illustrating Revelation 11:8–10.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T03.webp",
+        "reader": "releases/v1/web/1920/T3-T03.webp",
+        "original": "releases/v1/originals/T3-T03.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "1e5b557becbaffab33955a46bfc4feb70f1e2e55062e31aa17537408dd597fbd",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T04",
+      "tapestry": 3,
+      "row": "top",
+      "position": 4,
+      "title": "Ascension of Two witnesses",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 11,
+          "endChapter": 11,
+          "endVerse": 12
+        }
+      ],
+      "displayReference": "Revelation 11:11–12",
+      "passages": [
+        {
+          "reference": "Revelation 11:11–12",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 11,
+              "text": "After the three and a half days, the breath of life from God entered into them, and they stood on their feet. Great fear fell on those who saw them."
+            },
+            {
+              "chapter": 11,
+              "verse": 12,
+              "text": "I heard a loud voice from heaven saying to them, “Come up here!” They went up into heaven in a cloud, and their enemies saw them."
+            }
+          ]
+        }
+      ],
+      "alt": "Ascension of Two witnesses, illustrating Revelation 11:11–12.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T04.webp",
+        "reader": "releases/v1/web/1920/T3-T04.webp",
+        "original": "releases/v1/originals/T3-T04.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "8730750e7d14aea4d450b09b97db7b38e424337848767ddc3a1d10874573998e",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T05",
+      "tapestry": 3,
+      "row": "top",
+      "position": 5,
+      "title": "Seventh Trumpet: Adoration in heaven",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 15,
+          "endChapter": 11,
+          "endVerse": 19
+        }
+      ],
+      "displayReference": "Revelation 11:15–19",
+      "passages": [
+        {
+          "reference": "Revelation 11:15–19",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 15,
+              "text": "The seventh angel sounded, and great voices in heaven followed, saying, “The kingdom of the world has become the Kingdom of our Lord and of his Christ. He will reign forever and ever!”"
+            },
+            {
+              "chapter": 11,
+              "verse": 16,
+              "text": "The twenty-four elders, who sit on their thrones before God’s throne, fell on their faces and worshiped God,"
+            },
+            {
+              "chapter": 11,
+              "verse": 17,
+              "text": "saying: “We give you thanks, Lord God, the Almighty, the one who is and who was, because you have taken your great power and reigned."
+            },
+            {
+              "chapter": 11,
+              "verse": 18,
+              "text": "The nations were angry, and your wrath came, as did the time for the dead to be judged, and to give your bondservants the prophets, their reward, as well as to the saints and those who fear your name, to the small and the great, and to destroy those who destroy the earth.”"
+            },
+            {
+              "chapter": 11,
+              "verse": 19,
+              "text": "God’s temple that is in heaven was opened, and the ark of the Lord’s covenant was seen in his temple. Lightnings, sounds, thunders, an earthquake, and great hail followed."
+            }
+          ]
+        }
+      ],
+      "alt": "Seventh Trumpet: Adoration in heaven, illustrating Revelation 11:15–19.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T05.webp",
+        "reader": "releases/v1/web/1920/T3-T05.webp",
+        "original": "releases/v1/originals/T3-T05.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "ff30898015aa7026a846c97377c911bb1384b9d03698a832571bcafffebcf882",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T06",
+      "tapestry": 3,
+      "row": "top",
+      "position": 6,
+      "title": "Woman and the dragon",
+      "scriptureSpans": [
+        {
+          "startChapter": 12,
+          "startVerse": 1,
+          "endChapter": 12,
+          "endVerse": 6
+        }
+      ],
+      "displayReference": "Revelation 12:1–6",
+      "passages": [
+        {
+          "reference": "Revelation 12:1–6",
+          "verses": [
+            {
+              "chapter": 12,
+              "verse": 1,
+              "text": "A great sign was seen in heaven: a woman clothed with the sun, and the moon under her feet, and on her head a crown of twelve stars."
+            },
+            {
+              "chapter": 12,
+              "verse": 2,
+              "text": "She was with child. She cried out in pain, laboring to give birth."
+            },
+            {
+              "chapter": 12,
+              "verse": 3,
+              "text": "Another sign was seen in heaven. Behold, a great red dragon, having seven heads and ten horns, and on his heads seven crowns."
+            },
+            {
+              "chapter": 12,
+              "verse": 4,
+              "text": "His tail drew one third of the stars of the sky, and threw them to the earth. The dragon stood before the woman who was about to give birth, so that when she gave birth he might devour her child."
+            },
+            {
+              "chapter": 12,
+              "verse": 5,
+              "text": "She gave birth to a son, a male child, who is to rule all the nations with a rod of iron. Her child was caught up to God and to his throne."
+            },
+            {
+              "chapter": 12,
+              "verse": 6,
+              "text": "The woman fled into the wilderness, where she has a place prepared by God, that there they may nourish her one thousand two hundred sixty days."
+            }
+          ]
+        }
+      ],
+      "alt": "Woman and the dragon, illustrating Revelation 12:1–6.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T06.webp",
+        "reader": "releases/v1/web/1920/T3-T06.webp",
+        "original": "releases/v1/originals/T3-T06.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "4a927045c9aba28d16db83668720beaf85fa1912210da3d45d24a209ec9b2559",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T07",
+      "tapestry": 3,
+      "row": "top",
+      "position": 7,
+      "title": "Saint Michael and the dragon",
+      "scriptureSpans": [
+        {
+          "startChapter": 12,
+          "startVerse": 7,
+          "endChapter": 12,
+          "endVerse": 9
+        }
+      ],
+      "displayReference": "Revelation 12:7–9",
+      "passages": [
+        {
+          "reference": "Revelation 12:7–9",
+          "verses": [
+            {
+              "chapter": 12,
+              "verse": 7,
+              "text": "There was war in the sky. Michael and his angels made war on the dragon. The dragon and his angels made war."
+            },
+            {
+              "chapter": 12,
+              "verse": 8,
+              "text": "They didn’t prevail. No place was found for them any more in heaven."
+            },
+            {
+              "chapter": 12,
+              "verse": 9,
+              "text": "The great dragon was thrown down, the old serpent, he who is called the devil and Satan, the deceiver of the whole world. He was thrown down to the earth, and his angels were thrown down with him."
+            }
+          ]
+        }
+      ],
+      "alt": "Saint Michael and the dragon, illustrating Revelation 12:7–9.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T07.webp",
+        "reader": "releases/v1/web/1920/T3-T07.webp",
+        "original": "releases/v1/originals/T3-T07.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "ae0a38b521a46d7ffe44e2043ca47a3d8b9929c306fa3e9e4fd3328a3e89b8f0",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-B01",
+      "tapestry": 3,
+      "row": "bottom",
+      "position": 1,
+      "title": "Woman receiving the wings",
+      "scriptureSpans": [
+        {
+          "startChapter": 12,
+          "startVerse": 13,
+          "endChapter": 12,
+          "endVerse": 14
+        }
+      ],
+      "displayReference": "Revelation 12:13–14",
+      "passages": [
+        {
+          "reference": "Revelation 12:13–14",
+          "verses": [
+            {
+              "chapter": 12,
+              "verse": 13,
+              "text": "When the dragon saw that he was thrown down to the earth, he persecuted the woman who gave birth to the male child."
+            },
+            {
+              "chapter": 12,
+              "verse": 14,
+              "text": "Two wings of the great eagle were given to the woman, that she might fly into the wilderness to her place, so that she might be nourished for a time, times, and half a time, from the face of the serpent."
+            }
+          ]
+        }
+      ],
+      "alt": "Woman receiving the wings, illustrating Revelation 12:13–14.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-B01.webp",
+        "reader": "releases/v1/web/1920/T3-B01.webp",
+        "original": "releases/v1/originals/T3-B01.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "bb74f057a6fe566ae0f6d581fdad4eb4e0d21c82ff9b56d1d22e2230e825abc3",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-B02",
+      "tapestry": 3,
+      "row": "bottom",
+      "position": 2,
+      "title": "Dragon persecutes the woman",
+      "scriptureSpans": [
+        {
+          "startChapter": 12,
+          "startVerse": 15,
+          "endChapter": 12,
+          "endVerse": 17
+        }
+      ],
+      "displayReference": "Revelation 12:15–17",
+      "passages": [
+        {
+          "reference": "Revelation 12:15–17",
+          "verses": [
+            {
+              "chapter": 12,
+              "verse": 15,
+              "text": "The serpent spewed water out of his mouth after the woman like a river, that he might cause her to be carried away by the stream."
+            },
+            {
+              "chapter": 12,
+              "verse": 16,
+              "text": "The earth helped the woman, and the earth opened its mouth and swallowed up the river which the dragon spewed out of his mouth."
+            },
+            {
+              "chapter": 12,
+              "verse": 17,
+              "text": "The dragon grew angry with the woman, and went away to make war with the rest of her offspring, who keep God’s commandments and hold Jesus’ testimony."
+            }
+          ]
+        }
+      ],
+      "alt": "Dragon persecutes the woman, illustrating Revelation 12:15–17.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-B02.webp",
+        "reader": "releases/v1/web/1920/T3-B02.webp",
+        "original": "releases/v1/originals/T3-B02.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "d1076d6c79081ee04e7b27383219d13e3e68f1bdae6148e28b2c05374d66303e",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-B03",
+      "tapestry": 3,
+      "row": "bottom",
+      "position": 3,
+      "title": "Servants of God fighting with the dragon",
+      "scriptureSpans": [
+        {
+          "startChapter": 12,
+          "startVerse": 17,
+          "endChapter": 12,
+          "endVerse": 17
+        }
+      ],
+      "displayReference": "Revelation 12:17",
+      "passages": [
+        {
+          "reference": "Revelation 12:17",
+          "verses": [
+            {
+              "chapter": 12,
+              "verse": 17,
+              "text": "The dragon grew angry with the woman, and went away to make war with the rest of her offspring, who keep God’s commandments and hold Jesus’ testimony."
+            }
+          ]
+        }
+      ],
+      "alt": "Servants of God fighting with the dragon, illustrating Revelation 12:17.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-B03.webp",
+        "reader": "releases/v1/web/1920/T3-B03.webp",
+        "original": "releases/v1/originals/T3-B03.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "3415e1f85ad46d713d1035abc304cf626e947cbea94d6a43a780cd813ab1c573",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-B04",
+      "tapestry": 3,
+      "row": "bottom",
+      "position": 4,
+      "title": "The dragon gives power to the beast",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 1,
+          "endChapter": 13,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 13:1–2",
+      "passages": [
+        {
+          "reference": "Revelation 13:1–2",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 1,
+              "text": "Then I stood on the sand of the sea. I saw a beast coming up out of the sea, having ten horns and seven heads. On his horns were ten crowns, and on his heads, blasphemous names."
+            },
+            {
+              "chapter": 13,
+              "verse": 2,
+              "text": "The beast which I saw was like a leopard, and his feet were like those of a bear, and his mouth like the mouth of a lion. The dragon gave him his power, his throne, and great authority."
+            }
+          ]
+        }
+      ],
+      "alt": "The dragon gives power to the beast, illustrating Revelation 13:1–2.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-B04.webp",
+        "reader": "releases/v1/web/1920/T3-B04.webp",
+        "original": "releases/v1/originals/T3-B04.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "d0cefe37c4864f01fd21a7791d6dbc75a00c38b32e94a3debabe3b57c6092758",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-B05",
+      "tapestry": 3,
+      "row": "bottom",
+      "position": 5,
+      "title": "Adoration of the dragon",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 3,
+          "endChapter": 13,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 13:3–4",
+      "passages": [
+        {
+          "reference": "Revelation 13:3–4",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 3,
+              "text": "One of his heads looked like it had been wounded fatally. His fatal wound was healed, and the whole earth marveled at the beast."
+            },
+            {
+              "chapter": 13,
+              "verse": 4,
+              "text": "They worshiped the dragon because he gave his authority to the beast; and they worshiped the beast, saying, “Who is like the beast? Who is able to make war with him?”"
+            }
+          ]
+        }
+      ],
+      "alt": "Adoration of the dragon, illustrating Revelation 13:3–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-B05.webp",
+        "reader": "releases/v1/web/1920/T3-B05.webp",
+        "original": "releases/v1/originals/T3-B05.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "83e5e36331ef1f393394dd24acd35dbe9ea402b5ceaefa6dc96f59c9f4d6c38a",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-B06",
+      "tapestry": 3,
+      "row": "bottom",
+      "position": 6,
+      "title": "Adoration of the beast",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 4,
+          "endChapter": 13,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 13:4–8",
+      "passages": [
+        {
+          "reference": "Revelation 13:4–8",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 4,
+              "text": "They worshiped the dragon because he gave his authority to the beast; and they worshiped the beast, saying, “Who is like the beast? Who is able to make war with him?”"
+            },
+            {
+              "chapter": 13,
+              "verse": 5,
+              "text": "A mouth speaking great things and blasphemy was given to him. Authority to make war for forty-two months was given to him."
+            },
+            {
+              "chapter": 13,
+              "verse": 6,
+              "text": "He opened his mouth for blasphemy against God, to blaspheme his name, his dwelling, and those who dwell in heaven."
+            },
+            {
+              "chapter": 13,
+              "verse": 7,
+              "text": "It was given to him to make war with the saints and to overcome them. Authority over every tribe, people, language, and nation was given to him."
+            },
+            {
+              "chapter": 13,
+              "verse": 8,
+              "text": "All who dwell on the earth will worship him, everyone whose name has not been written from the foundation of the world in the book of life of the Lamb who has been killed."
+            }
+          ]
+        }
+      ],
+      "alt": "Adoration of the beast, illustrating Revelation 13:4–8.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-B06.webp",
+        "reader": "releases/v1/web/1920/T3-B06.webp",
+        "original": "releases/v1/originals/T3-B06.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "ce463e3ef1e2ff9b29bd276f67bcb2851dca8629efe3ed9fd6330effab3a06e3",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-B07",
+      "tapestry": 3,
+      "row": "bottom",
+      "position": 7,
+      "title": "Mark of the Beast",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 16,
+          "endChapter": 13,
+          "endVerse": 18
+        }
+      ],
+      "displayReference": "Revelation 13:16–18",
+      "passages": [
+        {
+          "reference": "Revelation 13:16–18",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 16,
+              "text": "He causes all, the small and the great, the rich and the poor, and the free and the slave, to be given marks on their right hands or on their foreheads;"
+            },
+            {
+              "chapter": 13,
+              "verse": 17,
+              "text": "and that no one would be able to buy or to sell unless he has that mark, which is the name of the beast or the number of his name."
+            },
+            {
+              "chapter": 13,
+              "verse": 18,
+              "text": "Here is wisdom. He who has understanding, let him calculate the number of the beast, for it is the number of a man. His number is six hundred sixty-six."
+            }
+          ]
+        }
+      ],
+      "alt": "Mark of the Beast, illustrating Revelation 13:16–18.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-B07.webp",
+        "reader": "releases/v1/web/1920/T3-B07.webp",
+        "original": "releases/v1/originals/T3-B07.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "5b82a4c6ffe138373f3c816c7479f101d91e5a5c06bb6b06cbe4aac5877acc8e",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-00",
+      "tapestry": 4,
+      "row": "lead",
+      "position": 0,
+      "title": "Saint John reading the Apocalypse (Fourth Vision)",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 11,
+          "endChapter": 13,
+          "endVerse": 18
+        }
+      ],
+      "displayReference": "Revelation 13:11–18",
+      "passages": [
+        {
+          "reference": "Revelation 13:11–18",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 11,
+              "text": "I saw another beast coming up out of the earth. He had two horns like a lamb and it spoke like a dragon."
+            },
+            {
+              "chapter": 13,
+              "verse": 12,
+              "text": "He exercises all the authority of the first beast in his presence. He makes the earth and those who dwell in it to worship the first beast, whose fatal wound was healed."
+            },
+            {
+              "chapter": 13,
+              "verse": 13,
+              "text": "He performs great signs, even making fire come down out of the sky to the earth in the sight of people."
+            },
+            {
+              "chapter": 13,
+              "verse": 14,
+              "text": "He deceives my own people who dwell on the earth because of the signs he was granted to do in front of the beast, saying to those who dwell on the earth that they should make an image to the beast who had the sword wound and lived."
+            },
+            {
+              "chapter": 13,
+              "verse": 15,
+              "text": "It was given to him to give breath to the image of the beast, that the image of the beast should both speak, and cause as many as wouldn’t worship the image of the beast to be killed."
+            },
+            {
+              "chapter": 13,
+              "verse": 16,
+              "text": "He causes all, the small and the great, the rich and the poor, and the free and the slave, to be given marks on their right hands or on their foreheads;"
+            },
+            {
+              "chapter": 13,
+              "verse": 17,
+              "text": "and that no one would be able to buy or to sell unless he has that mark, which is the name of the beast or the number of his name."
+            },
+            {
+              "chapter": 13,
+              "verse": 18,
+              "text": "Here is wisdom. He who has understanding, let him calculate the number of the beast, for it is the number of a man. His number is six hundred sixty-six."
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John reading the Apocalypse (Fourth Vision), illustrating Revelation 13:11–18.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-00.webp",
+        "reader": "releases/v1/web/1920/T4-00.webp",
+        "original": "releases/v1/originals/T4-00.png"
+      },
+      "width": 1024,
+      "height": 1536,
+      "checksum": "8d55fdbf09cfd501a834d039327e45ef48a65ad569abe728ab0ff5bb5ffc650e",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-T01",
+      "tapestry": 4,
+      "row": "top",
+      "position": 1,
+      "title": "Adoration of the beast",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 3,
+          "endChapter": 13,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 13:3–4",
+      "passages": [
+        {
+          "reference": "Revelation 13:3–4",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 3,
+              "text": "One of his heads looked like it had been wounded fatally. His fatal wound was healed, and the whole earth marveled at the beast."
+            },
+            {
+              "chapter": 13,
+              "verse": 4,
+              "text": "They worshiped the dragon because he gave his authority to the beast; and they worshiped the beast, saying, “Who is like the beast? Who is able to make war with him?”"
+            }
+          ]
+        }
+      ],
+      "alt": "Adoration of the beast, illustrating Revelation 13:3–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-T01.webp",
+        "reader": "releases/v1/web/1920/T4-T01.webp",
+        "original": "releases/v1/originals/T4-T01.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "e6bc81ecf61e92b87606918ca8d3d3652930f487a1dd05bf224f6350348e4624",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-T02",
+      "tapestry": 4,
+      "row": "top",
+      "position": 2,
+      "title": "Beast from the Earth makes Fire",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 11,
+          "endChapter": 13,
+          "endVerse": 13
+        }
+      ],
+      "displayReference": "Revelation 13:11–13",
+      "passages": [
+        {
+          "reference": "Revelation 13:11–13",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 11,
+              "text": "I saw another beast coming up out of the earth. He had two horns like a lamb and it spoke like a dragon."
+            },
+            {
+              "chapter": 13,
+              "verse": 12,
+              "text": "He exercises all the authority of the first beast in his presence. He makes the earth and those who dwell in it to worship the first beast, whose fatal wound was healed."
+            },
+            {
+              "chapter": 13,
+              "verse": 13,
+              "text": "He performs great signs, even making fire come down out of the sky to the earth in the sight of people."
+            }
+          ]
+        }
+      ],
+      "alt": "Beast from the Earth makes Fire, illustrating Revelation 13:11–13.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-T02.webp",
+        "reader": "releases/v1/web/1920/T4-T02.webp",
+        "original": "releases/v1/originals/T4-T02.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "12f48227fcef8fda9894371eeb08d363d5c14fc7d14cdcadb356a35af543c9a2",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-T03",
+      "tapestry": 4,
+      "row": "top",
+      "position": 3,
+      "title": "Adoration of the image of the beast",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 14,
+          "endChapter": 13,
+          "endVerse": 15
+        }
+      ],
+      "displayReference": "Revelation 13:14–15",
+      "passages": [
+        {
+          "reference": "Revelation 13:14–15",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 14,
+              "text": "He deceives my own people who dwell on the earth because of the signs he was granted to do in front of the beast, saying to those who dwell on the earth that they should make an image to the beast who had the sword wound and lived."
+            },
+            {
+              "chapter": 13,
+              "verse": 15,
+              "text": "It was given to him to give breath to the image of the beast, that the image of the beast should both speak, and cause as many as wouldn’t worship the image of the beast to be killed."
+            }
+          ]
+        }
+      ],
+      "alt": "Adoration of the image of the beast, illustrating Revelation 13:14–15.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-T03.webp",
+        "reader": "releases/v1/web/1920/T4-T03.webp",
+        "original": "releases/v1/originals/T4-T03.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "2a9697055fe65013d2ac48ea9762152be0697c86eb20a044c982bf2213e174f9",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-T04",
+      "tapestry": 4,
+      "row": "top",
+      "position": 4,
+      "title": "Number of the beast",
+      "scriptureSpans": [
+        {
+          "startChapter": 13,
+          "startVerse": 16,
+          "endChapter": 13,
+          "endVerse": 18
+        }
+      ],
+      "displayReference": "Revelation 13:16–18",
+      "passages": [
+        {
+          "reference": "Revelation 13:16–18",
+          "verses": [
+            {
+              "chapter": 13,
+              "verse": 16,
+              "text": "He causes all, the small and the great, the rich and the poor, and the free and the slave, to be given marks on their right hands or on their foreheads;"
+            },
+            {
+              "chapter": 13,
+              "verse": 17,
+              "text": "and that no one would be able to buy or to sell unless he has that mark, which is the name of the beast or the number of his name."
+            },
+            {
+              "chapter": 13,
+              "verse": 18,
+              "text": "Here is wisdom. He who has understanding, let him calculate the number of the beast, for it is the number of a man. His number is six hundred sixty-six."
+            }
+          ]
+        }
+      ],
+      "alt": "Number of the beast, illustrating Revelation 13:16–18.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-T04.webp",
+        "reader": "releases/v1/web/1920/T4-T04.webp",
+        "original": "releases/v1/originals/T4-T04.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "cc3f6721057cb6cce290960804514075fcd1e3940c1f1eb64a44a02be310152b",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-T05",
+      "tapestry": 4,
+      "row": "top",
+      "position": 5,
+      "title": "Adoration of the Lamb on Mount Sion",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 1,
+          "endChapter": 14,
+          "endVerse": 1
+        }
+      ],
+      "displayReference": "Revelation 14:1",
+      "passages": [
+        {
+          "reference": "Revelation 14:1",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 1,
+              "text": "I saw, and behold, the Lamb standing on Mount Zion, and with him a number, one hundred forty-four thousand, having his name and the name of his Father written on their foreheads."
+            }
+          ]
+        }
+      ],
+      "alt": "Adoration of the Lamb on Mount Sion, illustrating Revelation 14:1.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-T05.webp",
+        "reader": "releases/v1/web/1920/T4-T05.webp",
+        "original": "releases/v1/originals/T4-T05.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "7dbab282353464d18068dc74c59108a20c1ce07e254e449df4af5fbed550463a",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-T06",
+      "tapestry": 4,
+      "row": "top",
+      "position": 6,
+      "title": "New Song",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 2,
+          "endChapter": 14,
+          "endVerse": 3
+        }
+      ],
+      "displayReference": "Revelation 14:2–3",
+      "passages": [
+        {
+          "reference": "Revelation 14:2–3",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 2,
+              "text": "I heard a sound from heaven like the sound of many waters and like the sound of a great thunder. The sound which I heard was like that of harpists playing on their harps."
+            },
+            {
+              "chapter": 14,
+              "verse": 3,
+              "text": "They sing a new song before the throne and before the four living creatures and the elders. No one could learn the song except the one hundred forty-four thousand, those who had been redeemed out of the earth."
+            }
+          ]
+        }
+      ],
+      "alt": "New Song, illustrating Revelation 14:2–3.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-T06.webp",
+        "reader": "releases/v1/web/1920/T4-T06.webp",
+        "original": "releases/v1/originals/T4-T06.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "acc4f4f2c49f19e07598df6ff04a0899cbf5d8958fdb3434ff9942280d0b81da",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-T07",
+      "tapestry": 4,
+      "row": "top",
+      "position": 7,
+      "title": "Angel with the Eternal Gospel",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 6,
+          "endChapter": 14,
+          "endVerse": 7
+        }
+      ],
+      "displayReference": "Revelation 14:6–7",
+      "passages": [
+        {
+          "reference": "Revelation 14:6–7",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 6,
+              "text": "I saw an angel flying in mid heaven, having an eternal Good News to proclaim to those who dwell on the earth—to every nation, tribe, language, and people."
+            },
+            {
+              "chapter": 14,
+              "verse": 7,
+              "text": "He said with a loud voice, “Fear the Lord, and give him glory, for the hour of his judgment has come. Worship him who made the heaven, the earth, the sea, and the springs of waters!”"
+            }
+          ]
+        }
+      ],
+      "alt": "Angel with the Eternal Gospel, illustrating Revelation 14:6–7.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-T07.webp",
+        "reader": "releases/v1/web/1920/T4-T07.webp",
+        "original": "releases/v1/originals/T4-T07.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "9b4eb63c6384c8ba02e77684230c484425536fab65d4c134271bd2fc8f5c4729",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-B01",
+      "tapestry": 4,
+      "row": "bottom",
+      "position": 1,
+      "title": "Second angel predicts the fall of Babylon",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 8,
+          "endChapter": 14,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 14:8",
+      "passages": [
+        {
+          "reference": "Revelation 14:8",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 8,
+              "text": "Another, a second angel, followed, saying, “Babylon the great has fallen, which has made all the nations to drink of the wine of the wrath of her sexual immorality.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Second angel predicts the fall of Babylon, illustrating Revelation 14:8.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-B01.webp",
+        "reader": "releases/v1/web/1920/T4-B01.webp",
+        "original": "releases/v1/originals/T4-B01.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "b0b33a9592a5a5b381b0334ef66e40caef93df0c48122d5bc9bf138ec7ac78c6",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-B02",
+      "tapestry": 4,
+      "row": "bottom",
+      "position": 2,
+      "title": "Third angel and the Lamb",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 9,
+          "endChapter": 14,
+          "endVerse": 12
+        }
+      ],
+      "displayReference": "Revelation 14:9–12",
+      "passages": [
+        {
+          "reference": "Revelation 14:9–12",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 9,
+              "text": "Another angel, a third, followed them, saying with a great voice, “If anyone worships the beast and his image, and receives a mark on his forehead or on his hand,"
+            },
+            {
+              "chapter": 14,
+              "verse": 10,
+              "text": "he also will drink of the wine of the wrath of God, which is prepared unmixed in the cup of his anger. He will be tormented with fire and sulfur in the presence of the holy angels and in the presence of the Lamb."
+            },
+            {
+              "chapter": 14,
+              "verse": 11,
+              "text": "The smoke of their torment goes up forever and ever. They have no rest day and night, those who worship the beast and his image, and whoever receives the mark of his name."
+            },
+            {
+              "chapter": 14,
+              "verse": 12,
+              "text": "Here is the perseverance of the saints, those who keep the commandments of God and the faith of Jesus.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Third angel and the Lamb, illustrating Revelation 14:9–12.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-B02.webp",
+        "reader": "releases/v1/web/1920/T4-B02.webp",
+        "original": "releases/v1/originals/T4-B02.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "3f8933c1def8c63d11be2d5efc8ecb778ba75f6fe2edb5a817102cfdf219da9d",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-B03",
+      "tapestry": 4,
+      "row": "bottom",
+      "position": 3,
+      "title": "The dream of the justes",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 13,
+          "endChapter": 14,
+          "endVerse": 13
+        }
+      ],
+      "displayReference": "Revelation 14:13",
+      "passages": [
+        {
+          "reference": "Revelation 14:13",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 13,
+              "text": "I heard a voice from heaven saying, “Write, ‘Blessed are the dead who die in the Lord from now on.’” “Yes,” says the Spirit, “that they may rest from their labors, for their works follow with them.”"
+            }
+          ]
+        }
+      ],
+      "alt": "The dream of the justes, illustrating Revelation 14:13.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-B03.webp",
+        "reader": "releases/v1/web/1920/T4-B03.webp",
+        "original": "releases/v1/originals/T4-B03.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "32b66f2cced3a63d7f718a67e2948d32fae4e9234ab6074b0ca17586f67906ee",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-B04",
+      "tapestry": 4,
+      "row": "bottom",
+      "position": 4,
+      "title": "Last Harvest",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 14,
+          "endChapter": 14,
+          "endVerse": 16
+        }
+      ],
+      "displayReference": "Revelation 14:14–16",
+      "passages": [
+        {
+          "reference": "Revelation 14:14–16",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 14,
+              "text": "I looked, and saw a white cloud, and on the cloud one sitting like a son of man, having on his head a golden crown, and in his hand a sharp sickle."
+            },
+            {
+              "chapter": 14,
+              "verse": 15,
+              "text": "Another angel came out of the temple, crying with a loud voice to him who sat on the cloud, “Send your sickle and reap, for the hour to reap has come; for the harvest of the earth is ripe!”"
+            },
+            {
+              "chapter": 14,
+              "verse": 16,
+              "text": "He who sat on the cloud thrust his sickle on the earth, and the earth was reaped."
+            }
+          ]
+        }
+      ],
+      "alt": "Last Harvest, illustrating Revelation 14:14–16.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-B04.webp",
+        "reader": "releases/v1/web/1920/T4-B04.webp",
+        "original": "releases/v1/originals/T4-B04.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "265333e626ef4cfa932c697ecb8db310bf0dc4c3c37e305c9de29f2e431451ac",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-B05",
+      "tapestry": 4,
+      "row": "bottom",
+      "position": 5,
+      "title": "Angel gathers the vine",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 17,
+          "endChapter": 14,
+          "endVerse": 17
+        }
+      ],
+      "displayReference": "Revelation 14:17",
+      "passages": [
+        {
+          "reference": "Revelation 14:17",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 17,
+              "text": "Another angel came out of the temple which is in heaven. He also had a sharp sickle."
+            }
+          ]
+        }
+      ],
+      "alt": "Angel gathers the vine, illustrating Revelation 14:17.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-B05.webp",
+        "reader": "releases/v1/web/1920/T4-B05.webp",
+        "original": "releases/v1/originals/T4-B05.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "9430c5ca548c9486f1c5c79d8b6106091d16e606f06943e00b8c989d487d3126",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-B06",
+      "tapestry": 4,
+      "row": "bottom",
+      "position": 6,
+      "title": "The Harvest of Grapes",
+      "scriptureSpans": [
+        {
+          "startChapter": 14,
+          "startVerse": 18,
+          "endChapter": 14,
+          "endVerse": 20
+        }
+      ],
+      "displayReference": "Revelation 14:18–20",
+      "passages": [
+        {
+          "reference": "Revelation 14:18–20",
+          "verses": [
+            {
+              "chapter": 14,
+              "verse": 18,
+              "text": "Another angel came out from the altar, he who has power over fire, and he called with a great voice to him who had the sharp sickle, saying, “Send your sharp sickle and gather the clusters of the vine of the earth, for the earth’s grapes are fully ripe!”"
+            },
+            {
+              "chapter": 14,
+              "verse": 19,
+              "text": "The angel thrust his sickle into the earth, and gathered the vintage of the earth and threw it into the great wine press of the wrath of God."
+            },
+            {
+              "chapter": 14,
+              "verse": 20,
+              "text": "The wine press was trodden outside of the city, and blood came out of the wine press, up to the bridles of the horses, as far as one thousand six hundred stadia."
+            }
+          ]
+        }
+      ],
+      "alt": "The Harvest of Grapes, illustrating Revelation 14:18–20.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-B06.webp",
+        "reader": "releases/v1/web/1920/T4-B06.webp",
+        "original": "releases/v1/originals/T4-B06.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "a17ad183ba2ce49c4487dd365b1104f65998651736c88039d8c88f68ea5a6413",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T4-B07",
+      "tapestry": 4,
+      "row": "bottom",
+      "position": 7,
+      "title": "Seven vials",
+      "scriptureSpans": [
+        {
+          "startChapter": 15,
+          "startVerse": 1,
+          "endChapter": 15,
+          "endVerse": 1
+        },
+        {
+          "startChapter": 15,
+          "startVerse": 7,
+          "endChapter": 15,
+          "endVerse": 7
+        }
+      ],
+      "displayReference": "Revelation 15:1; Revelation 15:7",
+      "passages": [
+        {
+          "reference": "Revelation 15:1",
+          "verses": [
+            {
+              "chapter": 15,
+              "verse": 1,
+              "text": "I saw another great and marvelous sign in the sky: seven angels having the seven last plagues, for in them God’s wrath is finished."
+            }
+          ]
+        },
+        {
+          "reference": "Revelation 15:7",
+          "verses": [
+            {
+              "chapter": 15,
+              "verse": 7,
+              "text": "One of the four living creatures gave to the seven angels seven golden bowls full of the wrath of God, who lives forever and ever."
+            }
+          ]
+        }
+      ],
+      "alt": "Seven vials, illustrating Revelation 15:1; Revelation 15:7.",
+      "images": {
+        "preview": "releases/v1/web/640/T4-B07.webp",
+        "reader": "releases/v1/web/1920/T4-B07.webp",
+        "original": "releases/v1/originals/T4-B07.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "0b201587a10495173cc2e5e913e63b9973c5861bba76fa95a0180d7c62886731",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-00",
+      "tapestry": 5,
+      "row": "lead",
+      "position": 0,
+      "title": "Saint John reading the Apocalypse (Fifth Vision)",
+      "scriptureSpans": [
+        {
+          "startChapter": 15,
+          "startVerse": 1,
+          "endChapter": 15,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 15:1–4",
+      "passages": [
+        {
+          "reference": "Revelation 15:1–4",
+          "verses": [
+            {
+              "chapter": 15,
+              "verse": 1,
+              "text": "I saw another great and marvelous sign in the sky: seven angels having the seven last plagues, for in them God’s wrath is finished."
+            },
+            {
+              "chapter": 15,
+              "verse": 2,
+              "text": "I saw something like a sea of glass mixed with fire, and those who overcame the beast, his image, and the number of his name, standing on the sea of glass, having harps of God."
+            },
+            {
+              "chapter": 15,
+              "verse": 3,
+              "text": "They sang the song of Moses, the servant of God, and the song of the Lamb, saying, “Great and marvelous are your works, Lord God, the Almighty! Righteous and true are your ways, you King of the nations."
+            },
+            {
+              "chapter": 15,
+              "verse": 4,
+              "text": "Who wouldn’t fear you, Lord, and glorify your name? For you only are holy. For all the nations will come and worship before you. For your righteous acts have been revealed.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John reading the Apocalypse (Fifth Vision), illustrating Revelation 15:1–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-00.webp",
+        "reader": "releases/v1/web/1920/T5-00.webp",
+        "original": "releases/v1/originals/T5-00.png"
+      },
+      "width": 1024,
+      "height": 1536,
+      "checksum": "bdfb30704db11186b9a7605c2884c09d46cd6402035823414636300ba96cf306",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-T01",
+      "tapestry": 5,
+      "row": "top",
+      "position": 1,
+      "title": "Angels receiving the vials",
+      "scriptureSpans": [
+        {
+          "startChapter": 15,
+          "startVerse": 7,
+          "endChapter": 15,
+          "endVerse": 7
+        }
+      ],
+      "displayReference": "Revelation 15:7",
+      "passages": [
+        {
+          "reference": "Revelation 15:7",
+          "verses": [
+            {
+              "chapter": 15,
+              "verse": 7,
+              "text": "One of the four living creatures gave to the seven angels seven golden bowls full of the wrath of God, who lives forever and ever."
+            }
+          ]
+        }
+      ],
+      "alt": "Angels receiving the vials, illustrating Revelation 15:7.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-T01.webp",
+        "reader": "releases/v1/web/1920/T5-T01.webp",
+        "original": "releases/v1/originals/T5-T01.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "f765567f4282af148b278b1c278bfb3528e01118a1b776c657f0619e52730ff1",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-T02",
+      "tapestry": 5,
+      "row": "top",
+      "position": 2,
+      "title": "First vial on earth",
+      "scriptureSpans": [
+        {
+          "startChapter": 16,
+          "startVerse": 2,
+          "endChapter": 16,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 16:2",
+      "passages": [
+        {
+          "reference": "Revelation 16:2",
+          "verses": [
+            {
+              "chapter": 16,
+              "verse": 2,
+              "text": "The first went, and poured out his bowl into the earth, and it became a harmful and painful sore on the people who had the mark of the beast, and who worshiped his image."
+            }
+          ]
+        }
+      ],
+      "alt": "First vial on earth, illustrating Revelation 16:2.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-T02.webp",
+        "reader": "releases/v1/web/1920/T5-T02.webp",
+        "original": "releases/v1/originals/T5-T02.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "d15ab49099ca0216b07a466cf9e406a7bd4aac7523e5f570c3b5f8169630576e",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-T03",
+      "tapestry": 5,
+      "row": "top",
+      "position": 3,
+      "title": "Second vial on the sea",
+      "scriptureSpans": [
+        {
+          "startChapter": 16,
+          "startVerse": 3,
+          "endChapter": 16,
+          "endVerse": 3
+        }
+      ],
+      "displayReference": "Revelation 16:3",
+      "passages": [
+        {
+          "reference": "Revelation 16:3",
+          "verses": [
+            {
+              "chapter": 16,
+              "verse": 3,
+              "text": "The second angel poured out his bowl into the sea, and it became blood as of a dead man. Every living thing in the sea died."
+            }
+          ]
+        }
+      ],
+      "alt": "Second vial on the sea, illustrating Revelation 16:3.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-T03.webp",
+        "reader": "releases/v1/web/1920/T5-T03.webp",
+        "original": "releases/v1/originals/T5-T03.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "01d6701dbbd0aa2bf48158b491a1a36e8db53a399acc5c26d6b8ea07e305bf01",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-T04",
+      "tapestry": 5,
+      "row": "top",
+      "position": 4,
+      "title": "Fourth vial on the sun",
+      "scriptureSpans": [
+        {
+          "startChapter": 16,
+          "startVerse": 8,
+          "endChapter": 16,
+          "endVerse": 9
+        }
+      ],
+      "displayReference": "Revelation 16:8–9",
+      "passages": [
+        {
+          "reference": "Revelation 16:8–9",
+          "verses": [
+            {
+              "chapter": 16,
+              "verse": 8,
+              "text": "The fourth poured out his bowl on the sun, and it was given to him to scorch men with fire."
+            },
+            {
+              "chapter": 16,
+              "verse": 9,
+              "text": "People were scorched with great heat, and people blasphemed the name of God who has the power over these plagues. They didn’t repent and give him glory."
+            }
+          ]
+        }
+      ],
+      "alt": "Fourth vial on the sun, illustrating Revelation 16:8–9.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-T04.webp",
+        "reader": "releases/v1/web/1920/T5-T04.webp",
+        "original": "releases/v1/originals/T5-T04.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "0f9781777ec15c743396cda5278159753349cc9571966abcb399f51c99a5d1d1",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-T05",
+      "tapestry": 5,
+      "row": "top",
+      "position": 5,
+      "title": "Fifth and Sixth vials",
+      "scriptureSpans": [
+        {
+          "startChapter": 16,
+          "startVerse": 10,
+          "endChapter": 16,
+          "endVerse": 12
+        }
+      ],
+      "displayReference": "Revelation 16:10–12",
+      "passages": [
+        {
+          "reference": "Revelation 16:10–12",
+          "verses": [
+            {
+              "chapter": 16,
+              "verse": 10,
+              "text": "The fifth poured out his bowl on the throne of the beast, and his kingdom was darkened. They gnawed their tongues because of the pain,"
+            },
+            {
+              "chapter": 16,
+              "verse": 11,
+              "text": "and they blasphemed the God of heaven because of their pains and their sores. They still didn’t repent of their works."
+            },
+            {
+              "chapter": 16,
+              "verse": 12,
+              "text": "The sixth poured out his bowl on the great river, the Euphrates. Its water was dried up, that the way might be prepared for the kings that come from the sunrise."
+            }
+          ]
+        }
+      ],
+      "alt": "Fifth and Sixth vials, illustrating Revelation 16:10–12.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-T05.webp",
+        "reader": "releases/v1/web/1920/T5-T05.webp",
+        "original": "releases/v1/originals/T5-T05.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "6a869ab566195b57861dbe21039adfb2f037b619571e7d2caab9b3527d98f1f5",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-T06",
+      "tapestry": 5,
+      "row": "top",
+      "position": 6,
+      "title": "Unclean spirits",
+      "scriptureSpans": [
+        {
+          "startChapter": 16,
+          "startVerse": 13,
+          "endChapter": 16,
+          "endVerse": 14
+        }
+      ],
+      "displayReference": "Revelation 16:13–14",
+      "passages": [
+        {
+          "reference": "Revelation 16:13–14",
+          "verses": [
+            {
+              "chapter": 16,
+              "verse": 13,
+              "text": "I saw coming out of the mouth of the dragon, and out of the mouth of the beast, and out of the mouth of the false prophet, three unclean spirits, something like frogs;"
+            },
+            {
+              "chapter": 16,
+              "verse": 14,
+              "text": "for they are spirits of demons, performing signs, which go out to the kings of the whole inhabited earth, to gather them together for the war of that great day of God the Almighty."
+            }
+          ]
+        }
+      ],
+      "alt": "Unclean spirits, illustrating Revelation 16:13–14.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-T06.webp",
+        "reader": "releases/v1/web/1920/T5-T06.webp",
+        "original": "releases/v1/originals/T5-T06.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "1a8bde5d509f317acf3a82c9c6f9b1c9066c4f206817759c71830d4e28e73f23",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-T07",
+      "tapestry": 5,
+      "row": "top",
+      "position": 7,
+      "title": "Seven vial on the air",
+      "scriptureSpans": [
+        {
+          "startChapter": 16,
+          "startVerse": 17,
+          "endChapter": 16,
+          "endVerse": 21
+        }
+      ],
+      "displayReference": "Revelation 16:17–21",
+      "passages": [
+        {
+          "reference": "Revelation 16:17–21",
+          "verses": [
+            {
+              "chapter": 16,
+              "verse": 17,
+              "text": "The seventh poured out his bowl into the air. A loud voice came out of the temple of heaven, from the throne, saying, “It is done!”"
+            },
+            {
+              "chapter": 16,
+              "verse": 18,
+              "text": "There were lightnings, sounds, and thunders; and there was a great earthquake such as has not happened since there were men on the earth—so great an earthquake and so mighty."
+            },
+            {
+              "chapter": 16,
+              "verse": 19,
+              "text": "The great city was divided into three parts, and the cities of the nations fell. Babylon the great was remembered in the sight of God, to give to her the cup of the wine of the fierceness of his wrath."
+            },
+            {
+              "chapter": 16,
+              "verse": 20,
+              "text": "Every island fled away, and the mountains were not found."
+            },
+            {
+              "chapter": 16,
+              "verse": 21,
+              "text": "Great hailstones, about the weight of a talent, came down out of the sky on people. People blasphemed God because of the plague of the hail, for this plague was exceedingly severe."
+            }
+          ]
+        }
+      ],
+      "alt": "Seven vial on the air, illustrating Revelation 16:17–21.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-T07.webp",
+        "reader": "releases/v1/web/1920/T5-T07.webp",
+        "original": "releases/v1/originals/T5-T07.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "64345d744822c780dfedd6f858b169969342c11bc41e8485d295101933934a15",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-B01",
+      "tapestry": 5,
+      "row": "bottom",
+      "position": 1,
+      "title": "Whore of Babylon seated on the waters",
+      "scriptureSpans": [
+        {
+          "startChapter": 17,
+          "startVerse": 1,
+          "endChapter": 17,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 17:1–2",
+      "passages": [
+        {
+          "reference": "Revelation 17:1–2",
+          "verses": [
+            {
+              "chapter": 17,
+              "verse": 1,
+              "text": "One of the seven angels who had the seven bowls came and spoke with me, saying, “Come here. I will show you the judgment of the great prostitute who sits on many waters,"
+            },
+            {
+              "chapter": 17,
+              "verse": 2,
+              "text": "with whom the kings of the earth committed sexual immorality. Those who dwell on the earth were made drunken with the wine of her sexual immorality.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Whore of Babylon seated on the waters, illustrating Revelation 17:1–2.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-B01.webp",
+        "reader": "releases/v1/web/1920/T5-B01.webp",
+        "original": "releases/v1/originals/T5-B01.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "ed1c477c688d9d50c6bbf918ec5c56f6ff1b6b91cfc4627c4dd171f63b914847",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-B02",
+      "tapestry": 5,
+      "row": "bottom",
+      "position": 2,
+      "title": "Whore of Babylon seated on the beast",
+      "scriptureSpans": [
+        {
+          "startChapter": 17,
+          "startVerse": 3,
+          "endChapter": 17,
+          "endVerse": 6
+        }
+      ],
+      "displayReference": "Revelation 17:3–6",
+      "passages": [
+        {
+          "reference": "Revelation 17:3–6",
+          "verses": [
+            {
+              "chapter": 17,
+              "verse": 3,
+              "text": "He carried me away in the Spirit into a wilderness. I saw a woman sitting on a scarlet-colored beast, full of blasphemous names, having seven heads and ten horns."
+            },
+            {
+              "chapter": 17,
+              "verse": 4,
+              "text": "The woman was dressed in purple and scarlet, and decked with gold and precious stones and pearls, having in her hand a golden cup full of abominations and the impurities of the sexual immorality of the earth."
+            },
+            {
+              "chapter": 17,
+              "verse": 5,
+              "text": "And on her forehead a name was written, “MYSTERY, BABYLON THE GREAT, THE MOTHER OF THE PROSTITUTES AND OF THE ABOMINATIONS OF THE EARTH.”"
+            },
+            {
+              "chapter": 17,
+              "verse": 6,
+              "text": "I saw the woman drunken with the blood of the saints and with the blood of the martyrs of Jesus. When I saw her, I wondered with great amazement."
+            }
+          ]
+        }
+      ],
+      "alt": "Whore of Babylon seated on the beast, illustrating Revelation 17:3–6.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-B02.webp",
+        "reader": "releases/v1/web/1920/T5-B02.webp",
+        "original": "releases/v1/originals/T5-B02.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "7c253e65b16c866b80decf2bfc48c5d650b11df1e7003fe56ffe2c297dc4f480",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-B03",
+      "tapestry": 5,
+      "row": "bottom",
+      "position": 3,
+      "title": "Fall of Babylon",
+      "scriptureSpans": [
+        {
+          "startChapter": 18,
+          "startVerse": 1,
+          "endChapter": 18,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 18:1–8",
+      "passages": [
+        {
+          "reference": "Revelation 18:1–8",
+          "verses": [
+            {
+              "chapter": 18,
+              "verse": 1,
+              "text": "After these things, I saw another angel coming down out of the sky, having great authority. The earth was illuminated with his glory."
+            },
+            {
+              "chapter": 18,
+              "verse": 2,
+              "text": "He cried with a mighty voice, saying, “Fallen, fallen is Babylon the great, and she has become a habitation of demons, a prison of every unclean spirit, and a prison of every unclean and hated bird!"
+            },
+            {
+              "chapter": 18,
+              "verse": 3,
+              "text": "For all the nations have drunk of the wine of the wrath of her sexual immorality, the kings of the earth committed sexual immorality with her, and the merchants of the earth grew rich from the abundance of her luxury.”"
+            },
+            {
+              "chapter": 18,
+              "verse": 4,
+              "text": "I heard another voice from heaven, saying, “Come out of her, my people, that you have no participation in her sins, and that you don’t receive of her plagues,"
+            },
+            {
+              "chapter": 18,
+              "verse": 5,
+              "text": "for her sins have reached to the sky, and God has remembered her iniquities."
+            },
+            {
+              "chapter": 18,
+              "verse": 6,
+              "text": "Return to her just as she returned, and repay her double as she did, and according to her works. In the cup which she mixed, mix to her double."
+            },
+            {
+              "chapter": 18,
+              "verse": 7,
+              "text": "However much she glorified herself and grew wanton, so much give her of torment and mourning. For she says in her heart, ‘I sit a queen, and am no widow, and will in no way see mourning.’"
+            },
+            {
+              "chapter": 18,
+              "verse": 8,
+              "text": "Therefore in one day her plagues will come: death, mourning, and famine; and she will be utterly burned with fire, for the Lord God who has judged her is strong."
+            }
+          ]
+        }
+      ],
+      "alt": "Fall of Babylon, illustrating Revelation 18:1–8.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-B03.webp",
+        "reader": "releases/v1/web/1920/T5-B03.webp",
+        "original": "releases/v1/originals/T5-B03.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "a85726e549e6165eff2ed5b39fdf6d7a89558d583437b9950178021e321fb262",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-B04",
+      "tapestry": 5,
+      "row": "bottom",
+      "position": 4,
+      "title": "Angel casting a millstone",
+      "scriptureSpans": [
+        {
+          "startChapter": 18,
+          "startVerse": 21,
+          "endChapter": 18,
+          "endVerse": 21
+        }
+      ],
+      "displayReference": "Revelation 18:21",
+      "passages": [
+        {
+          "reference": "Revelation 18:21",
+          "verses": [
+            {
+              "chapter": 18,
+              "verse": 21,
+              "text": "A mighty angel took up a stone like a great millstone and cast it into the sea, saying, “Thus with violence will Babylon, the great city, be thrown down, and will be found no more at all."
+            }
+          ]
+        }
+      ],
+      "alt": "Angel casting a millstone, illustrating Revelation 18:21.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-B04.webp",
+        "reader": "releases/v1/web/1920/T5-B04.webp",
+        "original": "releases/v1/originals/T5-B04.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "0ce300f801062fa1d725bb83c1c9a1615d719613c33c7fb9fd9727889f101946",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-B05",
+      "tapestry": 5,
+      "row": "bottom",
+      "position": 5,
+      "title": "Harlot is cast into the flames",
+      "scriptureSpans": [
+        {
+          "startChapter": 18,
+          "startVerse": 8,
+          "endChapter": 18,
+          "endVerse": 10
+        },
+        {
+          "startChapter": 19,
+          "startVerse": 1,
+          "endChapter": 19,
+          "endVerse": 3
+        }
+      ],
+      "displayReference": "Revelation 18:8–10; Revelation 19:1–3",
+      "passages": [
+        {
+          "reference": "Revelation 18:8–10",
+          "verses": [
+            {
+              "chapter": 18,
+              "verse": 8,
+              "text": "Therefore in one day her plagues will come: death, mourning, and famine; and she will be utterly burned with fire, for the Lord God who has judged her is strong."
+            },
+            {
+              "chapter": 18,
+              "verse": 9,
+              "text": "The kings of the earth who committed sexual immorality and lived wantonly with her will weep and wail over her, when they look at the smoke of her burning,"
+            },
+            {
+              "chapter": 18,
+              "verse": 10,
+              "text": "standing far away for the fear of her torment, saying, ‘Woe, woe, the great city, Babylon, the strong city! For your judgment has come in one hour.’"
+            }
+          ]
+        },
+        {
+          "reference": "Revelation 19:1–3",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 1,
+              "text": "After these things I heard something like a loud voice of a great multitude in heaven, saying, “Hallelujah! Salvation, power, and glory belong to our God;"
+            },
+            {
+              "chapter": 19,
+              "verse": 2,
+              "text": "for his judgments are true and righteous. For he has judged the great prostitute who corrupted the earth with her sexual immorality, and he has avenged the blood of his servants at her hand.”"
+            },
+            {
+              "chapter": 19,
+              "verse": 3,
+              "text": "A second said, “Hallelujah! Her smoke goes up forever and ever.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Harlot is cast into the flames, illustrating Revelation 18:8–10; Revelation 19:1–3.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-B05.webp",
+        "reader": "releases/v1/web/1920/T5-B05.webp",
+        "original": "releases/v1/originals/T5-B05.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "8bce3286e831f25951b7f34af664371782a6a499bec236ce8ad11567944e6e9b",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-B06",
+      "tapestry": 5,
+      "row": "bottom",
+      "position": 6,
+      "title": "The marriage of the Lamb",
+      "scriptureSpans": [
+        {
+          "startChapter": 19,
+          "startVerse": 7,
+          "endChapter": 19,
+          "endVerse": 9
+        }
+      ],
+      "displayReference": "Revelation 19:7–9",
+      "passages": [
+        {
+          "reference": "Revelation 19:7–9",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 7,
+              "text": "Let’s rejoice and be exceedingly glad, and let’s give the glory to him. For the wedding of the Lamb has come, and his wife has made herself ready.”"
+            },
+            {
+              "chapter": 19,
+              "verse": 8,
+              "text": "It was given to her that she would array herself in bright, pure, fine linen, for the fine linen is the righteous acts of the saints."
+            },
+            {
+              "chapter": 19,
+              "verse": 9,
+              "text": "He said to me, “Write, ‘Blessed are those who are invited to the wedding supper of the Lamb.’” He said to me, “These are true words of God.”"
+            }
+          ]
+        }
+      ],
+      "alt": "The marriage of the Lamb, illustrating Revelation 19:7–9.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-B06.webp",
+        "reader": "releases/v1/web/1920/T5-B06.webp",
+        "original": "releases/v1/originals/T5-B06.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "9d30d42408e875b0bf09dfc5bcd46889d1fee18f0930b53196a84823eee6043c",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T5-B07",
+      "tapestry": 5,
+      "row": "bottom",
+      "position": 7,
+      "title": "Saint John and angel",
+      "scriptureSpans": [
+        {
+          "startChapter": 19,
+          "startVerse": 9,
+          "endChapter": 19,
+          "endVerse": 10
+        }
+      ],
+      "displayReference": "Revelation 19:9–10",
+      "passages": [
+        {
+          "reference": "Revelation 19:9–10",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 9,
+              "text": "He said to me, “Write, ‘Blessed are those who are invited to the wedding supper of the Lamb.’” He said to me, “These are true words of God.”"
+            },
+            {
+              "chapter": 19,
+              "verse": 10,
+              "text": "I fell down before his feet to worship him. He said to me, “Look! Don’t do it! I am a fellow bondservant with you and with your brothers who hold the testimony of Jesus. Worship God, for the testimony of Jesus is the Spirit of Prophecy.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John and angel, illustrating Revelation 19:9–10.",
+      "images": {
+        "preview": "releases/v1/web/640/T5-B07.webp",
+        "reader": "releases/v1/web/1920/T5-B07.webp",
+        "original": "releases/v1/originals/T5-B07.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "0e5e16e06dfde2fbbd5c3778dbcace7b5906ce31ba607218b89a650025d5dd4e",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-00",
+      "tapestry": 6,
+      "row": "lead",
+      "position": 0,
+      "title": "Saint John reading the Apocalypse (Sixth Vision)",
+      "scriptureSpans": [
+        {
+          "startChapter": 19,
+          "startVerse": 11,
+          "endChapter": 19,
+          "endVerse": 16
+        }
+      ],
+      "displayReference": "Revelation 19:11–16",
+      "passages": [
+        {
+          "reference": "Revelation 19:11–16",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 11,
+              "text": "I saw heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war."
+            },
+            {
+              "chapter": 19,
+              "verse": 12,
+              "text": "His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself."
+            },
+            {
+              "chapter": 19,
+              "verse": 13,
+              "text": "He is clothed in a garment sprinkled with blood. His name is called “The Word of God.”"
+            },
+            {
+              "chapter": 19,
+              "verse": 14,
+              "text": "The armies which are in heaven, clothed in white, pure, fine linen, followed him on white horses."
+            },
+            {
+              "chapter": 19,
+              "verse": 15,
+              "text": "Out of his mouth proceeds a sharp, double-edged sword that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty."
+            },
+            {
+              "chapter": 19,
+              "verse": 16,
+              "text": "He has on his garment and on his thigh a name written, “KING OF KINGS AND LORD OF LORDS.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John reading the Apocalypse (Sixth Vision), illustrating Revelation 19:11–16.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-00.webp",
+        "reader": "releases/v1/web/1920/T6-00.webp",
+        "original": "releases/v1/originals/T6-00.jpg"
+      },
+      "width": 1024,
+      "height": 1536,
+      "checksum": "16d3436a439218f9b3ea0c56cc4fb927bd65efb9ac3f7736cf19a9f59e36c3b9",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-T01",
+      "tapestry": 6,
+      "row": "top",
+      "position": 1,
+      "title": "Wrath of God",
+      "scriptureSpans": [
+        {
+          "startChapter": 19,
+          "startVerse": 11,
+          "endChapter": 19,
+          "endVerse": 16
+        }
+      ],
+      "displayReference": "Revelation 19:11–16",
+      "passages": [
+        {
+          "reference": "Revelation 19:11–16",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 11,
+              "text": "I saw heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war."
+            },
+            {
+              "chapter": 19,
+              "verse": 12,
+              "text": "His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself."
+            },
+            {
+              "chapter": 19,
+              "verse": 13,
+              "text": "He is clothed in a garment sprinkled with blood. His name is called “The Word of God.”"
+            },
+            {
+              "chapter": 19,
+              "verse": 14,
+              "text": "The armies which are in heaven, clothed in white, pure, fine linen, followed him on white horses."
+            },
+            {
+              "chapter": 19,
+              "verse": 15,
+              "text": "Out of his mouth proceeds a sharp, double-edged sword that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty."
+            },
+            {
+              "chapter": 19,
+              "verse": 16,
+              "text": "He has on his garment and on his thigh a name written, “KING OF KINGS AND LORD OF LORDS.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Wrath of God, illustrating Revelation 19:11–16.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-T01.webp",
+        "reader": "releases/v1/web/1920/T6-T01.webp",
+        "original": "releases/v1/originals/T6-T01.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "af315a609003c6268a2bb85cb1c3290f0b6108395471e7abc3b2cb8532883e3e",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-T02",
+      "tapestry": 6,
+      "row": "top",
+      "position": 2,
+      "title": "The birds eating the flesh",
+      "scriptureSpans": [
+        {
+          "startChapter": 19,
+          "startVerse": 17,
+          "endChapter": 19,
+          "endVerse": 18
+        }
+      ],
+      "displayReference": "Revelation 19:17–18",
+      "passages": [
+        {
+          "reference": "Revelation 19:17–18",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 17,
+              "text": "I saw an angel standing in the sun. He cried with a loud voice, saying to all the birds that fly in the sky, “Come! Be gathered together to the great supper of God,"
+            },
+            {
+              "chapter": 19,
+              "verse": 18,
+              "text": "that you may eat the flesh of kings, the flesh of captains, the flesh of mighty men, and the flesh of horses and of those who sit on them, and the flesh of all men, both free and slave, small and great.”"
+            }
+          ]
+        }
+      ],
+      "alt": "The birds eating the flesh, illustrating Revelation 19:17–18.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-T02.webp",
+        "reader": "releases/v1/web/1920/T6-T02.webp",
+        "original": "releases/v1/originals/T6-T02.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "848bcd7c45873a2adadf7f1b765945cff78fb3fb9994ea20d19f952843151257",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-T03",
+      "tapestry": 6,
+      "row": "top",
+      "position": 3,
+      "title": "Christ on the White Horse",
+      "scriptureSpans": [
+        {
+          "startChapter": 19,
+          "startVerse": 11,
+          "endChapter": 19,
+          "endVerse": 16
+        }
+      ],
+      "displayReference": "Revelation 19:11–16",
+      "passages": [
+        {
+          "reference": "Revelation 19:11–16",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 11,
+              "text": "I saw heaven opened, and behold, a white horse, and he who sat on it is called Faithful and True. In righteousness he judges and makes war."
+            },
+            {
+              "chapter": 19,
+              "verse": 12,
+              "text": "His eyes are a flame of fire, and on his head are many crowns. He has names written and a name written which no one knows but he himself."
+            },
+            {
+              "chapter": 19,
+              "verse": 13,
+              "text": "He is clothed in a garment sprinkled with blood. His name is called “The Word of God.”"
+            },
+            {
+              "chapter": 19,
+              "verse": 14,
+              "text": "The armies which are in heaven, clothed in white, pure, fine linen, followed him on white horses."
+            },
+            {
+              "chapter": 19,
+              "verse": 15,
+              "text": "Out of his mouth proceeds a sharp, double-edged sword that with it he should strike the nations. He will rule them with an iron rod. He treads the wine press of the fierceness of the wrath of God, the Almighty."
+            },
+            {
+              "chapter": 19,
+              "verse": 16,
+              "text": "He has on his garment and on his thigh a name written, “KING OF KINGS AND LORD OF LORDS.”"
+            }
+          ]
+        }
+      ],
+      "alt": "Christ on the White Horse, illustrating Revelation 19:11–16.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-T03.webp",
+        "reader": "releases/v1/web/1920/T6-T03.webp",
+        "original": "releases/v1/originals/T6-T03.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "408f54a76f07a80bf604008a50360758a48ebd41bd7d1c47272772aef5da18ba",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-T04",
+      "tapestry": 6,
+      "row": "top",
+      "position": 4,
+      "title": "The defeated cast into the pool of fire",
+      "scriptureSpans": [
+        {
+          "startChapter": 19,
+          "startVerse": 19,
+          "endChapter": 19,
+          "endVerse": 21
+        }
+      ],
+      "displayReference": "Revelation 19:19–21",
+      "passages": [
+        {
+          "reference": "Revelation 19:19–21",
+          "verses": [
+            {
+              "chapter": 19,
+              "verse": 19,
+              "text": "I saw the beast, the kings of the earth, and their armies, gathered together to make war against him who sat on the horse and against his army."
+            },
+            {
+              "chapter": 19,
+              "verse": 20,
+              "text": "The beast was taken, and with him the false prophet who worked the signs in his sight, with which he deceived those who had received the mark of the beast and those who worshiped his image. These two were thrown alive into the lake of fire that burns with sulfur."
+            },
+            {
+              "chapter": 19,
+              "verse": 21,
+              "text": "The rest were killed with the sword of him who sat on the horse, the sword which came out of his mouth. So all the birds were filled with their flesh."
+            }
+          ]
+        }
+      ],
+      "alt": "The defeated cast into the pool of fire, illustrating Revelation 19:19–21.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-T04.webp",
+        "reader": "releases/v1/web/1920/T6-T04.webp",
+        "original": "releases/v1/originals/T6-T04.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "b6aa10aa335c29ec6b20f00ffc1ee11f434a75be724525b57d1543a4aa26219b",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-T05",
+      "tapestry": 6,
+      "row": "top",
+      "position": 5,
+      "title": "The Dragon enchained",
+      "scriptureSpans": [
+        {
+          "startChapter": 20,
+          "startVerse": 1,
+          "endChapter": 20,
+          "endVerse": 3
+        }
+      ],
+      "displayReference": "Revelation 20:1–3",
+      "passages": [
+        {
+          "reference": "Revelation 20:1–3",
+          "verses": [
+            {
+              "chapter": 20,
+              "verse": 1,
+              "text": "I saw an angel coming down out of heaven, having the key of the abyss and a great chain in his hand."
+            },
+            {
+              "chapter": 20,
+              "verse": 2,
+              "text": "He seized the dragon, the old serpent, who is the devil and Satan, who deceives the whole inhabited earth, and bound him for a thousand years,"
+            },
+            {
+              "chapter": 20,
+              "verse": 3,
+              "text": "and cast him into the abyss, and shut it and sealed it over him, that he should deceive the nations no more until the thousand years were finished. After this, he must be freed for a short time."
+            }
+          ]
+        }
+      ],
+      "alt": "The Dragon enchained, illustrating Revelation 20:1–3.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-T05.webp",
+        "reader": "releases/v1/web/1920/T6-T05.webp",
+        "original": "releases/v1/originals/T6-T05.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "998e14ae3cdbd82c49f9fa4c49ca5c225af4eaef04fadbf335659f5a6120ed6f",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-T06",
+      "tapestry": 6,
+      "row": "top",
+      "position": 6,
+      "title": "Judges",
+      "scriptureSpans": [
+        {
+          "startChapter": 20,
+          "startVerse": 4,
+          "endChapter": 20,
+          "endVerse": 6
+        }
+      ],
+      "displayReference": "Revelation 20:4–6",
+      "passages": [
+        {
+          "reference": "Revelation 20:4–6",
+          "verses": [
+            {
+              "chapter": 20,
+              "verse": 4,
+              "text": "I saw thrones, and they sat on them, and judgment was given to them. I saw the souls of those who had been beheaded for the testimony of Jesus and for the word of God, and such as didn’t worship the beast nor his image, and didn’t receive the mark on their forehead and on their hand. They lived and reigned with Christ for a thousand years."
+            },
+            {
+              "chapter": 20,
+              "verse": 5,
+              "text": "The rest of the dead didn’t live until the thousand years were finished. This is the first resurrection."
+            },
+            {
+              "chapter": 20,
+              "verse": 6,
+              "text": "Blessed and holy is he who has part in the first resurrection. Over these, the second death has no power, but they will be priests of God and of Christ, and will reign with him one thousand years."
+            }
+          ]
+        }
+      ],
+      "alt": "Judges, illustrating Revelation 20:4–6.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-T06.webp",
+        "reader": "releases/v1/web/1920/T6-T06.webp",
+        "original": "releases/v1/originals/T6-T06.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "47a8e1ebf9530b1431a676bf6981e8d035839d2674941d920a5e4348d5fddf6f",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-T07",
+      "tapestry": 6,
+      "row": "top",
+      "position": 7,
+      "title": "Satan attacks the Holy City",
+      "scriptureSpans": [
+        {
+          "startChapter": 20,
+          "startVerse": 7,
+          "endChapter": 20,
+          "endVerse": 9
+        }
+      ],
+      "displayReference": "Revelation 20:7–9",
+      "passages": [
+        {
+          "reference": "Revelation 20:7–9",
+          "verses": [
+            {
+              "chapter": 20,
+              "verse": 7,
+              "text": "And after the thousand years, Satan will be released from his prison"
+            },
+            {
+              "chapter": 20,
+              "verse": 8,
+              "text": "and he will come out to deceive the nations which are in the four corners of the earth, Gog and Magog, to gather them together to the war, whose number is as the sand of the sea."
+            },
+            {
+              "chapter": 20,
+              "verse": 9,
+              "text": "They went up over the width of the earth and surrounded the camp of the saints and the beloved city. Fire came down out of heaven from God and devoured them."
+            }
+          ]
+        }
+      ],
+      "alt": "Satan attacks the Holy City, illustrating Revelation 20:7–9.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-T07.webp",
+        "reader": "releases/v1/web/1920/T6-T07.webp",
+        "original": "releases/v1/originals/T6-T07.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "c85e5c78e4c881d81872a16e19b3dff9cadaec8358ca97d9970e1163884e6160",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-B01",
+      "tapestry": 6,
+      "row": "bottom",
+      "position": 1,
+      "title": "Devil cast into the pool of fire",
+      "scriptureSpans": [
+        {
+          "startChapter": 20,
+          "startVerse": 10,
+          "endChapter": 20,
+          "endVerse": 10
+        }
+      ],
+      "displayReference": "Revelation 20:10",
+      "passages": [
+        {
+          "reference": "Revelation 20:10",
+          "verses": [
+            {
+              "chapter": 20,
+              "verse": 10,
+              "text": "The devil who deceived them was thrown into the lake of fire and sulfur, where the beast and the false prophet are also. They will be tormented day and night forever and ever."
+            }
+          ]
+        }
+      ],
+      "alt": "Devil cast into the pool of fire, illustrating Revelation 20:10.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-B01.webp",
+        "reader": "releases/v1/web/1920/T6-B01.webp",
+        "original": "releases/v1/originals/T6-B01.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "aabc0944958177fa67034d275af4ecb0596162ac8363f34a51f31730f9686716",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-B02",
+      "tapestry": 6,
+      "row": "bottom",
+      "position": 2,
+      "title": "Last Judgment",
+      "scriptureSpans": [
+        {
+          "startChapter": 20,
+          "startVerse": 11,
+          "endChapter": 20,
+          "endVerse": 15
+        }
+      ],
+      "displayReference": "Revelation 20:11–15",
+      "passages": [
+        {
+          "reference": "Revelation 20:11–15",
+          "verses": [
+            {
+              "chapter": 20,
+              "verse": 11,
+              "text": "I saw a great white throne and him who sat on it, from whose face the earth and the sky fled away. There was found no place for them."
+            },
+            {
+              "chapter": 20,
+              "verse": 12,
+              "text": "I saw the dead, the great and the small, standing before the throne, and they opened books. Another book was opened, which is the book of life. The dead were judged out of the things which were written in the books, according to their works."
+            },
+            {
+              "chapter": 20,
+              "verse": 13,
+              "text": "The sea gave up the dead who were in it. Death and Hades gave up the dead who were in them. They were judged, each one according to his works."
+            },
+            {
+              "chapter": 20,
+              "verse": 14,
+              "text": "Death and Hades were thrown into the lake of fire. This is the second death, the lake of fire."
+            },
+            {
+              "chapter": 20,
+              "verse": 15,
+              "text": "If anyone was not found written in the book of life, he was cast into the lake of fire."
+            }
+          ]
+        }
+      ],
+      "alt": "Last Judgment, illustrating Revelation 20:11–15.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-B02.webp",
+        "reader": "releases/v1/web/1920/T6-B02.webp",
+        "original": "releases/v1/originals/T6-B02.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "a54763457f4c6bf53494003160399c8bf3d9f5f91d3461291def1312c27d7bea",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-B03",
+      "tapestry": 6,
+      "row": "bottom",
+      "position": 3,
+      "title": "New Jerusalem",
+      "scriptureSpans": [
+        {
+          "startChapter": 21,
+          "startVerse": 1,
+          "endChapter": 21,
+          "endVerse": 4
+        }
+      ],
+      "displayReference": "Revelation 21:1–4",
+      "passages": [
+        {
+          "reference": "Revelation 21:1–4",
+          "verses": [
+            {
+              "chapter": 21,
+              "verse": 1,
+              "text": "I saw a new heaven and a new earth, for the first heaven and the first earth have passed away, and the sea is no more."
+            },
+            {
+              "chapter": 21,
+              "verse": 2,
+              "text": "I saw the holy city, New Jerusalem, coming down out of heaven from God, prepared like a bride adorned for her husband."
+            },
+            {
+              "chapter": 21,
+              "verse": 3,
+              "text": "I heard a loud voice out of heaven saying, “Behold, God’s dwelling is with people; and he will dwell with them, and they will be his people, and God himself will be with them as their God."
+            },
+            {
+              "chapter": 21,
+              "verse": 4,
+              "text": "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain any more. The first things have passed away.”"
+            }
+          ]
+        }
+      ],
+      "alt": "New Jerusalem, illustrating Revelation 21:1–4.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-B03.webp",
+        "reader": "releases/v1/web/1920/T6-B03.webp",
+        "original": "releases/v1/originals/T6-B03.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "69ca9839650601a843b5991f1d12efc053e7806d13d892e900549c233c6f3f15",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-B04",
+      "tapestry": 6,
+      "row": "bottom",
+      "position": 4,
+      "title": "The angel measures the city",
+      "scriptureSpans": [
+        {
+          "startChapter": 21,
+          "startVerse": 15,
+          "endChapter": 21,
+          "endVerse": 17
+        }
+      ],
+      "displayReference": "Revelation 21:15–17",
+      "passages": [
+        {
+          "reference": "Revelation 21:15–17",
+          "verses": [
+            {
+              "chapter": 21,
+              "verse": 15,
+              "text": "He who spoke with me had for a measure a golden reed to measure the city, its gates, and its walls."
+            },
+            {
+              "chapter": 21,
+              "verse": 16,
+              "text": "The city is square. Its length is as great as its width. He measured the city with the reed: twelve thousand twelve stadia. Its length, width, and height are equal."
+            },
+            {
+              "chapter": 21,
+              "verse": 17,
+              "text": "Its wall is one hundred forty-four cubits, by the measure of a man, that is, of an angel."
+            }
+          ]
+        }
+      ],
+      "alt": "The angel measures the city, illustrating Revelation 21:15–17.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-B04.webp",
+        "reader": "releases/v1/web/1920/T6-B04.webp",
+        "original": "releases/v1/originals/T6-B04.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "66f81d8bebd83f255e0c9c35d290556976832f4a5e74460dc25a2cee76681a4d",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-B05",
+      "tapestry": 6,
+      "row": "bottom",
+      "position": 5,
+      "title": "River of life",
+      "scriptureSpans": [
+        {
+          "startChapter": 22,
+          "startVerse": 1,
+          "endChapter": 22,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 22:1–2",
+      "passages": [
+        {
+          "reference": "Revelation 22:1–2",
+          "verses": [
+            {
+              "chapter": 22,
+              "verse": 1,
+              "text": "He showed me a river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb,"
+            },
+            {
+              "chapter": 22,
+              "verse": 2,
+              "text": "in the middle of its street. On this side of the river and on that was the tree of life, bearing twelve kinds of fruits, yielding its fruit every month. The leaves of the tree were for the healing of the nations."
+            }
+          ]
+        }
+      ],
+      "alt": "River of life, illustrating Revelation 22:1–2.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-B05.webp",
+        "reader": "releases/v1/web/1920/T6-B05.webp",
+        "original": "releases/v1/originals/T6-B05.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "8741c33e94654ec8214f7f55a39aa1dec0269e661263368becadf44a92a7a68b",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-B06",
+      "tapestry": 6,
+      "row": "bottom",
+      "position": 6,
+      "title": "Saint John and the angel",
+      "scriptureSpans": [
+        {
+          "startChapter": 22,
+          "startVerse": 8,
+          "endChapter": 22,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 22:8",
+      "passages": [
+        {
+          "reference": "Revelation 22:8",
+          "verses": [
+            {
+              "chapter": 22,
+              "verse": 8,
+              "text": "Now I, John, am the one who heard and saw these things. When I heard and saw, I fell down to worship before the feet of the angel who had shown me these things."
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John and the angel, illustrating Revelation 22:8.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-B06.webp",
+        "reader": "releases/v1/web/1920/T6-B06.webp",
+        "original": "releases/v1/originals/T6-B06.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "f9b26a28b6035aa6d2787584b20a1c9702ab2ca36944eba530d9aa231aa09421",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T6-B07",
+      "tapestry": 6,
+      "row": "bottom",
+      "position": 7,
+      "title": "Saint John before God",
+      "scriptureSpans": [
+        {
+          "startChapter": 22,
+          "startVerse": 9,
+          "endChapter": 22,
+          "endVerse": 13
+        }
+      ],
+      "displayReference": "Revelation 22:9–13",
+      "passages": [
+        {
+          "reference": "Revelation 22:9–13",
+          "verses": [
+            {
+              "chapter": 22,
+              "verse": 9,
+              "text": "He said to me, “You must not do that! I am a fellow bondservant with you and with your brothers, the prophets, and with those who keep the words of this book. Worship God.”"
+            },
+            {
+              "chapter": 22,
+              "verse": 10,
+              "text": "He said to me, “Don’t seal up the words of the prophecy of this book, for the time is at hand."
+            },
+            {
+              "chapter": 22,
+              "verse": 11,
+              "text": "He who acts unjustly, let him act unjustly still. He who is filthy, let him be filthy still. He who is righteous, let him do righteousness still. He who is holy, let him be holy still.”"
+            },
+            {
+              "chapter": 22,
+              "verse": 12,
+              "text": "“Behold, I am coming soon! My reward is with me, to repay to each man according to his work."
+            },
+            {
+              "chapter": 22,
+              "verse": 13,
+              "text": "I am the Alpha and the Omega, the First and the Last, the Beginning and the End."
+            }
+          ]
+        }
+      ],
+      "alt": "Saint John before God, illustrating Revelation 22:9–13.",
+      "images": {
+        "preview": "releases/v1/web/640/T6-B07.webp",
+        "reader": "releases/v1/web/1920/T6-B07.webp",
+        "original": "releases/v1/originals/T6-B07.png"
+      },
+      "width": 3840,
+      "height": 2160,
+      "checksum": "db49e808699cc7f30809c7f8f26c0164f790ff4366a568695f342fa26f8dedea",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}
