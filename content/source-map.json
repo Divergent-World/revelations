@@ -1,0 +1,542 @@
+[
+  {
+    "id": "T1-00",
+    "sourcePath": "Tapestries/I/1.png",
+    "originalExtension": ".png",
+    "checksum": "77501b12d6139017afd2755fb978f7e41f1e6ef67a6f6f119a3ee66f65ee901b"
+  },
+  {
+    "id": "T1-T01",
+    "sourcePath": "Tapestries/I/01-1-v3.png",
+    "originalExtension": ".png",
+    "checksum": "a271011cc3d0cac291838cd88d65e6042a68f8719236fc7b0876a40e5a0910a3"
+  },
+  {
+    "id": "T1-T02",
+    "sourcePath": "Tapestries/I/01-02-v8 1.png",
+    "originalExtension": ".png",
+    "checksum": "ce2cc0bed3d54bd4dd9ed7edf7944ec37213bb04e60d4c43fabff5440ac4921d"
+  },
+  {
+    "id": "T1-T03",
+    "sourcePath": "Tapestries/I/01-03-v4.png",
+    "originalExtension": ".png",
+    "checksum": "84a939588d8212701d441969478cbe277232b19617f1da43fdad70ac5f19c0fc"
+  },
+  {
+    "id": "T1-T04",
+    "sourcePath": "Tapestries/I/01-04-v5.png",
+    "originalExtension": ".png",
+    "checksum": "dead0a929e94c93028e9d6beb897f88549fdea8dcd308ebdb7f6f8a92f4d39aa"
+  },
+  {
+    "id": "T1-T05",
+    "sourcePath": "Tapestries/I/01-05-v3 1.png",
+    "originalExtension": ".png",
+    "checksum": "56f6b6dda6816aba6ae52b89c4fb6cb4a1a3db29387ea3f8e89eb22ccceef507"
+  },
+  {
+    "id": "T1-T06",
+    "sourcePath": "Tapestries/I/01-06.png",
+    "originalExtension": ".png",
+    "checksum": "026b4bb76338a353b6de5b1266887d363a1c275953365d9a2c11b08b86046691"
+  },
+  {
+    "id": "T1-T07",
+    "sourcePath": "Tapestries/I/01-07-v3.png",
+    "originalExtension": ".png",
+    "checksum": "53359240b4c7e6df76beac41af049a2f3bc20497dd7fdb285b3a5fd39f064d85"
+  },
+  {
+    "id": "T1-B01",
+    "sourcePath": "Tapestries/I/01-08-v4.png",
+    "originalExtension": ".png",
+    "checksum": "36c184ebd0a168b31f47b2c0842a59c6029e08871fc35d75d709f49aaa254c49"
+  },
+  {
+    "id": "T1-B02",
+    "sourcePath": "Tapestries/I/01-09-v2 1.png",
+    "originalExtension": ".png",
+    "checksum": "a32aa933022d5954db1548dbd728a44c340ca9401094c71de44433ff12c531f4"
+  },
+  {
+    "id": "T1-B03",
+    "sourcePath": "Tapestries/I/01-10-v2.png",
+    "originalExtension": ".png",
+    "checksum": "1e3f2f13ca8f37afbbaf24ac42925db3e365d70b444b6292d162a8afdbdbb291"
+  },
+  {
+    "id": "T1-B04",
+    "sourcePath": "Tapestries/I/01-11.png",
+    "originalExtension": ".png",
+    "checksum": "e8749ee15213314d9fcc2f93177a2d37c5649227f5fccae961a9803e14ebaaee"
+  },
+  {
+    "id": "T1-B05",
+    "sourcePath": "Tapestries/I/01-12-v1.png",
+    "originalExtension": ".png",
+    "checksum": "7deaa06ed0863d8e2da2e86d94465fe23ab2f417de7a0d6f6b2731c1b5df1392"
+  },
+  {
+    "id": "T1-B06",
+    "sourcePath": "Tapestries/I/01-13-v2.png",
+    "originalExtension": ".png",
+    "checksum": "854e5f005fff3a2d7837bd3f1512f80278a46bb28c4f96aa030e474be3158637"
+  },
+  {
+    "id": "T1-B07",
+    "sourcePath": "Tapestries/I/01-14-v3.png",
+    "originalExtension": ".png",
+    "checksum": "ac5fbb11eed91dd2695447a9d22ec147ee030c7c026a5a1e37589d95ec988609"
+  },
+  {
+    "id": "T2-00",
+    "sourcePath": "Tapestries/II/2-v2.png",
+    "originalExtension": ".png",
+    "checksum": "64c16176707e92a883d4b67339c42f95b61986feb51037dc2cd6cfcde4fbb214"
+  },
+  {
+    "id": "T2-T01",
+    "sourcePath": "Tapestries/II/02-01.png",
+    "originalExtension": ".png",
+    "checksum": "5ae050a9e722d910b83b7b539b9d18b7ba4569d1b693030c19a9078a574a7d3d"
+  },
+  {
+    "id": "T2-T02",
+    "sourcePath": "Tapestries/II/02-02.png",
+    "originalExtension": ".png",
+    "checksum": "b1aa162fad1d918df01d163d95efeb311fc8cf293db32c3b028de19ca51db087"
+  },
+  {
+    "id": "T2-T03",
+    "sourcePath": "Tapestries/II/02-03-v4.png",
+    "originalExtension": ".png",
+    "checksum": "f830bedf1e1bdbc6bdb9d2b77b3f237bc3aa2b60b81db888df532824e75fa584"
+  },
+  {
+    "id": "T2-T04",
+    "sourcePath": "Tapestries/II/II (Part I)_GPT Image 1.5 Edit_2026-04-05_19-36-46.png",
+    "originalExtension": ".png",
+    "checksum": "fda2817193eeadf2a30db4b4580d786e4bae8fb2f092856326258c3ed5dba4b0"
+  },
+  {
+    "id": "T2-T05",
+    "sourcePath": "Tapestries/II/II (Part I)_Gemini 3.1 Flash (Nano Banana 2)_2026-05-08_03-15-09.png",
+    "originalExtension": ".png",
+    "checksum": "4746c6da0e97b1651793f52584a6578b4be4ca09adf7d6c42302760e27b7a393"
+  },
+  {
+    "id": "T2-T06",
+    "sourcePath": "Tapestries/II/02-06-1.png",
+    "originalExtension": ".png",
+    "checksum": "46a3457123d3d758d0ac722d1937a1cc11df1b140bc142c97b0f3b61e1440ad2"
+  },
+  {
+    "id": "T2-T07",
+    "sourcePath": "Tapestries/II/II (Part II)_ChatGPT Images 2.0 Edit_2026-06-04_19-46-24.png",
+    "originalExtension": ".png",
+    "checksum": "e90d9190276183d2c814d76167201cf51886536e84feb7781e6c8afa2a3890bc"
+  },
+  {
+    "id": "T2-B01",
+    "sourcePath": "Tapestries/II/II (Part II)_Gemini 3.1 Flash (Nano Banana 2)_2026-06-04_20-03-30.png",
+    "originalExtension": ".png",
+    "checksum": "b21f768b298d3234017743c55a711e298c04e646dce9e02a140ee43795bd6452"
+  },
+  {
+    "id": "T2-B02",
+    "sourcePath": "Tapestries/II/II (Part II)_ChatGPT Images 2.0 Edit_2026-06-04_20-15-44.png",
+    "originalExtension": ".png",
+    "checksum": "fa34d364b19c5e2851dddc2bb41a4083ff5d8b51379b9fcd4a308d13c26ae3f6"
+  },
+  {
+    "id": "T2-B03",
+    "sourcePath": "Tapestries/II/II (Part II)_ChatGPT Images 2.0 Edit_2026-06-04_20-32-38.png",
+    "originalExtension": ".png",
+    "checksum": "d034deb74812b836ccbba8a934a7fcee83bae71c0c3aaa27c3b86dfb8a25be2d"
+  },
+  {
+    "id": "T2-B04",
+    "sourcePath": "Tapestries/II/II (Part II)_Gemini 3.1 Flash (Nano Banana 2)_2026-06-04_20-50-19.png",
+    "originalExtension": ".png",
+    "checksum": "74b760b3565b0e8b69b92271375fbe3a1b867c30bf39e8f8745d5033b4bb09ce"
+  },
+  {
+    "id": "T2-B05",
+    "sourcePath": "Tapestries/II/II (Part II)_Gemini 3.1 Flash (Nano Banana 2)_2026-06-04_21-01-56.png",
+    "originalExtension": ".png",
+    "checksum": "47a4aaf07d30efbade8d0e2d1532b3ea8697d4da606eb109be6755a987558255"
+  },
+  {
+    "id": "T2-B06",
+    "sourcePath": "Tapestries/II/II (Part II)_Gemini 3.1 Flash (Nano Banana 2)_2026-06-04_21-07-36.png",
+    "originalExtension": ".png",
+    "checksum": "cfc1691da7a59eddc858a8cf721da1e172b19c52e766c0034952e88c4a4ef374"
+  },
+  {
+    "id": "T2-B07",
+    "sourcePath": "Tapestries/II/II (Part II)_ChatGPT Images 2.0 Edit_2026-06-04_21-23-13.png",
+    "originalExtension": ".png",
+    "checksum": "21f3a4977820194e7e7629fbfd1ac5eb6a3ce037297133af45f8c6e8f7ab7ad4"
+  },
+  {
+    "id": "T3-00",
+    "sourcePath": "Tapestries/III/3.png",
+    "originalExtension": ".png",
+    "checksum": "2a943d3d522b62bbcb189c41865023fe52046afb0cb753c697626ef24cc9e014"
+  },
+  {
+    "id": "T3-T01",
+    "sourcePath": "Tapestries/III/III (Part I)_Gemini 3 (Nano Banana Pro)_2026-06-24_20-30-29.png",
+    "originalExtension": ".png",
+    "checksum": "aba5373aadc149db1614fef42fbbc4ecda0d3f983e2b8ce4ca7cce2f35286499"
+  },
+  {
+    "id": "T3-T02",
+    "sourcePath": "Tapestries/III/III (Part I)_Gemini 3 (Nano Banana Pro)_2026-06-29_00-35-54.png",
+    "originalExtension": ".png",
+    "checksum": "1958171e34baa1b60ebfa0e9ee1751a96f671b2b6095610d0ee14c27819d5ade"
+  },
+  {
+    "id": "T3-T03",
+    "sourcePath": "Tapestries/III/III (Part I)_ChatGPT Images 2.0 Edit_2026-06-29_00-59-46.png",
+    "originalExtension": ".png",
+    "checksum": "1e5b557becbaffab33955a46bfc4feb70f1e2e55062e31aa17537408dd597fbd"
+  },
+  {
+    "id": "T3-T04",
+    "sourcePath": "Tapestries/III/III (Part I)_Gemini 3.1 Flash (Nano Banana 2)_2026-06-29_01-17-46.png",
+    "originalExtension": ".png",
+    "checksum": "8730750e7d14aea4d450b09b97db7b38e424337848767ddc3a1d10874573998e"
+  },
+  {
+    "id": "T3-T05",
+    "sourcePath": "Tapestries/III/III (Part II)_Gemini 3.1 Flash (Nano Banana 2)_2026-07-10_20-45-55.png",
+    "originalExtension": ".png",
+    "checksum": "ff30898015aa7026a846c97377c911bb1384b9d03698a832571bcafffebcf882"
+  },
+  {
+    "id": "T3-T06",
+    "sourcePath": "Tapestries/III/III (Part II)_Gemini 3.1 Flash (Nano Banana 2)_2026-07-10_21-01-44.png",
+    "originalExtension": ".png",
+    "checksum": "4a927045c9aba28d16db83668720beaf85fa1912210da3d45d24a209ec9b2559"
+  },
+  {
+    "id": "T3-T07",
+    "sourcePath": "Tapestries/III/III (Part II)_Gemini 3 (Nano Banana Pro)_2026-07-10_21-18-16.png",
+    "originalExtension": ".png",
+    "checksum": "ae0a38b521a46d7ffe44e2043ca47a3d8b9929c306fa3e9e4fd3328a3e89b8f0"
+  },
+  {
+    "id": "T3-B01",
+    "sourcePath": "Tapestries/III/III (Part II)_ChatGPT Images 2.0 Edit_2026-07-10_21-21-20.png",
+    "originalExtension": ".png",
+    "checksum": "bb74f057a6fe566ae0f6d581fdad4eb4e0d21c82ff9b56d1d22e2230e825abc3"
+  },
+  {
+    "id": "T3-B02",
+    "sourcePath": "Tapestries/III/III (Part II)_ChatGPT Images 2.0 Edit_2026-07-10_21-29-05.png",
+    "originalExtension": ".png",
+    "checksum": "d1076d6c79081ee04e7b27383219d13e3e68f1bdae6148e28b2c05374d66303e"
+  },
+  {
+    "id": "T3-B03",
+    "sourcePath": "Tapestries/III/III (Part III)_ChatGPT Images 2.0 Edit_2026-07-22_19-04-30.png",
+    "originalExtension": ".png",
+    "checksum": "3415e1f85ad46d713d1035abc304cf626e947cbea94d6a43a780cd813ab1c573"
+  },
+  {
+    "id": "T3-B04",
+    "sourcePath": "Tapestries/III/III (Part III)_Gemini 3 (Nano Banana Pro)_2026-07-22_19-09-00.png",
+    "originalExtension": ".png",
+    "checksum": "d0cefe37c4864f01fd21a7791d6dbc75a00c38b32e94a3debabe3b57c6092758"
+  },
+  {
+    "id": "T3-B05",
+    "sourcePath": "Tapestries/III/III (Part III)_ChatGPT Images 2.0 Edit_2026-07-22_19-12-33.png",
+    "originalExtension": ".png",
+    "checksum": "83e5e36331ef1f393394dd24acd35dbe9ea402b5ceaefa6dc96f59c9f4d6c38a"
+  },
+  {
+    "id": "T3-B06",
+    "sourcePath": "Tapestries/III/III (Part III)_ChatGPT Images 2.0 Edit_2026-07-22_19-33-31.png",
+    "originalExtension": ".png",
+    "checksum": "ce463e3ef1e2ff9b29bd276f67bcb2851dca8629efe3ed9fd6330effab3a06e3"
+  },
+  {
+    "id": "T3-B07",
+    "sourcePath": "Tapestries/III/III (Part III)_ChatGPT Images 2.0 Edit_2026-07-22_19-25-44.png",
+    "originalExtension": ".png",
+    "checksum": "5b82a4c6ffe138373f3c816c7479f101d91e5a5c06bb6b06cbe4aac5877acc8e"
+  },
+  {
+    "id": "T4-00",
+    "sourcePath": "Tapestries/IV/4.png",
+    "originalExtension": ".png",
+    "checksum": "8d55fdbf09cfd501a834d039327e45ef48a65ad569abe728ab0ff5bb5ffc650e"
+  },
+  {
+    "id": "T4-T01",
+    "sourcePath": "Tapestries/IV/IV (Part I)_Gemini 3 (Nano Banana Pro)_2026-07-29_20-51-35.png",
+    "originalExtension": ".png",
+    "checksum": "e6bc81ecf61e92b87606918ca8d3d3652930f487a1dd05bf224f6350348e4624"
+  },
+  {
+    "id": "T4-T02",
+    "sourcePath": "Tapestries/IV/IV (Part I)_ChatGPT Images 2.0 Edit_2026-07-29_21-08-15.png",
+    "originalExtension": ".png",
+    "checksum": "12f48227fcef8fda9894371eeb08d363d5c14fc7d14cdcadb356a35af543c9a2"
+  },
+  {
+    "id": "T4-T03",
+    "sourcePath": "Tapestries/IV/IV (Part I)_Gemini 3 (Nano Banana Pro)_2026-07-30_16-16-54.png",
+    "originalExtension": ".png",
+    "checksum": "2a9697055fe65013d2ac48ea9762152be0697c86eb20a044c982bf2213e174f9"
+  },
+  {
+    "id": "T4-T04",
+    "sourcePath": "Tapestries/IV/IV (Part I)_ChatGPT Images 2.0 Edit_2026-07-30_19-51-51.png",
+    "originalExtension": ".png",
+    "checksum": "cc3f6721057cb6cce290960804514075fcd1e3940c1f1eb64a44a02be310152b"
+  },
+  {
+    "id": "T4-T05",
+    "sourcePath": "Tapestries/IV/IV (Part I)_ChatGPT Images 2.0 Edit_2026-07-30_20-18-00.png",
+    "originalExtension": ".png",
+    "checksum": "7dbab282353464d18068dc74c59108a20c1ce07e254e449df4af5fbed550463a"
+  },
+  {
+    "id": "T4-T06",
+    "sourcePath": "Tapestries/IV/IV (Part II)_ChatGPT Images 2.0 Edit_2026-07-31_21-50-08.png",
+    "originalExtension": ".png",
+    "checksum": "acc4f4f2c49f19e07598df6ff04a0899cbf5d8958fdb3434ff9942280d0b81da"
+  },
+  {
+    "id": "T4-T07",
+    "sourcePath": "Tapestries/IV/IV (Part II)_Gemini 3 (Nano Banana Pro)_2026-07-31_21-43-47.png",
+    "originalExtension": ".png",
+    "checksum": "9b4eb63c6384c8ba02e77684230c484425536fab65d4c134271bd2fc8f5c4729"
+  },
+  {
+    "id": "T4-B01",
+    "sourcePath": "Tapestries/IV/IV (Part II)_Gemini 3 (Nano Banana Pro)_2026-07-31_21-46-56.png",
+    "originalExtension": ".png",
+    "checksum": "b0b33a9592a5a5b381b0334ef66e40caef93df0c48122d5bc9bf138ec7ac78c6"
+  },
+  {
+    "id": "T4-B02",
+    "sourcePath": "Tapestries/IV/IV (Part II)_ChatGPT Images 2.0 Edit_2026-07-31_21-58-24.png",
+    "originalExtension": ".png",
+    "checksum": "3f8933c1def8c63d11be2d5efc8ecb778ba75f6fe2edb5a817102cfdf219da9d"
+  },
+  {
+    "id": "T4-B03",
+    "sourcePath": "Tapestries/IV/IV (Part II)_ChatGPT Images 2.0 Edit_2026-07-31_22-00-50.png",
+    "originalExtension": ".png",
+    "checksum": "32b66f2cced3a63d7f718a67e2948d32fae4e9234ab6074b0ca17586f67906ee"
+  },
+  {
+    "id": "T4-B04",
+    "sourcePath": "Tapestries/IV/IV (Part III)_ChatGPT Images 2.0 Edit_2026-08-03_19-06-54.png",
+    "originalExtension": ".png",
+    "checksum": "265333e626ef4cfa932c697ecb8db310bf0dc4c3c37e305c9de29f2e431451ac"
+  },
+  {
+    "id": "T4-B05",
+    "sourcePath": "Tapestries/IV/IV (Part III)_Gemini 3 (Nano Banana Pro)_2026-08-03_19-08-21.png",
+    "originalExtension": ".png",
+    "checksum": "9430c5ca548c9486f1c5c79d8b6106091d16e606f06943e00b8c989d487d3126"
+  },
+  {
+    "id": "T4-B06",
+    "sourcePath": "Tapestries/IV/IV (Part III)_Gemini 3 (Nano Banana Pro)_2026-08-03_19-14-53.png",
+    "originalExtension": ".png",
+    "checksum": "a17ad183ba2ce49c4487dd365b1104f65998651736c88039d8c88f68ea5a6413"
+  },
+  {
+    "id": "T4-B07",
+    "sourcePath": "Tapestries/IV/IV (Part III)_ChatGPT Images 2.0 Edit_2026-08-03_19-36-26.png",
+    "originalExtension": ".png",
+    "checksum": "0b201587a10495173cc2e5e913e63b9973c5861bba76fa95a0180d7c62886731"
+  },
+  {
+    "id": "T5-00",
+    "sourcePath": "Tapestries/V/5-v2.png",
+    "originalExtension": ".png",
+    "checksum": "bdfb30704db11186b9a7605c2884c09d46cd6402035823414636300ba96cf306"
+  },
+  {
+    "id": "T5-T01",
+    "sourcePath": "Tapestries/V/V (Part I)_Gemini 3 (Nano Banana Pro)_2026-08-04_21-18-07.png",
+    "originalExtension": ".png",
+    "checksum": "f765567f4282af148b278b1c278bfb3528e01118a1b776c657f0619e52730ff1"
+  },
+  {
+    "id": "T5-T02",
+    "sourcePath": "Tapestries/V/V (Part I)_Gemini 3 (Nano Banana Pro)_2026-08-05_02-06-17.png",
+    "originalExtension": ".png",
+    "checksum": "d15ab49099ca0216b07a466cf9e406a7bd4aac7523e5f570c3b5f8169630576e"
+  },
+  {
+    "id": "T5-T03",
+    "sourcePath": "Tapestries/V/V (Part I)_ChatGPT Images 2.0 Edit_2026-08-05_02-12-04 1.png",
+    "originalExtension": ".png",
+    "checksum": "01d6701dbbd0aa2bf48158b491a1a36e8db53a399acc5c26d6b8ea07e305bf01"
+  },
+  {
+    "id": "T5-T04",
+    "sourcePath": "Tapestries/V/V (Part I)_ChatGPT Images 2.0 Edit_2026-08-08_21-32-08.png",
+    "originalExtension": ".png",
+    "checksum": "0f9781777ec15c743396cda5278159753349cc9571966abcb399f51c99a5d1d1"
+  },
+  {
+    "id": "T5-T05",
+    "sourcePath": "Tapestries/V/V (Part I)_ChatGPT Images 2.0 Edit_2026-08-08_21-36-32.png",
+    "originalExtension": ".png",
+    "checksum": "6a869ab566195b57861dbe21039adfb2f037b619571e7d2caab9b3527d98f1f5"
+  },
+  {
+    "id": "T5-T06",
+    "sourcePath": "Tapestries/V/V (Part II)_ChatGPT Images 2.0 Edit_2026-08-09_23-53-49.png",
+    "originalExtension": ".png",
+    "checksum": "1a8bde5d509f317acf3a82c9c6f9b1c9066c4f206817759c71830d4e28e73f23"
+  },
+  {
+    "id": "T5-T07",
+    "sourcePath": "Tapestries/V/V (Part II)_Gemini 3 (Nano Banana Pro)_2026-08-10_00-04-24.png",
+    "originalExtension": ".png",
+    "checksum": "64345d744822c780dfedd6f858b169969342c11bc41e8485d295101933934a15"
+  },
+  {
+    "id": "T5-B01",
+    "sourcePath": "Tapestries/V/V (Part II)_ChatGPT Images 2.0 Edit_2026-08-10_00-12-11.png",
+    "originalExtension": ".png",
+    "checksum": "ed1c477c688d9d50c6bbf918ec5c56f6ff1b6b91cfc4627c4dd171f63b914847"
+  },
+  {
+    "id": "T5-B02",
+    "sourcePath": "Tapestries/V/V (Part II)_ChatGPT Images 2.0 Edit_2026-08-10_00-33-35.png",
+    "originalExtension": ".png",
+    "checksum": "7c253e65b16c866b80decf2bfc48c5d650b11df1e7003fe56ffe2c297dc4f480"
+  },
+  {
+    "id": "T5-B03",
+    "sourcePath": "Tapestries/V/V (Part II)_ChatGPT Images 2.0 Edit_2026-08-10_00-33-05.png",
+    "originalExtension": ".png",
+    "checksum": "a85726e549e6165eff2ed5b39fdf6d7a89558d583437b9950178021e321fb262"
+  },
+  {
+    "id": "T5-B04",
+    "sourcePath": "Tapestries/V/V (Part III)_Gemini 3 (Nano Banana Pro)_2026-08-10_01-20-56.png",
+    "originalExtension": ".png",
+    "checksum": "0ce300f801062fa1d725bb83c1c9a1615d719613c33c7fb9fd9727889f101946"
+  },
+  {
+    "id": "T5-B05",
+    "sourcePath": "Tapestries/V/V (Part III)_ChatGPT Images 2.0 Edit_2026-08-10_01-23-00.png",
+    "originalExtension": ".png",
+    "checksum": "8bce3286e831f25951b7f34af664371782a6a499bec236ce8ad11567944e6e9b"
+  },
+  {
+    "id": "T5-B06",
+    "sourcePath": "Tapestries/V/V (Part III)_ChatGPT Images 2.0 Edit_2026-08-10_02-11-02.png",
+    "originalExtension": ".png",
+    "checksum": "9d30d42408e875b0bf09dfc5bcd46889d1fee18f0930b53196a84823eee6043c"
+  },
+  {
+    "id": "T5-B07",
+    "sourcePath": "Tapestries/V/V (Part III)_ChatGPT Images 2.0 Edit_2026-08-10_02-12-56.png",
+    "originalExtension": ".png",
+    "checksum": "0e5e16e06dfde2fbbd5c3778dbcace7b5906ce31ba607218b89a650025d5dd4e"
+  },
+  {
+    "id": "T6-00",
+    "sourcePath": "Tapestries/VI/6-v3.jpg",
+    "originalExtension": ".jpg",
+    "checksum": "16d3436a439218f9b3ea0c56cc4fb927bd65efb9ac3f7736cf19a9f59e36c3b9"
+  },
+  {
+    "id": "T6-T01",
+    "sourcePath": "Tapestries/VI/VI (Part I)_Gemini 3 (Nano Banana Pro)_2026-08-11_02-16-52.png",
+    "originalExtension": ".png",
+    "checksum": "af315a609003c6268a2bb85cb1c3290f0b6108395471e7abc3b2cb8532883e3e"
+  },
+  {
+    "id": "T6-T02",
+    "sourcePath": "Tapestries/VI/VI (Part I)_Gemini 3.1 Flash (Nano Banana 2)_2026-08-11_03-07-13.png",
+    "originalExtension": ".png",
+    "checksum": "848bcd7c45873a2adadf7f1b765945cff78fb3fb9994ea20d19f952843151257"
+  },
+  {
+    "id": "T6-T03",
+    "sourcePath": "Tapestries/VI/VI (Part I)_Gemini 3 (Nano Banana Pro)_2026-08-11_02-53-01.png",
+    "originalExtension": ".png",
+    "checksum": "408f54a76f07a80bf604008a50360758a48ebd41bd7d1c47272772aef5da18ba"
+  },
+  {
+    "id": "T6-T04",
+    "sourcePath": "Tapestries/VI/VI (Part I)_ChatGPT Images 2.0 Edit_2026-08-11_03-18-12.png",
+    "originalExtension": ".png",
+    "checksum": "b6aa10aa335c29ec6b20f00ffc1ee11f434a75be724525b57d1543a4aa26219b"
+  },
+  {
+    "id": "T6-T05",
+    "sourcePath": "Tapestries/VI/VI (Part I)_ChatGPT Images 2.0 Edit_2026-08-11_02-50-41.png",
+    "originalExtension": ".png",
+    "checksum": "998e14ae3cdbd82c49f9fa4c49ca5c225af4eaef04fadbf335659f5a6120ed6f"
+  },
+  {
+    "id": "T6-T06",
+    "sourcePath": "Tapestries/VI/VI (Part II)_ChatGPT Images 2.0 Edit_2026-08-11_15-31-32.png",
+    "originalExtension": ".png",
+    "checksum": "47a8e1ebf9530b1431a676bf6981e8d035839d2674941d920a5e4348d5fddf6f"
+  },
+  {
+    "id": "T6-T07",
+    "sourcePath": "Tapestries/VI/VI (Part II)_ChatGPT Images 2.0 Edit_2026-08-11_15-38-43.png",
+    "originalExtension": ".png",
+    "checksum": "c85e5c78e4c881d81872a16e19b3dff9cadaec8358ca97d9970e1163884e6160"
+  },
+  {
+    "id": "T6-B01",
+    "sourcePath": "Tapestries/VI/VI (Part II)_ChatGPT Images 2.0 Edit_2026-08-11_15-56-06.png",
+    "originalExtension": ".png",
+    "checksum": "aabc0944958177fa67034d275af4ecb0596162ac8363f34a51f31730f9686716"
+  },
+  {
+    "id": "T6-B02",
+    "sourcePath": "Tapestries/VI/VI (Part II)_Gemini 3 (Nano Banana Pro)_2026-08-11_15-58-06.png",
+    "originalExtension": ".png",
+    "checksum": "a54763457f4c6bf53494003160399c8bf3d9f5f91d3461291def1312c27d7bea"
+  },
+  {
+    "id": "T6-B03",
+    "sourcePath": "Tapestries/VI/VI (Part II)_ChatGPT Images 2.0 Edit_2026-08-11_16-00-11.png",
+    "originalExtension": ".png",
+    "checksum": "69ca9839650601a843b5991f1d12efc053e7806d13d892e900549c233c6f3f15"
+  },
+  {
+    "id": "T6-B04",
+    "sourcePath": "Tapestries/VI/VI (Part III)_ChatGPT Images 2.0 Edit_2026-08-11_22-19-34.png",
+    "originalExtension": ".png",
+    "checksum": "66f81d8bebd83f255e0c9c35d290556976832f4a5e74460dc25a2cee76681a4d"
+  },
+  {
+    "id": "T6-B05",
+    "sourcePath": "Tapestries/VI/VI (Part III)_ChatGPT Images 2.0 Edit_2026-08-11_22-50-55.png",
+    "originalExtension": ".png",
+    "checksum": "8741c33e94654ec8214f7f55a39aa1dec0269e661263368becadf44a92a7a68b"
+  },
+  {
+    "id": "T6-B06",
+    "sourcePath": "Tapestries/VI/VI (Part III)_ChatGPT Images 2.0 Edit_2026-08-11_22-57-21.png",
+    "originalExtension": ".png",
+    "checksum": "f9b26a28b6035aa6d2787584b20a1c9702ab2ca36944eba530d9aa231aa09421"
+  },
+  {
+    "id": "T6-B07",
+    "sourcePath": "Tapestries/VI/VI (Part III)_ChatGPT Images 2.0 Edit_2026-08-11_22-40-50.png",
+    "originalExtension": ".png",
+    "checksum": "db49e808699cc7f30809c7f8f26c0164f790ff4366a568695f342fa26f8dedea"
+  }
+]
