@@ -57,20 +57,209 @@ test("preview frames preserve artwork without elongation or cropping", async ({ 
   expect(geometry.objectFit).toBe("contain");
 });
 
-test("reader artwork panel scrolls independently when artwork exceeds its viewport", async ({ page }, testInfo) => {
+test("reader artwork stays contained by its zoom viewport", async ({ page }) => {
   await page.goto("/tapestries/1/?scene=T1-00");
   const geometry = await page.locator(".dialog-art").evaluate((panel) => {
     const image = panel.querySelector("img")!;
+    const viewport = panel.querySelector<HTMLElement>(".zoom-artwork__viewport")!;
     return {
       overflowY: getComputedStyle(panel).overflowY,
       scrollHeight: panel.scrollHeight,
       clientHeight: panel.clientHeight,
       imageObjectFit: getComputedStyle(image).objectFit,
+      viewportTouchAction: getComputedStyle(viewport).touchAction,
     };
   });
-  expect(geometry.overflowY).toBe("auto");
-  if (testInfo.project.name !== "mobile") expect(geometry.scrollHeight).toBeGreaterThan(geometry.clientHeight);
+  expect(geometry.overflowY).toBe("hidden");
+  expect(geometry.scrollHeight - geometry.clientHeight).toBeLessThanOrEqual(1);
   expect(geometry.imageObjectFit).toBe("contain");
+  expect(geometry.viewportTouchAction).toBe("none");
+});
+
+test("artwork zoom controls step between their bounds and reset pan", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.goto("/tapestries/1/?scene=T1-T01");
+
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  const zoomOut = page.getByRole("button", { name: "Zoom out" });
+  const zoomIn = page.getByRole("button", { name: "Zoom in" });
+  const reset = page.getByRole("button", { name: "Reset artwork zoom" });
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await expect(zoomOut).toBeDisabled();
+  await expect(reset).toBeDisabled();
+
+  await zoomIn.click();
+  await expect(page.getByText("1.5×", { exact: true })).toBeVisible();
+  for (let step = 0; step < 5; step += 1) await zoomIn.click();
+  await expect(page.getByText("4×", { exact: true })).toBeVisible();
+  await expect(zoomIn).toBeDisabled();
+  for (let step = 0; step < 6; step += 1) await zoomOut.click();
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await expect(zoomOut).toBeDisabled();
+
+  await viewport.click({ position: { x: 80, y: 80 } });
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+  const box = await viewport.boundingBox();
+  expect(box).not.toBeNull();
+  const anchored = await viewport.locator("img").evaluate((image) => {
+    const matrix = new DOMMatrix(getComputedStyle(image).transform);
+    const bounds = image.parentElement!.getBoundingClientRect();
+    const intrinsicRatio = Number(image.getAttribute("width")) / Number(image.getAttribute("height"));
+    const viewportRatio = bounds.width / bounds.height;
+    const fittedWidth = intrinsicRatio > viewportRatio ? bounds.width : bounds.height * intrinsicRatio;
+    const fittedHeight = intrinsicRatio > viewportRatio ? bounds.width / intrinsicRatio : bounds.height;
+    return {
+      x: matrix.e,
+      y: matrix.f,
+      maxX: Math.max(0, (fittedWidth * 2 - bounds.width) / 2),
+      maxY: Math.max(0, (fittedHeight * 2 - bounds.height) / 2),
+    };
+  });
+  expect(anchored.x).toBeGreaterThan(1);
+  expect(anchored.y).toBeGreaterThan(1);
+  await page.mouse.move(box!.x + box!.width / 2, box!.y + box!.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(box!.x + box!.width / 2 + 500, box!.y + box!.height / 2 + 500);
+  await page.mouse.up();
+  const panned = await viewport.locator("img").evaluate((image) => {
+    const matrix = new DOMMatrix(getComputedStyle(image).transform);
+    return { x: matrix.e, y: matrix.f };
+  });
+  expect(panned.x).toBeCloseTo(anchored.maxX, 0);
+  expect(panned.y).toBeCloseTo(anchored.maxY, 0);
+  await reset.click();
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await expect(viewport.locator("img")).toHaveCSS("transform", "matrix(1, 0, 0, 1, 0, 0)");
+});
+
+test("artwork zoom click toggle and hover lens follow pointer mode", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.goto("/tapestries/1/?scene=T1-T01");
+
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  await viewport.hover({ position: { x: 100, y: 100 } });
+  await expect(page.locator(".art-lens")).toBeVisible();
+  await viewport.click({ position: { x: 100, y: 100 } });
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+  await expect(page.locator(".art-lens")).toBeHidden();
+  await viewport.click({ position: { x: 100, y: 100 } });
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+});
+
+test("artwork zoom keyboard shortcuts adjust and reset the focused viewport", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.goto("/tapestries/1/?scene=T1-T01");
+
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  await viewport.focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+  await page.keyboard.press("-");
+  await expect(page.getByText("1.5×", { exact: true })).toBeVisible();
+  await page.keyboard.press("+");
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.keyboard.press("Space");
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+  await page.keyboard.press("0");
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+});
+
+test("artwork zoom resets between scenes and disables only after both images fail", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.route("**/T1-T03.webp", (route) => route.fulfill({ status: 404 }));
+  await page.goto("/tapestries/1/?scene=T1-T01");
+  await page.getByRole("button", { name: "Zoom in" }).click();
+  await expect(page.getByText("1.5×", { exact: true })).toBeVisible();
+  await page.route("**/web/1920/T1-T02.webp", (route) => route.fulfill({ status: 404 }));
+  await page.getByRole("button", { name: "Next →" }).click();
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Zoom in" })).toBeEnabled();
+
+  await page.getByRole("button", { name: "Next →" }).click();
+  const unavailable = page.getByRole("dialog").locator(".image-fallback");
+  await expect(unavailable).toHaveAccessibleName(/Vision of Christ in Majesty/);
+  await expect(page.getByRole("button", { name: "Zoom in" })).toBeDisabled();
+  await expect(page.getByRole("button", { name: "Zoom out" })).toBeDisabled();
+  await expect(page.getByRole("button", { name: "Reset artwork zoom" })).toBeDisabled();
+});
+
+test("artwork zoom keeps the reader split at iPad width", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.setViewportSize({ width: 820, height: 1000 });
+  await page.goto("/tapestries/1/?scene=T1-T01");
+  const layout = await page.getByRole("dialog").evaluate((dialog) => {
+    const art = dialog.querySelector<HTMLElement>(".dialog-art")!.getBoundingClientRect();
+    const reading = dialog.querySelector<HTMLElement>(".dialog-reading")!.getBoundingClientRect();
+    return {
+      sideBySide: Math.abs(art.y - reading.y) < 2 && reading.x > art.x,
+      artworkTouchAction: getComputedStyle(dialog.querySelector<HTMLElement>(".zoom-artwork__viewport")!).touchAction,
+      readingTouchAction: getComputedStyle(dialog.querySelector<HTMLElement>(".dialog-reading")!).touchAction,
+    };
+  });
+  expect(layout.sideBySide).toBe(true);
+  expect(layout.artworkTouchAction).toBe("none");
+  expect(layout.readingTouchAction).not.toBe("none");
+
+  const reading = page.locator(".dialog-reading");
+  await reading.hover();
+  await page.mouse.wheel(0, 500);
+  await expect.poll(() => reading.evaluate((node) => node.scrollTop)).toBeGreaterThan(0);
+  await page.getByRole("button", { name: "Close scene" }).click();
+  await page.mouse.move(400, 500);
+  await page.mouse.wheel(0, 500);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+});
+
+test("artwork zoom handles native touch pinch and pan without click toggle", async ({ page, context }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.setViewportSize({ width: 820, height: 1000 });
+  await page.goto("/tapestries/1/?scene=T1-00");
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  const box = await viewport.boundingBox();
+  expect(box).not.toBeNull();
+  const center = { x: box!.x + box!.width * .35, y: box!.y + box!.height * .4 };
+  const client = await context.newCDPSession(page);
+  const pageScroll = await page.evaluate(() => window.scrollY);
+
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [
+      { x: center.x - 50, y: center.y, id: 0 },
+      { x: center.x + 50, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [
+      { x: center.x - 100, y: center.y, id: 0 },
+      { x: center.x + 100, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+
+  const beforePan = await viewport.locator("img").evaluate((image) => {
+    const matrix = new DOMMatrix(getComputedStyle(image).transform);
+    return { transform: getComputedStyle(image).transform, x: matrix.e, y: matrix.f };
+  });
+  expect(beforePan.x).toBeGreaterThan(1);
+  expect(beforePan.y).toBeGreaterThan(1);
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [{ x: center.x, y: center.y, id: 0 }],
+  });
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [{ x: center.x + 50, y: center.y + 30, id: 0 }],
+  });
+  await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+  const afterPan = await viewport.locator("img").evaluate((image) => getComputedStyle(image).transform);
+  expect(afterPan).not.toBe(beforePan.transform);
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+  expect(await page.evaluate(() => window.scrollY)).toBe(pageScroll);
 });
 
 test("scene deep links open, navigate, and follow browser history", async ({ page }) => {

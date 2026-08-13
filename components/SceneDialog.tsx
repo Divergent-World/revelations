@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { assetUrl, type Scene } from "@/lib/content";
-import { ArtworkImage } from "./ArtworkImage";
 import { VerseText } from "./VerseText";
+import { ZoomableArtwork } from "./ZoomableArtwork";
 
 export function SceneDialog({ scene, previous, next, onClose, onNavigate }: {
   scene: Scene;
@@ -46,7 +46,7 @@ export function SceneDialog({ scene, previous, next, onClose, onNavigate }: {
     <dialog ref={dialog} className="scene-dialog" onClose={onClose} aria-labelledby="scene-dialog-title">
       <button className="dialog-close" type="button" onClick={onClose} aria-label="Close scene">×</button>
       <div className="dialog-art">
-        <ArtworkImage key={scene.id} scene={scene} size="reader" eager />
+        <ZoomableArtwork key={scene.id} scene={scene} />
       </div>
       <article className="dialog-reading">
         <p className="eyebrow">Scene {scene.id}</p>
