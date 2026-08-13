@@ -37,25 +37,9 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .95; }
 .site-footer p { margin: 0; }
 
 .eyebrow { color: var(--gold); font-size: .67rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; }
-.hero { min-height: calc(100svh - 5.5rem); display: grid; align-content: center; max-width: 100rem; margin: auto; padding: 7rem clamp(1rem, 7vw, 8rem); }
-.hero h1 { max-width: 12ch; margin-bottom: 2rem; }
-.hero-copy { max-width: 50rem; color: #b9b8b5; font: clamp(1.15rem, 2.2vw, 1.7rem)/1.55 var(--font-display), serif; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; padding: 0 1.25rem; border: 1px solid var(--line); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
 .button:hover { border-color: var(--gold); }
 .button-primary { color: #0c0e12; background: var(--gold); border-color: var(--gold); }
-.tapestry-index, .archive-callout { max-width: 100rem; margin: auto; padding: 7rem clamp(1rem, 7vw, 8rem); }
-.section-heading { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 1px solid var(--line); }
-.tapestry-list { list-style: none; margin: 0; padding: 0; }
-.tapestry-list li { border-bottom: 1px solid var(--line); }
-.tapestry-list a { display: grid; grid-template-columns: 6rem 1fr auto; gap: 1.5rem; align-items: center; padding: 2rem 0; }
-.tapestry-list a:hover { color: var(--gold); }
-.tapestry-list .roman { color: var(--gold); font: 3rem/1 var(--font-display), serif; }
-.tapestry-list strong, .tapestry-list small { display: block; }
-.tapestry-list strong { font-family: var(--font-display), serif; font-size: 1.35rem; font-weight: 500; }
-.tapestry-list small { max-width: 58rem; margin-top: .5rem; color: var(--muted); line-height: 1.5; }
-.archive-callout { border-top: 1px solid var(--line); }
-.archive-callout p:not(.eyebrow) { max-width: 48rem; color: var(--muted); line-height: 1.7; }
 
 .viewer-shell { min-height: 100vh; padding: 4rem 0; overflow: hidden; }
 .viewer-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; padding: 0 clamp(1rem, 4vw, 4rem) 4rem; }
@@ -151,9 +135,6 @@ body:has(.embed-frame) main { min-height: 100vh; }
   .site-header { min-height: 4.5rem; }
   .site-header nav a:first-child { display: none; }
   .site-footer { flex-direction: column; }
-  .hero { min-height: calc(100svh - 4.5rem); padding-block: 5rem; }
-  .tapestry-list a { grid-template-columns: 3rem 1fr auto; }
-  .tapestry-list .roman { font-size: 2rem; }
   .viewer-heading { display: block; padding-bottom: 2.5rem; }
   .viewer-controls { margin-top: 1.5rem; }
   .lead-scene { grid-template-columns: 1fr; padding-bottom: 4rem; }

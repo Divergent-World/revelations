@@ -677,3 +677,47 @@ test("public taxonomy presents the prophecy as six movements", async ({ page }) 
   await page.goto("/revelation/");
   await expect(page.locator(".reader-hero")).toContainText("six movements");
 });
+
+test("homepage opens as an illuminated movement ledger", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.goto("/");
+  const hero = page.getByRole("region", { name: "A prophecy in six movements" });
+  const feature = hero.locator("figure");
+  await expect(feature.getByRole("img", { name: /New Jerusalem/ })).toBeVisible();
+  await expect(hero.locator("dl dd")).toHaveText(["06", "22", "90"]);
+
+  const movementIndex = page.getByRole("region", { name: "The six movements" });
+  const entries = movementIndex.locator("ol > li");
+  await expect(entries).toHaveCount(6);
+  await expect(entries.locator("img")).toHaveCount(6);
+  await expect(entries.first().getByRole("link", { name: /Movement I.*The Scroll Opens/ })).toHaveAttribute("href", "/tapestries/1/");
+
+  const headingBox = await hero.getByRole("heading", { level: 1 }).boundingBox();
+  const featureBox = await feature.boundingBox();
+  expect(headingBox).not.toBeNull();
+  expect(featureBox).not.toBeNull();
+  expect(featureBox!.x).toBeGreaterThan(headingBox!.x + headingBox!.width);
+  await expect(feature.locator("img")).toHaveCSS("object-fit", "contain");
+});
+
+test("homepage illuminated ledger stacks cleanly on mobile", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.goto("/");
+  const hero = page.getByRole("region", { name: "A prophecy in six movements" });
+  const headingBox = await hero.getByRole("heading", { level: 1 }).boundingBox();
+  const featureBox = await hero.locator("figure").boundingBox();
+  expect(headingBox).not.toBeNull();
+  expect(featureBox).not.toBeNull();
+  expect(featureBox!.y).toBeGreaterThan(headingBox!.y + headingBox!.height);
+  await expect(page.getByRole("region", { name: "The six movements" }).locator("ol > li")).toHaveCount(6);
+});
+
+test("homepage movement links keep visible focus and reduced motion", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  const firstMovement = page.getByRole("region", { name: "The six movements" }).getByRole("link").first();
+  await firstMovement.focus();
+  await expect(firstMovement).toBeFocused();
+  await expect(firstMovement).toHaveCSS("outline-style", "solid");
+  await expect(firstMovement.locator("img")).toHaveCSS("transition-duration", "1e-05s");
+});
