@@ -58,5 +58,5 @@
   .archive::after { opacity: .45; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .movementArt img { transition: none; }
+  .movementArt img { transition: none; transform: none !important; }
 }

@@ -678,6 +678,14 @@ test("public taxonomy presents the prophecy as six movements", async ({ page }) 
   await expect(page.locator(".reader-hero")).toContainText("six movements");
 });
 
+test("mobile primary navigation keeps movements reachable", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.goto("/");
+  const movements = page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Movements" });
+  await expect(movements).toBeVisible();
+  await expect(movements).toHaveAttribute("href", "/tapestries/1/");
+});
+
 test("homepage opens as an illuminated movement ledger", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile");
   await page.goto("/");
@@ -720,4 +728,5 @@ test("homepage movement links keep visible focus and reduced motion", async ({ p
   await expect(firstMovement).toBeFocused();
   await expect(firstMovement).toHaveCSS("outline-style", "solid");
   await expect(firstMovement.locator("img")).toHaveCSS("transition-duration", "1e-05s");
+  await expect(firstMovement.locator("img")).toHaveCSS("transform", "none");
 });

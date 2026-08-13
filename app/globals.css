@@ -133,7 +133,6 @@ body:has(.embed-frame) main { min-height: 100vh; }
 
 @media (max-width: 960px) {
   .site-header { min-height: 4.5rem; }
-  .site-header nav a:first-child { display: none; }
   .site-footer { flex-direction: column; }
   .viewer-heading { display: block; padding-bottom: 2.5rem; }
   .viewer-controls { margin-top: 1.5rem; }
