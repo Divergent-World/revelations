@@ -220,10 +220,12 @@ test("artwork zoom lens preserves the fitted region beneath the pointer", async 
   expect(geometry.lensY).toBeCloseTo(geometry.sourceY, 3);
 });
 
-test("artwork zoom keyboard shortcuts adjust and reset the focused viewport", async ({ page }, testInfo) => {
+test("artwork zoom keyboard shortcuts adjust and Escape closes the focused dialog", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile");
-  await page.goto("/tapestries/1/?scene=T1-T01");
+  await page.goto("/tapestries/1/");
 
+  const opener = page.getByRole("button", { name: "Open Seven churches of Asia" });
+  await opener.click();
   const viewport = page.getByRole("button", { name: "Zoom artwork" });
   await viewport.focus();
   await page.keyboard.press("Enter");
@@ -233,12 +235,17 @@ test("artwork zoom keyboard shortcuts adjust and reset the focused viewport", as
   await page.keyboard.press("+");
   await expect(page.getByText("2×", { exact: true })).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(page.getByText("1×", { exact: true })).toBeVisible();
-  await expect(page.getByRole("dialog")).toBeVisible();
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await expect(page).not.toHaveURL(/scene=/);
+  await expect(opener).toBeFocused();
+
+  await opener.click();
+  await page.getByRole("button", { name: "Zoom artwork" }).focus();
   await page.keyboard.press("Space");
   await expect(page.getByText("2×", { exact: true })).toBeVisible();
   await page.keyboard.press("0");
   await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await expect(page.getByRole("dialog")).toBeVisible();
 });
 
 test("artwork zoom resets between scenes and disables only after both images fail", async ({ page }, testInfo) => {
@@ -294,6 +301,38 @@ test("artwork zoom keeps the reader split at iPad width", async ({ page }, testI
   await page.mouse.move(400, 500);
   await page.mouse.wheel(0, 500);
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+});
+
+test("artwork zoom stacks artwork and text at 740px phone width", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.setViewportSize({ width: 740, height: 900 });
+  await page.goto("/tapestries/1/?scene=T1-T01");
+  const layout = await page.getByRole("dialog").evaluate((dialog) => {
+    const artwork = dialog.querySelector<HTMLElement>(".dialog-art")!.getBoundingClientRect();
+    const reading = dialog.querySelector<HTMLElement>(".dialog-reading")!.getBoundingClientRect();
+    return { display: getComputedStyle(dialog).display, artworkBottom: artwork.bottom, readingTop: reading.top };
+  });
+  expect(layout.display).toBe("block");
+  expect(layout.readingTop).toBeGreaterThanOrEqual(layout.artworkBottom - 1);
+});
+
+test("artwork zoom stacks artwork and text on a short coarse-pointer landscape phone", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.setViewportSize({ width: 844, height: 390 });
+  await page.goto("/tapestries/1/?scene=T1-T01");
+  const layout = await page.getByRole("dialog").evaluate((dialog) => {
+    const artwork = dialog.querySelector<HTMLElement>(".dialog-art")!.getBoundingClientRect();
+    const reading = dialog.querySelector<HTMLElement>(".dialog-reading")!.getBoundingClientRect();
+    return {
+      coarsePointer: matchMedia("(pointer: coarse)").matches,
+      display: getComputedStyle(dialog).display,
+      artworkBottom: artwork.bottom,
+      readingTop: reading.top,
+    };
+  });
+  expect(layout.coarsePointer).toBe(true);
+  expect(layout.display).toBe("block");
+  expect(layout.readingTop).toBeGreaterThanOrEqual(layout.artworkBottom - 1);
 });
 
 test("artwork zoom handles native touch pinch and pan without click toggle", async ({ page, context }, testInfo) => {
@@ -360,6 +399,37 @@ test("artwork zoom handles native touch pinch and pan without click toggle", asy
   expect(afterPan.y).toBeGreaterThan(beforePan.y);
   await expect(page.getByText("2×", { exact: true })).toBeVisible();
   expect(await page.evaluate(() => window.scrollY)).toBe(pageScroll);
+});
+
+test("artwork zoom keeps continuous pinch updates out of live regions", async ({ page, context }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.setViewportSize({ width: 820, height: 1000 });
+  await page.goto("/tapestries/1/?scene=T1-00");
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  const output = page.locator('[aria-label="Artwork zoom level"]');
+  const box = await viewport.boundingBox();
+  expect(box).not.toBeNull();
+  const center = { x: box!.x + box!.width / 2, y: box!.y + box!.height / 2 };
+  const client = await context.newCDPSession(page);
+
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [
+      { x: center.x - 50, y: center.y, id: 0 },
+      { x: center.x + 50, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [
+      { x: center.x - 100, y: center.y, id: 0 },
+      { x: center.x + 100, y: center.y, id: 1 },
+    ],
+  });
+  await expect(output).toHaveText("2×");
+  await expect(page.locator(".zoom-toolbar [aria-live]")).toHaveCount(0);
+  await expect(page.getByRole("status")).toHaveCount(0);
+  await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
 });
 
 test("artwork zoom clamps native touch pinch at exactly 1× and 4×", async ({ page, context }, testInfo) => {

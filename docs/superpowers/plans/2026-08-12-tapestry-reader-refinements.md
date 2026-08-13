@@ -371,7 +371,7 @@ Render:
 - a hover lens only for fine-pointer desktop input at `1×`;
 - an unavailable state that hides/disables the zoom toolbar.
 
-Use pointer events rather than a dependency. Clamp the transform after every scale and pan update so blank space cannot be dragged into the viewport. Give the viewport `role="button"`, a descriptive `aria-label`, and keyboard handling: Enter/Space toggles `1×`/`2×`, `+`/`-` adjust scale, and Escape/`0` resets.
+Use pointer events rather than a dependency. Clamp the transform after every scale and pan update so blank space cannot be dragged into the viewport. Give the viewport `role="button"`, a descriptive `aria-label`, and keyboard handling: Enter/Space toggles `1×`/`2×`, `+`/`-` adjust scale, and `0` resets. Do not intercept Escape in the zoom viewport; it must retain the dialog's native close behavior.
 
 On desktop:
 
@@ -463,7 +463,7 @@ Confirm that:
 - all six expanded movement narratives remain intact, including the supplied four-part Tapestry II text;
 - generated scripture wording is byte-for-byte unchanged apart from added range metadata;
 - zoom works with mouse, keyboard, and touch semantics;
-- only scene-dialog scripture receives the gold speech accent.
+- both scene-dialog scripture and the full-chapter reader receive the gold speech accent.
 
 ### Step 3: Request focused code review
 

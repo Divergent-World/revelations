@@ -210,7 +210,7 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
     } else if (event.key === "-") {
       event.preventDefault();
       zoomAround(transformRef.current.scale - SCALE_STEP);
-    } else if (event.key === "Escape" || event.key === "0") {
+    } else if (event.key === "0") {
       event.preventDefault();
       reset();
     }
@@ -272,7 +272,7 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
       </div>
       <div className="zoom-toolbar" role="group" aria-label="Artwork zoom controls">
         <button type="button" aria-label="Zoom out" disabled={unavailable || transform.scale <= MIN_SCALE} onClick={() => zoomAround(transform.scale - SCALE_STEP)}>−</button>
-        <output aria-live="polite" aria-label="Artwork zoom level">{scaleLabel}</output>
+        <span className="zoom-toolbar__level" aria-label="Artwork zoom level">{scaleLabel}</span>
         <button type="button" aria-label="Zoom in" disabled={unavailable || transform.scale >= MAX_SCALE} onClick={() => zoomAround(transform.scale + SCALE_STEP)}>+</button>
         <button type="button" disabled={unavailable || transform.scale === MIN_SCALE} onClick={reset} aria-label="Reset artwork zoom">Reset</button>
       </div>
