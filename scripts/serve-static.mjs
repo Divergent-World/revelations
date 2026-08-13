@@ -23,6 +23,7 @@ createServer(async (request, response) => {
     file = path.join(root, "404.html");
     response.statusCode = 404;
   }
+  if (pathname === "/export.md") response.setHeader("Content-Disposition", 'attachment; filename="export.md"');
   response.setHeader("Content-Type", types[path.extname(file)] ?? "application/octet-stream");
   createReadStream(file).pipe(response);
 }).listen(port, "127.0.0.1", () => console.log(`${path.relative(path.resolve(import.meta.dirname, ".."), root)} available at http://127.0.0.1:${port}`));

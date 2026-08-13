@@ -9,6 +9,7 @@ test("homepage downloads the complete illuminated Markdown edition", async ({ pa
   const response = await page.request.get("/export.md");
   expect(response.ok()).toBe(true);
   expect(response.headers()["content-type"]).toContain("text/markdown");
+  expect(response.headers()["content-disposition"]).toBe('attachment; filename="export.md"');
   const markdown = await response.text();
   expect(markdown).toContain("# The Revelation to John");
   expect(markdown.match(/^!\[/gm)).toHaveLength(90);
