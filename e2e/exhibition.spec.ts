@@ -1,5 +1,21 @@
 import { expect, test } from "@playwright/test";
 
+test("homepage downloads the complete illuminated Markdown edition", async ({ page }) => {
+  await page.goto("/");
+  const exportLink = page.getByRole("link", { name: "export.md" });
+  await expect(exportLink).toHaveAttribute("href", "/export.md");
+  await expect(exportLink).toHaveAttribute("download", "");
+
+  const response = await page.request.get("/export.md");
+  expect(response.ok()).toBe(true);
+  expect(response.headers()["content-type"]).toContain("text/markdown");
+  const markdown = await response.text();
+  expect(markdown).toContain("# The Revelation to John");
+  expect(markdown.match(/^!\[/gm)).toHaveLength(90);
+  expect(markdown).toContain("· T6-B07 · Saint John before God · Revelation 22:9–13");
+  expect(markdown).toContain("http://127.0.0.1:3101/releases/v1/web/1920/T1-00.webp");
+});
+
 test.beforeEach(async ({ page }) => {
   await page.route("**/releases/v1/web/**", (route) => route.fulfill({
     status: 200,

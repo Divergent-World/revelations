@@ -43,6 +43,7 @@ export default function HomePage() {
         <h2>Keep the entire work.</h2>
         <p>The versioned release contains all 90 high-resolution originals, metadata, checksums, attribution, and license terms.</p>
         <div className="hero-actions">
+          <a className="button button-primary" href="/export.md" download>export.md</a>
           <a className="button button-primary" href={archiveUrl}>Download artwork v1</a>
           <a className="button" href="https://github.com/Divergent-World/revelations">Fork the source</a>
         </div>
