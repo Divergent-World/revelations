@@ -37,6 +37,10 @@ npm run content:validate
 
 VPL supplies the visible canonical scripture wording; USFM supplies only verified `\wj` words-of-Jesus ranges. The generator reads the vault but never renames, moves, or writes its files.
 
+## Book export
+
+The homepage’s `export.md` action downloads all 22 chapters with 90 unique linked illuminations. See [Convert the illuminated Markdown book](docs/book-export.md) for Pandoc commands that create DOCX, EPUB, and PDF files and for the Google Docs import workflow.
+
 ## Build the artwork release
 
 ```bash
