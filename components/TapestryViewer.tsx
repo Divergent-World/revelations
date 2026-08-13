@@ -70,7 +70,7 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
       <header className="viewer-heading">
         <div>
           <p className="eyebrow">Tapestry {tapestry.roman}</p>
-          <h1>{tapestry.movements.join(" · ")}</h1>
+          <h1>{tapestry.movements.map(({ title }) => title).join(" · ")}</h1>
           <p>{tapestry.summary}</p>
         </div>
         <div className="viewer-controls">
@@ -83,7 +83,14 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
         <SceneCard scene={lead} eager onOpen={openScene} />
         <div className="movement-list">
           <p className="eyebrow">The movement</p>
-          <ol>{tapestry.movements.map((movement) => <li key={movement}>{movement}</li>)}</ol>
+          <ol>
+            {tapestry.movements.map(({ title, description }) => (
+              <li key={title}>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

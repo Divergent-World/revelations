@@ -67,7 +67,10 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .95; }
 .lead-scene { display: grid; grid-template-columns: minmax(14rem, 22rem) 1fr; gap: clamp(2rem, 6vw, 8rem); align-items: center; max-width: 90rem; padding: 0 clamp(1rem, 4vw, 4rem) 7rem; }
 .lead-scene .scene-card { --card-width: 20rem; }
 .movement-list ol { display: grid; grid-template-columns: repeat(2, minmax(10rem, 1fr)); gap: 1px; padding: 1px; list-style-position: inside; background: var(--line); }
-.movement-list li { padding: 1.4rem; background: var(--night); font: 1.3rem var(--font-display), serif; }
+.movement-list li { padding: 1.4rem; background: var(--night); }
+.movement-list li::marker { color: var(--gold); font: .7rem var(--font-sans), sans-serif; }
+.movement-list h2 { display: inline; margin: 0; font: 1.3rem/1.15 var(--font-display), serif; }
+.movement-list li p { margin: .8rem 0 0; color: var(--muted); font: .9rem/1.65 var(--font-sans), sans-serif; }
 .tapestry-stage { overflow-x: auto; overscroll-behavior-x: contain; padding: 2rem clamp(1rem, 4vw, 4rem) 4rem; scrollbar-color: var(--gold) #171a1f; }
 .tapestry-stage.zoom-0 { --card-width: 16rem; }
 .tapestry-stage.zoom-1 { --card-width: 22rem; }

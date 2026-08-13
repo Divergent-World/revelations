@@ -88,6 +88,16 @@ test("keyboard controls zoom and navigate an open scene", async ({ page }) => {
   await expect(page.getByRole("dialog")).toHaveCount(0);
 });
 
+test("tapestry movements present the full narrative beside the reader", async ({ page }) => {
+  await page.goto("/tapestries/2/");
+  const movements = page.locator(".movement-list li");
+  await expect(movements).toHaveCount(4);
+  await expect(movements.first()).toContainText("God marks out His people");
+  await expect(movements.first()).toContainText("144,000 sealed");
+  await expect(movements.last()).toContainText("Judgment becomes demonic and militarized");
+  await expect(movements.last()).toContainText("riders on fire-breathing horses");
+});
+
 test("normal viewing never requests an archival original", async ({ page }) => {
   const requests: string[] = [];
   page.on("request", (request) => requests.push(request.url()));
