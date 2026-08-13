@@ -39,7 +39,7 @@ VPL supplies the visible canonical scripture wording; USFM supplies only verifie
 
 ## Book export
 
-The homepage’s `export.md` action downloads all 22 chapters with 90 unique linked illuminations. See [Convert the illuminated Markdown book](docs/book-export.md) for Pandoc commands that create DOCX, EPUB, and PDF files and for the Google Docs import workflow.
+The homepage’s `export.md` action downloads all 22 chapters with 90 unique linked illuminations. Download its companion `red-letter reference` file when creating DOCX: it preserves the words of Jesus in crimson in Word and Google Docs. See [Convert the illuminated Markdown book](docs/book-export.md) for Pandoc commands that create red-letter DOCX, EPUB, and PDF files.
 
 ## Build the artwork release
 
@@ -48,7 +48,7 @@ npm run assets:release
 npm run assets:validate
 ```
 
-This creates ignored files under `dist/releases/v1/`: 90 checksum-verified originals, 640px and 1920px WebP derivatives, the release manifest, checksums, and `revelations-artwork-v1.zip`.
+This creates ignored files under `dist/releases/v1/`: 90 checksum-verified originals, 640px and 1920px WebP derivatives, 1920px-or-smaller book-safe JPEGs, the release manifest, checksums, and `revelations-artwork-v1.zip`.
 
 Upload after setting the four R2 credentials shown in `.env.example`:
 

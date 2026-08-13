@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 import { renderMarkdownBook } from "../lib/markdown-book.ts";
@@ -18,7 +20,7 @@ test("renders the complete illuminated Revelation with every artwork once", () =
   const markdown = render();
   const chapterHeadings = markdown.match(/^## Revelation \d+$/gm) ?? [];
   const verseLines = markdown.match(/^\*\*\d+:\d+\*\* /gm) ?? [];
-  const figureLines = markdown.match(/^!\[[^\n]+\]\((https:\/\/assets\.example\.test\/releases\/v1\/web\/1920\/[^)]+\.webp)\)$/gm) ?? [];
+  const figureLines = markdown.match(/^!\[[^\n]+\]\((https:\/\/assets\.example\.test\/releases\/v1\/book\/images\/[^)]+\.jpg)\)$/gm) ?? [];
   const sceneCaptions = [...markdown.matchAll(/^\*Movement [IVX]+ · (T\d-(?:00|[TB]\d{2})) ·/gm)].map((match) => match[1]);
 
   assert.equal(chapterHeadings.length, 22);
@@ -28,6 +30,33 @@ test("renders the complete illuminated Revelation with every artwork once", () =
   assert.equal(new Set(sceneCaptions).size, 90);
   assert.match(markdown, /^---\ntitle: "The Revelation to John"/);
   assert.match(markdown, /\*\*22:21\*\* The grace of the Lord Jesus Christ be with all the saints\. Amen\./);
+});
+
+test("annotates every canonical words-of-Jesus range without changing scripture", () => {
+  const markdown = render();
+  const annotation = /\[([^\]]*)\]\{\.words-of-jesus style="color: #9B1C31" custom-style="Words of Jesus"\}/g;
+  const expectedRanges = chapters.reduce(
+    (count, chapter) => count + chapter.verses.reduce((verseCount, verse) => verseCount + (verse.wordsOfJesus?.length ?? 0), 0),
+    0,
+  );
+  assert.equal([...markdown.matchAll(annotation)].length, expectedRanges);
+
+  for (const chapter of chapters) {
+    for (const verse of chapter.verses) {
+      const line = markdown.split("\n").find((candidate) => candidate.startsWith(`**${chapter.chapter}:${verse.number}** `));
+      assert.ok(line, `missing Revelation ${chapter.chapter}:${verse.number}`);
+      const reconstructed = line.slice(`**${chapter.chapter}:${verse.number}** `.length).replaceAll(annotation, "$1");
+      assert.equal(reconstructed, verse.text, `Revelation ${chapter.chapter}:${verse.number} changed`);
+    }
+  }
+});
+
+test("publishes a red-letter reference DOCX for Pandoc", () => {
+  const reference = fileURLToPath(new URL("../public/red-letter-reference.docx", import.meta.url));
+  const styles = execFileSync("unzip", ["-p", reference, "word/styles.xml"], { encoding: "utf8" });
+  assert.match(styles, /<w:style[^>]+w:type="character"[^>]+w:styleId="WordsofJesus"/);
+  assert.match(styles, /<w:name w:val="Words of Jesus"\s*\/>/);
+  assert.match(styles, /<w:color w:val="9B1C31"\s*\/>/);
 });
 
 test("places shared and multi-span scenes once at their first verse", () => {

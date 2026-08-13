@@ -6,6 +6,7 @@ export function releasePaths(sceneId, extension) {
     original: `releases/v1/originals/${sceneId}${ext}`,
     preview: `releases/v1/web/640/${sceneId}.webp`,
     reader: `releases/v1/web/1920/${sceneId}.webp`,
+    book: `releases/v1/book/images/${sceneId}.jpg`,
   };
 }
 
@@ -34,6 +35,7 @@ export function expectedReleaseFiles(sources) {
     originals: sources.map(({ id, originalExtension }) => `${id}${originalExtension}`).sort(),
     previews: sources.map(({ id }) => `${id}.webp`).sort(),
     readers: sources.map(({ id }) => `${id}.webp`).sort(),
+    books: sources.map(({ id }) => `${id}.jpg`).sort(),
   };
 }
 
@@ -42,6 +44,7 @@ export function validateReleaseInventory(inventory) {
     originals: 90,
     previews: 90,
     readers: 90,
+    books: 90,
     zipFiles: 95,
     archiveOriginals: 90,
   };

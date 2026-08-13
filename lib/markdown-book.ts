@@ -25,6 +25,23 @@ function escapeMarkdown(value: string) {
   return value.replaceAll("\\", "\\\\").replaceAll("[", "\\[").replaceAll("]", "\\]").replaceAll("*", "\\*").replaceAll("_", "\\_");
 }
 
+function renderVerseText(verse: ScriptureChapter["verses"][number]) {
+  const ranges = verse.wordsOfJesus ?? [];
+  if (ranges.length === 0) return verse.text;
+
+  let cursor = 0;
+  const parts: string[] = [];
+  for (const range of ranges) {
+    parts.push(
+      verse.text.slice(cursor, range.start),
+      `[${verse.text.slice(range.start, range.end)}]{.words-of-jesus style="color: #9B1C31" custom-style="Words of Jesus"}`,
+    );
+    cursor = range.end;
+  }
+  parts.push(verse.text.slice(cursor));
+  return parts.join("");
+}
+
 export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownBookInput) {
   const origin = cleanOrigin(assetBaseUrl);
   if (chapters.length !== 22 || chapters.some(({ chapter }, index) => chapter !== index + 1)) {
@@ -60,7 +77,7 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
     if (scene.images.reader !== `releases/v1/web/1920/${scene.id}.webp`) {
       throw new Error(`${scene.id}: reader image must be a canonical release key`);
     }
-    const imageUrl = new URL(scene.images.reader, `${origin}/`).href;
+    const imageUrl = new URL(`releases/v1/book/images/${scene.id}.jpg`, `${origin}/`).href;
     imageUrls.add(imageUrl);
     scenesAt.set(anchorKey, [...(scenesAt.get(anchorKey) ?? []), { scene, imageUrl }]);
   }
@@ -99,7 +116,7 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
           "",
         );
       }
-      lines.push(`**${chapter.chapter}:${verse.number}** ${verse.text}`, "");
+      lines.push(`**${chapter.chapter}:${verse.number}** ${renderVerseText(verse)}`, "");
     }
   }
 

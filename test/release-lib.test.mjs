@@ -8,6 +8,7 @@ test("releasePaths uses stable scene IDs and preserves original extension", () =
     original: "releases/v1/originals/T2-B07.png",
     preview: "releases/v1/web/640/T2-B07.webp",
     reader: "releases/v1/web/1920/T2-B07.webp",
+    book: "releases/v1/book/images/T2-B07.jpg",
   });
 });
 
@@ -30,6 +31,7 @@ test("expectedReleaseFiles produces exact stable filenames", () => {
     originals: ["T1-T01.png"],
     previews: ["T1-T01.webp"],
     readers: ["T1-T01.webp"],
+    books: ["T1-T01.jpg"],
   });
 });
 
@@ -38,6 +40,7 @@ test("validateReleaseInventory requires 90 originals, two derivative sets, and a
     originals: 90,
     previews: 90,
     readers: 90,
+    books: 90,
     zipFiles: 95,
     archiveOriginals: 90,
   };

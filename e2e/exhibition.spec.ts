@@ -14,7 +14,7 @@ test("homepage downloads the complete illuminated Markdown edition", async ({ pa
   expect(markdown).toContain("# The Revelation to John");
   expect(markdown.match(/^!\[/gm)).toHaveLength(90);
   expect(markdown).toContain("· T6-B07 · Saint John before God · Revelation 22:9–13");
-  expect(markdown).toContain("http://127.0.0.1:3101/releases/v1/web/1920/T1-00.webp");
+  expect(markdown).toContain("http://127.0.0.1:3101/releases/v1/book/images/T1-00.jpg");
 });
 
 test.beforeEach(async ({ page }) => {

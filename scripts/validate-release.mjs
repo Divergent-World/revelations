@@ -49,10 +49,11 @@ async function walk(directory, prefix = "") {
   return nested.flat();
 }
 
-const [originals, previews, readers, zipList] = await Promise.all([
+const [originals, previews, readers, books, zipList] = await Promise.all([
   readdir(path.join(releaseRoot, "originals")),
   readdir(path.join(releaseRoot, "web", "640")),
   readdir(path.join(releaseRoot, "web", "1920")),
+  readdir(path.join(releaseRoot, "book", "images")),
   run("unzip", ["-Z1", archive]),
 ]);
 const zipFiles = zipList.split("\n").filter((entry) => entry && !entry.endsWith("/"));
@@ -61,12 +62,14 @@ validateReleaseInventory({
   originals: originals.length,
   previews: previews.length,
   readers: readers.length,
+  books: books.length,
   zipFiles: zipFiles.length,
   archiveOriginals: zipFiles.filter((entry) => entry.startsWith("originals/")).length,
 });
 assertExactFiles(originals, expected.originals, "original");
 assertExactFiles(previews, expected.previews, "preview derivative");
 assertExactFiles(readers, expected.readers, "reader derivative");
+assertExactFiles(books, expected.books, "book derivative");
 assertExactFiles(zipFiles, [
   "ATTRIBUTION.txt",
   "LICENSE-ARTWORK.txt",
@@ -82,6 +85,7 @@ assertExactFiles(await walk(releaseRoot), [
   ...expected.originals.map((file) => `originals/${file}`),
   ...expected.previews.map((file) => `web/640/${file}`),
   ...expected.readers.map((file) => `web/1920/${file}`),
+  ...expected.books.map((file) => `book/images/${file}`),
 ].sort(), "release tree");
 
 const canonicalManifest = await readFile(path.join(root, "content", "tapestries.json"), "utf8");
@@ -128,5 +132,24 @@ for (const [directory, maximumWidth] of [["640", 640], ["1920", 1920]]) {
   }
 }
 
+for (const file of books) {
+  const derivativePath = path.join(releaseRoot, "book", "images", file);
+  const derivative = await readFile(derivativePath);
+  const metadata = await sharp(derivative).metadata();
+  const sceneId = path.basename(file, ".jpg");
+  const scene = canonicalScenes.get(sceneId);
+  const expectedWidth = Math.min(1920, scene?.width ?? 0);
+  const expectedHeight = Math.round((expectedWidth * (scene?.height ?? 0)) / (scene?.width ?? 1));
+  if (metadata.format !== "jpeg" || metadata.width !== expectedWidth || Math.abs((metadata.height ?? 0) - expectedHeight) > 1) {
+    throw new Error(`book/images/${file}: invalid derivative format or dimensions`);
+  }
+  const source = sourceMap.find(({ id }) => id === sceneId);
+  const original = path.join(releaseRoot, "originals", `${sceneId}${source.originalExtension}`);
+  const regenerated = await sharp(original).resize({ width: expectedWidth, withoutEnlargement: true }).jpeg({ quality: 88, mozjpeg: true }).toBuffer();
+  if (sha256(derivative) !== sha256(regenerated)) {
+    throw new Error(`book/images/${file}: derivative does not match its canonical original`);
+  }
+}
+
 await run("unzip", ["-tq", archive]);
-console.log("Release validated: 90 originals, 180 WebP derivatives, matching checksums, and a complete ZIP archive.");
+console.log("Release validated: 90 originals, 180 WebP derivatives, 90 book JPEGs, matching checksums, and a complete ZIP archive.");

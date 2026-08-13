@@ -65,6 +65,7 @@ export default function HomePage() {
         <p className={styles.archiveIntro}>Export all 22 chapters and 90 unique illuminations as an editable Markdown book, or keep the complete archival artwork release.</p>
         <div className={styles.actions}>
           <a className="button button-primary" href="/export.md" download>export.md</a>
+          <a className="button" href="/red-letter-reference.docx" download>red-letter reference</a>
           <a className="button" href={archiveUrl}>Download artwork v1</a>
           <a className="button" href="https://github.com/Divergent-World/revelations">Fork the source</a>
         </div>
