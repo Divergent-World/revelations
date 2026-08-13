@@ -245,7 +245,7 @@ Open a scene whose passage includes a `wordsOfJesus` range and assert that:
 - a `.words-of-jesus` span exists;
 - its text equals the corresponding substring in generated JSON;
 - surrounding scripture stays in the normal passage color;
-- the full-chapter reader does not add red-letter spans.
+- the full-chapter reader applies the same gold spans to the same marked substrings.
 
 Run:
 
@@ -276,7 +276,7 @@ function VerseText({ verse }: { verse: Verse }) {
 }
 ```
 
-Handle the no-range case by returning the complete verse text directly. Use the helper only inside scene-dialog passages; leave the chapter-reader component unchanged.
+Handle the no-range case by returning the complete verse text directly. Export or colocate the helper so both scene-dialog passages and the full-chapter reader use the same range-splitting implementation.
 
 ### Step 3: Style the accent and verify
 

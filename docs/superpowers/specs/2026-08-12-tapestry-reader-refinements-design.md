@@ -65,7 +65,7 @@ During content generation:
 
 `WEB_USFM_PATH` points to either the Revelation `.usfm` file or the official `engwebp_usfm.zip`; the generator selects `96-REVengwebp.usfm` from the archive. Update `.env.example` and content-generation documentation accordingly. Static builds do not require either source file because they consume the committed generated JSON.
 
-In `SceneDialog`, split verse text at the generated ranges and render only marked spans with a `words-of-jesus` class. Use the existing gold color at normal font weight. Narration inside a partially marked verse remains unchanged. This treatment is scoped to scripture beside scene artwork; the full chapter reader remains unchanged.
+In both `SceneDialog` and the full chapter reader, split verse text at the generated ranges and render only marked spans with a `words-of-jesus` class. Use the existing gold color at normal font weight. Narration inside a partially marked verse remains unchanged. Both reading surfaces share the same range-rendering helper so their treatment cannot drift.
 
 ## Components and data flow
 
@@ -101,4 +101,4 @@ No new package, route, canvas rendering layer, or persistent user preference is 
 
 ## Scope
 
-This change does not alter movement summaries, scene metadata, artwork mapping, canonical scripture wording, the full chapter reader, navigation, licensing, or the Obsidian vault.
+This change does not alter movement summaries, scene metadata, artwork mapping, canonical scripture wording, navigation, licensing, or the Obsidian vault. The full chapter reader changes only by applying the same generated gold speech spans used beside scene artwork.
