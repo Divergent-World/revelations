@@ -28,6 +28,8 @@ for (const scene of scenes) {
 for (const tapestry of tapestries) {
   assert.ok([4, 5].includes(tapestry.movements.length), `Tapestry ${tapestry.id} must contain 4 or 5 movements`);
   for (const [index, movement] of tapestry.movements.entries()) {
+    assert.equal(typeof movement.label, "string", `Tapestry ${tapestry.id} movement ${index + 1} needs a label`);
+    assert.ok(movement.label.trim(), `Tapestry ${tapestry.id} movement ${index + 1} label must not be empty`);
     assert.equal(typeof movement.title, "string", `Tapestry ${tapestry.id} movement ${index + 1} needs a title`);
     assert.ok(movement.title.trim(), `Tapestry ${tapestry.id} movement ${index + 1} title must not be empty`);
     assert.equal(typeof movement.description, "string", `Tapestry ${tapestry.id} movement ${index + 1} needs a description`);

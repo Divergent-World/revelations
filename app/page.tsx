@@ -28,7 +28,7 @@ export default function HomePage() {
               <Link href={`/tapestries/${tapestry.id}/`}>
                 <span className="roman">{tapestry.roman}</span>
                 <span>
-                  <strong>{tapestry.movements.map(({ title }) => title).join(" · ")}</strong>
+                  <strong>{tapestry.movements.map(({ label }) => label).join(" · ")}</strong>
                   <small>{tapestry.summary}</small>
                 </span>
                 <span aria-hidden="true">↗</span>

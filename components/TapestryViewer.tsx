@@ -70,7 +70,7 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
       <header className="viewer-heading">
         <div>
           <p className="eyebrow">Tapestry {tapestry.roman}</p>
-          <h1>{tapestry.movements.map(({ title }) => title).join(" · ")}</h1>
+          <h1>{tapestry.movements.map(({ label }) => label).join(" · ")}</h1>
           <p>{tapestry.summary}</p>
         </div>
         <div className="viewer-controls">

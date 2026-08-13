@@ -10,7 +10,7 @@ export type VerseSpan = {
 };
 export type Verse = { chapter: number; verse: number; text: string };
 export type Passage = { reference: string; verses: Verse[] };
-export type Movement = { title: string; description: string };
+export type Movement = { label: string; title: string; description: string };
 export type Scene = {
   id: SceneId;
   tapestry: number;

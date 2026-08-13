@@ -4,7 +4,7 @@
 
 **Goal:** Replace the terse movement labels beside every lead reader image with four or five numbered title-and-description cards faithful to the Obsidian canvas summaries.
 
-**Architecture:** Keep movement copy in the existing generated tapestry manifest, but change each movement from a string to a `{ title, description }` object. The shared viewer renders the full objects, while the homepage and page heading derive their existing compact title lists with `movements.map(({ title }) => title)`.
+**Architecture:** Keep movement copy in the existing generated tapestry manifest, but change each movement from a string to a `{ label, title, description }` object. The shared viewer renders full titles and descriptions, while the homepage and page heading preserve their compact lists with `movements.map(({ label }) => label)`.
 
 **Tech Stack:** Next.js 16.3 App Router, React 19, TypeScript 5.9, global CSS, Node.js test runner, Playwright.
 
@@ -27,7 +27,7 @@
 - Modify: `lib/content.ts`
 
 **Interfaces:**
-- Produces: `Movement = { title: string; description: string }`
+- Produces: `Movement = { label: string; title: string; description: string }`
 - Produces: `Tapestry.movements: Movement[]`
 - Consumes: the existing six-entry `movements` authoring array in `scripts/generate-content.mjs`
 
@@ -38,6 +38,8 @@ Inside the existing `for (const tapestry of tapestries)` loop in `scripts/valida
 ```js
 assert.ok([4, 5].includes(tapestry.movements.length), `Tapestry ${tapestry.id} must contain 4 or 5 movements`);
 for (const [index, movement] of tapestry.movements.entries()) {
+  assert.equal(typeof movement.label, "string", `Tapestry ${tapestry.id} movement ${index + 1} needs a label`);
+  assert.ok(movement.label.trim(), `Tapestry ${tapestry.id} movement ${index + 1} label must not be empty`);
   assert.equal(typeof movement.title, "string", `Tapestry ${tapestry.id} movement ${index + 1} needs a title`);
   assert.ok(movement.title.trim(), `Tapestry ${tapestry.id} movement ${index + 1} title must not be empty`);
   assert.equal(typeof movement.description, "string", `Tapestry ${tapestry.id} movement ${index + 1} needs a description`);
@@ -68,6 +70,7 @@ Represent each entry as:
 
 ```js
 {
+  label: "Revelation",
   title: "Christ appears and the revelation begins.",
   description: "The first scenes establish that John has received a divine vision. Christ is shown in majesty among the candlesticks, and the ‘seven churches’ are invoked as the audience of the revelation. The point here is not yet catastrophe. The point is authority: this vision comes from Christ, and it is meant for the Church.",
 }
@@ -78,18 +81,22 @@ Use these exact Tapestry II objects:
 ```js
 [
   {
+    label: "The faithful sealed",
     title: "God marks out His people before the next wave of judgment.",
     description: "The tapestry opens with the 144,000 sealed. So before the next catastrophes begin, there is first an image of distinction and protection: God knows who are His. In the historical cycle, this functions like a pause after the seals and before the trumpets.",
   },
   {
+    label: "Trumpets prepared",
     title: "Heaven prepares judgment through liturgy.",
     description: "Then the mood shifts upward: the angels receive the seven trumpets, and another angel handles the incense that represents the prayers of the saints. This is important because the coming judgments are not shown as random chaos. They are framed as proceeding from heaven, with the prayers of the faithful rising before God. The angel then casts the incense/fire to the earth, and the trumpet cycle begins.",
   },
   {
+    label: "Creation struck",
     title: "Creation itself begins to break apart.",
     description: "The first run of trumpets strikes the natural world: hail and fire, the burning mountain thrown into the sea, Wormwood falling from heaven into the waters, and then the darkening of the sun, moon, and stars. So this middle section of Tapestry 2 is really about the world becoming disordered at the cosmic level — land, sea, rivers, sky, light itself.",
   },
   {
+    label: "The abyss and war unleashed",
     title: "Judgment becomes demonic and militarized.",
     description: "Then the imagery grows more frightening and surreal. The fifth trumpet brings the locusts from the pit; the sixth trumpet releases the four angels; and finally comes the apocalyptic cavalry, the riders on fire-breathing horses, killing on a massive scale. So Tapestry 2 does not end with a quiet symbol. It ends with an escalation: from environmental catastrophe to infernal torment to warlike devastation.",
   },
@@ -103,7 +110,7 @@ Copy the same objects into the six tapestry records at the top of `content/tapes
 In `lib/content.ts`, add:
 
 ```ts
-export type Movement = { title: string; description: string };
+export type Movement = { label: string; title: string; description: string };
 ```
 
 Change `Tapestry.movements` from `string[]` to `Movement[]`.
@@ -162,7 +169,7 @@ Expected: FAIL because the existing list renders object values directly and has 
 In `components/TapestryViewer.tsx` and `app/page.tsx`, replace `tapestry.movements.join(" · ")` with:
 
 ```tsx
-tapestry.movements.map(({ title }) => title).join(" · ")
+tapestry.movements.map(({ label }) => label).join(" · ")
 ```
 
 - [ ] **Step 4: Render semantic movement cards**

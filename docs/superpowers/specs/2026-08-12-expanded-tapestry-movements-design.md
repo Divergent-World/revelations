@@ -20,6 +20,7 @@ Replace each `movements` string with an object containing:
 
 ```ts
 type Movement = {
+  label: string;
   title: string;
   description: string;
 };
@@ -31,7 +32,7 @@ The generated `content/tapestries.json` file and its source arrays in `scripts/g
 
 - The shared tapestry viewer renders each movement as a numbered card with a title and paragraph.
 - The cards remain beside the lead reader image on all six regular and embedded tapestry pages.
-- The tapestry heading and homepage index continue to show only the movement titles, joined by centered dots.
+- The tapestry heading and homepage index continue to show the existing concise movement labels, joined by centered dots.
 - Existing typography and responsive behavior remain intact, with small CSS adjustments for the longer card content.
 
 ## Validation

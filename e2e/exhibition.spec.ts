@@ -90,6 +90,7 @@ test("keyboard controls zoom and navigate an open scene", async ({ page }) => {
 
 test("tapestry movements present the full narrative beside the reader", async ({ page }) => {
   await page.goto("/tapestries/2/");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("The faithful sealed · Trumpets prepared · Creation struck · The abyss and war unleashed");
   const movements = page.locator(".movement-list li");
   await expect(movements).toHaveCount(4);
   await expect(movements.first()).toContainText("God marks out His people");
