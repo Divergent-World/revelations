@@ -26,16 +26,16 @@ This serves the application at `http://127.0.0.1:3000` and injects the local ass
 
 - `content/tapestries.json` is the public, canonical scene manifest.
 - `content/source-map.json` records private-vault source paths and checksums for reproducible releases.
-- `content/revelation.web.json` contains all 22 Revelation chapters from the World English Bible verse-per-line distribution.
+- `content/revelation.web.json` contains all 22 Revelation chapters from the World English Bible verse-per-line distribution, with words-of-Jesus ranges derived from official USFM markers.
 
-Regenerate content only with access to the sibling `Apocalypse Tapestry` vault and the official `engwebp_vpl.txt` file:
+Regenerate content only with access to the sibling `Apocalypse Tapestry` vault, the official `engwebp_vpl.txt` file, and the official USFM file or ZIP archive:
 
 ```bash
-WEB_VPL_PATH=/absolute/path/engwebp_vpl.txt npm run content:generate
+WEB_VPL_PATH=/absolute/path/engwebp_vpl.txt WEB_USFM_PATH=/absolute/path/engwebp_usfm.zip npm run content:generate
 npm run content:validate
 ```
 
-The generator reads the vault but never renames, moves, or writes its files.
+VPL supplies the visible canonical scripture wording; USFM supplies only verified `\wj` words-of-Jesus ranges. The generator reads the vault but never renames, moves, or writes its files.
 
 ## Build the artwork release
 

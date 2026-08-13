@@ -8,7 +8,13 @@ export type VerseSpan = {
   endChapter: number;
   endVerse: number | null;
 };
-export type Verse = { chapter: number; verse: number; text: string };
+export type TextRange = { start: number; end: number };
+export type Verse = {
+  chapter: number;
+  verse: number;
+  text: string;
+  wordsOfJesus?: TextRange[];
+};
 export type Passage = { reference: string; verses: Verse[] };
 export type Movement = { title: string; description: string };
 export type Scene = {
@@ -37,7 +43,10 @@ export type Tapestry = {
   leadSceneId: SceneId;
   sceneIds: SceneId[];
 };
-export type ScriptureChapter = { chapter: number; verses: { number: number; text: string }[] };
+export type ScriptureChapter = {
+  chapter: number;
+  verses: { number: number; text: string; wordsOfJesus?: TextRange[] }[];
+};
 
 const scenes = tapestryData.scenes as Scene[];
 const tapestries = tapestryData.tapestries as Tapestry[];

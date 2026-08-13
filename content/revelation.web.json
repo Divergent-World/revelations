@@ -35,7 +35,21 @@
         },
         {
           "number": 8,
-          "text": "“I am the Alpha and the Omega,” says the Lord God, “who is and who was and who is to come, the Almighty.”"
+          "text": "“I am the Alpha and the Omega,” says the Lord God, “who is and who was and who is to come, the Almighty.”",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 30
+            },
+            {
+              "start": 30,
+              "end": 31
+            },
+            {
+              "start": 51,
+              "end": 105
+            }
+          ]
         },
         {
           "number": 9,
@@ -47,7 +61,17 @@
         },
         {
           "number": 11,
-          "text": "saying, “What you see, write in a book and send to the seven assemblies: to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, and to Laodicea.”"
+          "text": "saying, “What you see, write in a book and send to the seven assemblies: to Ephesus, Smyrna, Pergamum, Thyatira, Sardis, Philadelphia, and to Laodicea.”",
+          "wordsOfJesus": [
+            {
+              "start": 8,
+              "end": 72
+            },
+            {
+              "start": 73,
+              "end": 152
+            }
+          ]
         },
         {
           "number": 12,
@@ -71,19 +95,47 @@
         },
         {
           "number": 17,
-          "text": "When I saw him, I fell at his feet like a dead man. He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,"
+          "text": "When I saw him, I fell at his feet like a dead man. He laid his right hand on me, saying, “Don’t be afraid. I am the first and the last,",
+          "wordsOfJesus": [
+            {
+              "start": 90,
+              "end": 136
+            }
+          ]
         },
         {
           "number": 18,
-          "text": "and the Living one. I was dead, and behold, I am alive forever and ever. Amen. I have the keys of Death and of Hades."
+          "text": "and the Living one. I was dead, and behold, I am alive forever and ever. Amen. I have the keys of Death and of Hades.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 117
+            }
+          ]
         },
         {
           "number": 19,
-          "text": "Write therefore the things which you have seen, and the things which are, and the things which will happen hereafter."
+          "text": "Write therefore the things which you have seen, and the things which are, and the things which will happen hereafter.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 117
+            }
+          ]
         },
         {
           "number": 20,
-          "text": "The mystery of the seven stars which you saw in my right hand, and the seven golden lamp stands is this: The seven stars are the angels of the seven assemblies. The seven lamp stands are seven assemblies."
+          "text": "The mystery of the seven stars which you saw in my right hand, and the seven golden lamp stands is this: The seven stars are the angels of the seven assemblies. The seven lamp stands are seven assemblies.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 135
+            },
+            {
+              "start": 136,
+              "end": 204
+            }
+          ]
         }
       ]
     },
@@ -92,119 +144,325 @@
       "verses": [
         {
           "number": 1,
-          "text": "“To the angel of the assembly in Ephesus write: “He who holds the seven stars in his right hand, he who walks among the seven golden lamp stands says these things:"
+          "text": "“To the angel of the assembly in Ephesus write: “He who holds the seven stars in his right hand, he who walks among the seven golden lamp stands says these things:",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 47
+            },
+            {
+              "start": 48,
+              "end": 163
+            }
+          ]
         },
         {
           "number": 2,
-          "text": "“I know your works, and your toil and perseverance, and that you can’t tolerate evil men, and have tested those who call themselves apostles, and they are not, and found them false."
+          "text": "“I know your works, and your toil and perseverance, and that you can’t tolerate evil men, and have tested those who call themselves apostles, and they are not, and found them false.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 181
+            }
+          ]
         },
         {
           "number": 3,
-          "text": "You have perseverance and have endured for my name’s sake, and have not grown weary."
+          "text": "You have perseverance and have endured for my name’s sake, and have not grown weary.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 67
+            },
+            {
+              "start": 68,
+              "end": 84
+            }
+          ]
         },
         {
           "number": 4,
-          "text": "But I have this against you, that you left your first love."
+          "text": "But I have this against you, that you left your first love.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 59
+            }
+          ]
         },
         {
           "number": 5,
-          "text": "Remember therefore from where you have fallen, and repent and do the first works; or else I am coming to you swiftly, and will move your lamp stand out of its place, unless you repent."
+          "text": "Remember therefore from where you have fallen, and repent and do the first works; or else I am coming to you swiftly, and will move your lamp stand out of its place, unless you repent.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 184
+            }
+          ]
         },
         {
           "number": 6,
-          "text": "But this you have, that you hate the works of the Nicolaitans, which I also hate."
+          "text": "But this you have, that you hate the works of the Nicolaitans, which I also hate.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 81
+            }
+          ]
         },
         {
           "number": 7,
-          "text": "He who has an ear, let him hear what the Spirit says to the assemblies. To him who overcomes I will give to eat from the tree of life, which is in the Paradise of my God."
+          "text": "He who has an ear, let him hear what the Spirit says to the assemblies. To him who overcomes I will give to eat from the tree of life, which is in the Paradise of my God.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 170
+            }
+          ]
         },
         {
           "number": 8,
-          "text": "“To the angel of the assembly in Smyrna write: “The first and the last, who was dead, and has come to life says these things:"
+          "text": "“To the angel of the assembly in Smyrna write: “The first and the last, who was dead, and has come to life says these things:",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 46
+            },
+            {
+              "start": 47,
+              "end": 125
+            }
+          ]
         },
         {
           "number": 9,
-          "text": "“I know your works, oppression, and your poverty (but you are rich), and the blasphemy of those who say they are Jews, and they are not, but are a synagogue of Satan."
+          "text": "“I know your works, oppression, and your poverty (but you are rich), and the blasphemy of those who say they are Jews, and they are not, but are a synagogue of Satan.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 166
+            }
+          ]
         },
         {
           "number": 10,
-          "text": "Don’t be afraid of the things which you are about to suffer. Behold, the devil is about to throw some of you into prison, that you may be tested; and you will have oppression for ten days. Be faithful to death, and I will give you the crown of life."
+          "text": "Don’t be afraid of the things which you are about to suffer. Behold, the devil is about to throw some of you into prison, that you may be tested; and you will have oppression for ten days. Be faithful to death, and I will give you the crown of life.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 249
+            }
+          ]
         },
         {
           "number": 11,
-          "text": "He who has an ear, let him hear what the Spirit says to the assemblies. He who overcomes won’t be harmed by the second death."
+          "text": "He who has an ear, let him hear what the Spirit says to the assemblies. He who overcomes won’t be harmed by the second death.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 125
+            }
+          ]
         },
         {
           "number": 12,
-          "text": "“To the angel of the assembly in Pergamum write: “He who has the sharp two-edged sword says these things:"
+          "text": "“To the angel of the assembly in Pergamum write: “He who has the sharp two-edged sword says these things:",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 48
+            },
+            {
+              "start": 49,
+              "end": 105
+            }
+          ]
         },
         {
           "number": 13,
-          "text": "“I know your works and where you dwell, where Satan’s throne is. You hold firmly to my name, and didn’t deny my faith in the days of Antipas my witness, my faithful one, who was killed among you, where Satan dwells."
+          "text": "“I know your works and where you dwell, where Satan’s throne is. You hold firmly to my name, and didn’t deny my faith in the days of Antipas my witness, my faithful one, who was killed among you, where Satan dwells.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 215
+            }
+          ]
         },
         {
           "number": 14,
-          "text": "But I have a few things against you, because you have there some who hold the teaching of Balaam, who taught Balak to throw a stumbling block before the children of Israel, to eat things sacrificed to idols, and to commit sexual immorality."
+          "text": "But I have a few things against you, because you have there some who hold the teaching of Balaam, who taught Balak to throw a stumbling block before the children of Israel, to eat things sacrificed to idols, and to commit sexual immorality.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 240
+            }
+          ]
         },
         {
           "number": 15,
-          "text": "So also you likewise have some who hold to the teaching of the Nicolaitans."
+          "text": "So also you likewise have some who hold to the teaching of the Nicolaitans.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 75
+            }
+          ]
         },
         {
           "number": 16,
-          "text": "Repent therefore, or else I am coming to you quickly and I will make war against them with the sword of my mouth."
+          "text": "Repent therefore, or else I am coming to you quickly and I will make war against them with the sword of my mouth.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 113
+            }
+          ]
         },
         {
           "number": 17,
-          "text": "He who has an ear, let him hear what the Spirit says to the assemblies. To him who overcomes, to him I will give of the hidden manna, and I will give him a white stone, and on the stone a new name written which no one knows but he who receives it."
+          "text": "He who has an ear, let him hear what the Spirit says to the assemblies. To him who overcomes, to him I will give of the hidden manna, and I will give him a white stone, and on the stone a new name written which no one knows but he who receives it.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 133
+            },
+            {
+              "start": 134,
+              "end": 247
+            }
+          ]
         },
         {
           "number": 18,
-          "text": "“To the angel of the assembly in Thyatira write: “The Son of God, who has his eyes like a flame of fire, and his feet are like burnished brass, says these things:"
+          "text": "“To the angel of the assembly in Thyatira write: “The Son of God, who has his eyes like a flame of fire, and his feet are like burnished brass, says these things:",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 48
+            },
+            {
+              "start": 49,
+              "end": 162
+            }
+          ]
         },
         {
           "number": 19,
-          "text": "“I know your works, your love, faith, service, patient endurance, and that your last works are more than the first."
+          "text": "“I know your works, your love, faith, service, patient endurance, and that your last works are more than the first.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 115
+            }
+          ]
         },
         {
           "number": 20,
-          "text": "But I have this against you, that you tolerate your woman Jezebel, who calls herself a prophetess. She teaches and seduces my servants to commit sexual immorality and to eat things sacrificed to idols."
+          "text": "But I have this against you, that you tolerate your woman Jezebel, who calls herself a prophetess. She teaches and seduces my servants to commit sexual immorality and to eat things sacrificed to idols.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 51
+            },
+            {
+              "start": 52,
+              "end": 201
+            }
+          ]
         },
         {
           "number": 21,
-          "text": "I gave her time to repent, but she refuses to repent of her sexual immorality."
+          "text": "I gave her time to repent, but she refuses to repent of her sexual immorality.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 78
+            }
+          ]
         },
         {
           "number": 22,
-          "text": "Behold, I will throw her and those who commit adultery with her into a bed of great oppression, unless they repent of her works."
+          "text": "Behold, I will throw her and those who commit adultery with her into a bed of great oppression, unless they repent of her works.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 128
+            }
+          ]
         },
         {
           "number": 23,
-          "text": "I will kill her children with Death, and all the assemblies will know that I am he who searches the minds and hearts. I will give to each one of you according to your deeds."
+          "text": "I will kill her children with Death, and all the assemblies will know that I am he who searches the minds and hearts. I will give to each one of you according to your deeds.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 173
+            }
+          ]
         },
         {
           "number": 24,
-          "text": "But to you I say, to the rest who are in Thyatira—as many as don’t have this teaching, who don’t know what some call ‘the deep things of Satan’—to you I say, I am not putting any other burden on you."
+          "text": "But to you I say, to the rest who are in Thyatira—as many as don’t have this teaching, who don’t know what some call ‘the deep things of Satan’—to you I say, I am not putting any other burden on you.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 199
+            }
+          ]
         },
         {
           "number": 25,
-          "text": "Nevertheless, hold that which you have firmly until I come."
+          "text": "Nevertheless, hold that which you have firmly until I come.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 59
+            }
+          ]
         },
         {
           "number": 26,
-          "text": "He who overcomes, and he who keeps my works to the end, to him I will give authority over the nations."
+          "text": "He who overcomes, and he who keeps my works to the end, to him I will give authority over the nations.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 102
+            }
+          ]
         },
         {
           "number": 27,
-          "text": "He will rule them with a rod of iron, shattering them like clay pots, as I also have received of my Father;"
+          "text": "He will rule them with a rod of iron, shattering them like clay pots, as I also have received of my Father;",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 69
+            },
+            {
+              "start": 70,
+              "end": 107
+            }
+          ]
         },
         {
           "number": 28,
-          "text": "and I will give him the morning star."
+          "text": "and I will give him the morning star.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 37
+            }
+          ]
         },
         {
           "number": 29,
-          "text": "He who has an ear, let him hear what the Spirit says to the assemblies."
+          "text": "He who has an ear, let him hear what the Spirit says to the assemblies.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 71
+            }
+          ]
         }
       ]
     },
@@ -213,91 +471,247 @@
       "verses": [
         {
           "number": 1,
-          "text": "“And to the angel of the assembly in Sardis write: “He who has the seven Spirits of God and the seven stars says these things: “I know your works, that you have a reputation of being alive, but you are dead."
+          "text": "“And to the angel of the assembly in Sardis write: “He who has the seven Spirits of God and the seven stars says these things: “I know your works, that you have a reputation of being alive, but you are dead.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 50
+            },
+            {
+              "start": 51,
+              "end": 126
+            },
+            {
+              "start": 127,
+              "end": 207
+            }
+          ]
         },
         {
           "number": 2,
-          "text": "Wake up and strengthen the things that remain, which you were about to throw away, for I have found no works of yours perfected before my God."
+          "text": "Wake up and strengthen the things that remain, which you were about to throw away, for I have found no works of yours perfected before my God.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 82
+            },
+            {
+              "start": 83,
+              "end": 142
+            }
+          ]
         },
         {
           "number": 3,
-          "text": "Remember therefore how you have received and heard. Keep it and repent. If therefore you won’t watch, I will come as a thief, and you won’t know what hour I will come upon you."
+          "text": "Remember therefore how you have received and heard. Keep it and repent. If therefore you won’t watch, I will come as a thief, and you won’t know what hour I will come upon you.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 176
+            }
+          ]
         },
         {
           "number": 4,
-          "text": "Nevertheless you have a few names in Sardis that didn’t defile their garments. They will walk with me in white, for they are worthy."
+          "text": "Nevertheless you have a few names in Sardis that didn’t defile their garments. They will walk with me in white, for they are worthy.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 132
+            }
+          ]
         },
         {
           "number": 5,
-          "text": "He who overcomes will be arrayed in white garments, and I will in no way blot his name out of the book of life, and I will confess his name before my Father, and before his angels."
+          "text": "He who overcomes will be arrayed in white garments, and I will in no way blot his name out of the book of life, and I will confess his name before my Father, and before his angels.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 180
+            }
+          ]
         },
         {
           "number": 6,
-          "text": "He who has an ear, let him hear what the Spirit says to the assemblies."
+          "text": "He who has an ear, let him hear what the Spirit says to the assemblies.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 71
+            }
+          ]
         },
         {
           "number": 7,
-          "text": "“To the angel of the assembly in Philadelphia write: “He who is holy, he who is true, he who has the key of David, he who opens and no one can shut, and who shuts and no one opens, says these things:"
+          "text": "“To the angel of the assembly in Philadelphia write: “He who is holy, he who is true, he who has the key of David, he who opens and no one can shut, and who shuts and no one opens, says these things:",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 52
+            },
+            {
+              "start": 53,
+              "end": 199
+            }
+          ]
         },
         {
           "number": 8,
-          "text": "“I know your works (behold, I have set before you an open door, which no one can shut), that you have a little power, and kept my word, and didn’t deny my name."
+          "text": "“I know your works (behold, I have set before you an open door, which no one can shut), that you have a little power, and kept my word, and didn’t deny my name.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 160
+            }
+          ]
         },
         {
           "number": 9,
-          "text": "Behold, I make some of the synagogue of Satan, of those who say they are Jews, and they are not, but lie—behold, I will make them to come and worship before your feet, and to know that I have loved you."
+          "text": "Behold, I make some of the synagogue of Satan, of those who say they are Jews, and they are not, but lie—behold, I will make them to come and worship before your feet, and to know that I have loved you.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 202
+            }
+          ]
         },
         {
           "number": 10,
-          "text": "Because you kept my command to endure, I also will keep you from the hour of testing which is to come on the whole world, to test those who dwell on the earth."
+          "text": "Because you kept my command to endure, I also will keep you from the hour of testing which is to come on the whole world, to test those who dwell on the earth.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 159
+            }
+          ]
         },
         {
           "number": 11,
-          "text": "I am coming quickly! Hold firmly that which you have, so that no one takes your crown."
+          "text": "I am coming quickly! Hold firmly that which you have, so that no one takes your crown.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 86
+            }
+          ]
         },
         {
           "number": 12,
-          "text": "He who overcomes, I will make him a pillar in the temple of my God, and he will go out from there no more. I will write on him the name of my God and the name of the city of my God, the new Jerusalem, which comes down out of heaven from my God, and my own new name."
+          "text": "He who overcomes, I will make him a pillar in the temple of my God, and he will go out from there no more. I will write on him the name of my God and the name of the city of my God, the new Jerusalem, which comes down out of heaven from my God, and my own new name.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 265
+            }
+          ]
         },
         {
           "number": 13,
-          "text": "He who has an ear, let him hear what the Spirit says to the assemblies."
+          "text": "He who has an ear, let him hear what the Spirit says to the assemblies.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 71
+            }
+          ]
         },
         {
           "number": 14,
-          "text": "“To the angel of the assembly in Laodicea write: “The Amen, the Faithful and True Witness, the Beginning of God’s creation, says these things:"
+          "text": "“To the angel of the assembly in Laodicea write: “The Amen, the Faithful and True Witness, the Beginning of God’s creation, says these things:",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 48
+            },
+            {
+              "start": 49,
+              "end": 104
+            },
+            {
+              "start": 105,
+              "end": 142
+            }
+          ]
         },
         {
           "number": 15,
-          "text": "“I know your works, that you are neither cold nor hot. I wish you were cold or hot."
+          "text": "“I know your works, that you are neither cold nor hot. I wish you were cold or hot.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 83
+            }
+          ]
         },
         {
           "number": 16,
-          "text": "So, because you are lukewarm, and neither hot nor cold, I will vomit you out of my mouth."
+          "text": "So, because you are lukewarm, and neither hot nor cold, I will vomit you out of my mouth.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 89
+            }
+          ]
         },
         {
           "number": 17,
-          "text": "Because you say, ‘I am rich, and have gotten riches, and have need of nothing,’ and don’t know that you are the wretched one, miserable, poor, blind, and naked;"
+          "text": "Because you say, ‘I am rich, and have gotten riches, and have need of nothing,’ and don’t know that you are the wretched one, miserable, poor, blind, and naked;",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 160
+            }
+          ]
         },
         {
           "number": 18,
-          "text": "I counsel you to buy from me gold refined by fire, that you may become rich; and white garments, that you may clothe yourself, and that the shame of your nakedness may not be revealed; and eye salve to anoint your eyes, that you may see."
+          "text": "I counsel you to buy from me gold refined by fire, that you may become rich; and white garments, that you may clothe yourself, and that the shame of your nakedness may not be revealed; and eye salve to anoint your eyes, that you may see.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 237
+            }
+          ]
         },
         {
           "number": 19,
-          "text": "As many as I love, I reprove and chasten. Be zealous therefore, and repent."
+          "text": "As many as I love, I reprove and chasten. Be zealous therefore, and repent.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 75
+            }
+          ]
         },
         {
           "number": 20,
-          "text": "Behold, I stand at the door and knock. If anyone hears my voice and opens the door, then I will come in to him and will dine with him, and he with me."
+          "text": "Behold, I stand at the door and knock. If anyone hears my voice and opens the door, then I will come in to him and will dine with him, and he with me.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 150
+            }
+          ]
         },
         {
           "number": 21,
-          "text": "He who overcomes, I will give to him to sit down with me on my throne, as I also overcame and sat down with my Father on his throne."
+          "text": "He who overcomes, I will give to him to sit down with me on my throne, as I also overcame and sat down with my Father on his throne.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 132
+            }
+          ]
         },
         {
           "number": 22,
-          "text": "He who has an ear, let him hear what the Spirit says to the assemblies.”"
+          "text": "He who has an ear, let him hear what the Spirit says to the assemblies.”",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 72
+            }
+          ]
         }
       ]
     },
@@ -1166,7 +1580,13 @@
         },
         {
           "number": 15,
-          "text": "“Behold, I come like a thief. Blessed is he who watches, and keeps his clothes, so that he doesn’t walk naked, and they see his shame.”"
+          "text": "“Behold, I come like a thief. Blessed is he who watches, and keeps his clothes, so that he doesn’t walk naked, and they see his shame.”",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 135
+            }
+          ]
         },
         {
           "number": 16,
@@ -1547,19 +1967,55 @@
         },
         {
           "number": 5,
-          "text": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”"
+          "text": "He who sits on the throne said, “Behold, I am making all things new.” He said, “Write, for these words of God are faithful and true.”",
+          "wordsOfJesus": [
+            {
+              "start": 32,
+              "end": 69
+            },
+            {
+              "start": 79,
+              "end": 133
+            }
+          ]
         },
         {
           "number": 6,
-          "text": "He said to me, “I am the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life."
+          "text": "He said to me, “I am the Alpha and the Omega, the Beginning and the End. I will give freely to him who is thirsty from the spring of the water of life.",
+          "wordsOfJesus": [
+            {
+              "start": 15,
+              "end": 151
+            }
+          ]
         },
         {
           "number": 7,
-          "text": "He who overcomes, I will give him these things. I will be his God, and he will be my son."
+          "text": "He who overcomes, I will give him these things. I will be his God, and he will be my son.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 89
+            }
+          ]
         },
         {
           "number": 8,
-          "text": "But for the cowardly, unbelieving, sinners, abominable, murderers, sexually immoral, sorcerers, idolaters, and all liars, their part is in the lake that burns with fire and sulfur, which is the second death.”"
+          "text": "But for the cowardly, unbelieving, sinners, abominable, murderers, sexually immoral, sorcerers, idolaters, and all liars, their part is in the lake that burns with fire and sulfur, which is the second death.”",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 43
+            },
+            {
+              "start": 44,
+              "end": 95
+            },
+            {
+              "start": 96,
+              "end": 208
+            }
+          ]
         },
         {
           "number": 9,
@@ -1668,7 +2124,13 @@
         },
         {
           "number": 7,
-          "text": "“Behold, I am coming soon! Blessed is he who keeps the words of the prophecy of this book.”"
+          "text": "“Behold, I am coming soon! Blessed is he who keeps the words of the prophecy of this book.”",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 91
+            }
+          ]
         },
         {
           "number": 8,
@@ -1688,23 +2150,57 @@
         },
         {
           "number": 12,
-          "text": "“Behold, I am coming soon! My reward is with me, to repay to each man according to his work."
+          "text": "“Behold, I am coming soon! My reward is with me, to repay to each man according to his work.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 92
+            }
+          ]
         },
         {
           "number": 13,
-          "text": "I am the Alpha and the Omega, the First and the Last, the Beginning and the End."
+          "text": "I am the Alpha and the Omega, the First and the Last, the Beginning and the End.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 80
+            }
+          ]
         },
         {
           "number": 14,
-          "text": "Blessed are those who do his commandments, that they may have the right to the tree of life, and may enter in by the gates into the city."
+          "text": "Blessed are those who do his commandments, that they may have the right to the tree of life, and may enter in by the gates into the city.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 42
+            },
+            {
+              "start": 43,
+              "end": 137
+            }
+          ]
         },
         {
           "number": 15,
-          "text": "Outside are the dogs, the sorcerers, the sexually immoral, the murderers, the idolaters, and everyone who loves and practices falsehood."
+          "text": "Outside are the dogs, the sorcerers, the sexually immoral, the murderers, the idolaters, and everyone who loves and practices falsehood.",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 136
+            }
+          ]
         },
         {
           "number": 16,
-          "text": "I, Jesus, have sent my angel to testify these things to you for the assemblies. I am the root and the offspring of David, the Bright and Morning Star.”"
+          "text": "I, Jesus, have sent my angel to testify these things to you for the assemblies. I am the root and the offspring of David, the Bright and Morning Star.”",
+          "wordsOfJesus": [
+            {
+              "start": 0,
+              "end": 151
+            }
+          ]
         },
         {
           "number": 17,
@@ -1720,7 +2216,13 @@
         },
         {
           "number": 20,
-          "text": "He who testifies these things says, “Yes, I am coming soon.” Amen! Yes, come, Lord Jesus!"
+          "text": "He who testifies these things says, “Yes, I am coming soon.” Amen! Yes, come, Lord Jesus!",
+          "wordsOfJesus": [
+            {
+              "start": 36,
+              "end": 60
+            }
+          ]
         },
         {
           "number": 21,

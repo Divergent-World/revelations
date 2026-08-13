@@ -1,14 +1,18 @@
 import { createHash } from "node:crypto";
+import { execFile } from "node:child_process";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
+import { promisify } from "node:util";
 import sharp from "sharp";
 
-import { displayReference, mapCanvasToSceneIds, parseVplRevelation, relativeObjectKey, validateSceneMetadata } from "./lib/content.mjs";
+import { annotateWordsOfJesus, displayReference, mapCanvasToSceneIds, parseVplRevelation, relativeObjectKey, validateSceneMetadata } from "./lib/content.mjs";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
 const vaultRoot = path.resolve(process.env.APOCALYPSE_VAULT ?? path.join(repoRoot, "..", "Apocalypse Tapestry"));
 const vplPath = process.env.WEB_VPL_PATH ?? "/private/tmp/engwebp_vpl.txt";
+const usfmPath = process.env.WEB_USFM_PATH;
 const contentDir = path.join(repoRoot, "content");
+const execFileAsync = promisify(execFile);
 const romans = ["I", "II", "III", "IV", "V", "VI"];
 const tapestryTitles = [
   "The Scroll Opens",
@@ -192,9 +196,34 @@ function versesForSpans(chapters, spans) {
         const maxVerse = span.endVerse ?? Number.POSITIVE_INFINITY;
         return verses
           .filter(({ number }) => (chapter > span.startChapter || number >= span.startVerse) && (chapter < span.endChapter || number <= maxVerse))
-          .map(({ number, text }) => ({ chapter, verse: number, text }));
+          .map(({ number, text, wordsOfJesus }) => ({
+            chapter,
+            verse: number,
+            text,
+            ...(wordsOfJesus ? { wordsOfJesus } : {}),
+          }));
       }),
   }));
+}
+
+async function readRevelationUsfm() {
+  if (!usfmPath) {
+    throw new Error("WEB_USFM_PATH is required. Set it to the official engwebp .usfm file or USFM ZIP archive.");
+  }
+  const extension = path.extname(usfmPath).toLowerCase();
+  if (extension === ".usfm") {
+    return readFile(usfmPath, "utf8").catch(() => {
+      throw new Error(`WEB USFM source missing at ${usfmPath}. Check WEB_USFM_PATH.`);
+    });
+  }
+  if (extension === ".zip") {
+    return execFileAsync("unzip", ["-p", usfmPath, "96-REVengwebp.usfm"], { encoding: "utf8" })
+      .then(({ stdout }) => stdout)
+      .catch(() => {
+        throw new Error(`Could not read 96-REVengwebp.usfm from ${usfmPath}. Check WEB_USFM_PATH and the archive contents.`);
+      });
+  }
+  throw new Error(`Unsupported WEB_USFM_PATH extension "${extension || "(none)"}". Use a .usfm or .zip file.`);
 }
 
 async function hashFile(filePath) {
@@ -205,8 +234,9 @@ async function main() {
   const vpl = await readFile(vplPath, "utf8").catch(() => {
     throw new Error(`WEB verse-per-line source missing at ${vplPath}. Set WEB_VPL_PATH to engwebp_vpl.txt.`);
   });
-  const revelation = parseVplRevelation(vpl);
-  if (revelation.length !== 22) throw new Error(`Expected 22 Revelation chapters, found ${revelation.length}`);
+  const vplRevelation = parseVplRevelation(vpl);
+  if (vplRevelation.length !== 22) throw new Error(`Expected 22 Revelation chapters, found ${vplRevelation.length}`);
+  const revelation = annotateWordsOfJesus(vplRevelation, await readRevelationUsfm());
 
   const expectedSceneIds = romans.flatMap((_, index) => {
     const tapestry = index + 1;
