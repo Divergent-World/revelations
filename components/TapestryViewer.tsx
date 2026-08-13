@@ -69,7 +69,7 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
     <div className={`viewer-shell ${embedded ? "viewer-embedded" : ""}`}>
       <header className="viewer-heading">
         <div>
-          <p className="eyebrow">Tapestry {tapestry.roman}</p>
+          <p className="eyebrow">Movement {tapestry.roman}</p>
           <h1>{tapestry.title}</h1>
           <p>{tapestry.summary}</p>
         </div>
@@ -82,7 +82,7 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
       <section className="lead-scene">
         <SceneCard scene={lead} eager onOpen={openScene} />
         <div className="movement-list">
-          <p className="eyebrow">The movement</p>
+          <p className="eyebrow">The prophecy unfolds</p>
           <ol>
             {tapestry.movements.map(({ title, description }) => (
               <li key={title}>
@@ -94,15 +94,15 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
         </div>
       </section>
 
-      <section className={`tapestry-stage zoom-${zoom}`} aria-label={`Tapestry ${tapestry.roman} scenes`}>
+      <section className={`tapestry-stage zoom-${zoom}`} aria-label={`Movement ${tapestry.roman} scenes`}>
         <div className="tapestry-row" data-row="top">{top.map((scene, index) => <SceneCard key={scene.id} scene={scene} eager={index === 0} onOpen={openScene} />)}</div>
         <div className="tapestry-row" data-row="bottom">{bottom.map((scene) => <SceneCard key={scene.id} scene={scene} onOpen={openScene} />)}</div>
       </section>
 
-      <nav className="tapestry-pagination" aria-label="Tapestry navigation">
-        {tapestry.id > 1 ? <Link href={`/tapestries/${tapestry.id - 1}/`}>← Tapestry {tapestry.id - 1}</Link> : <span />}
-        <Link href="/">All tapestries</Link>
-        {tapestry.id < 6 ? <Link href={`/tapestries/${tapestry.id + 1}/`}>Tapestry {tapestry.id + 1} →</Link> : <Link href="/revelation/22/">Read the ending →</Link>}
+      <nav className="tapestry-pagination" aria-label="Movement navigation">
+        {tapestry.id > 1 ? <Link href={`/tapestries/${tapestry.id - 1}/`}>← Previous movement</Link> : <span />}
+        <Link href="/">All movements</Link>
+        {tapestry.id < 6 ? <Link href={`/tapestries/${tapestry.id + 1}/`}>Next movement →</Link> : <Link href="/revelation/22/">Read the ending →</Link>}
       </nav>
 
       {selected && <SceneDialog scene={selected} previous={scenes[selectedIndex - 1]} next={scenes[selectedIndex + 1]} onClose={closeScene} onNavigate={updateScene} />}

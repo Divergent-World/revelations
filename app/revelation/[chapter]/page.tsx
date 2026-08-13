@@ -37,7 +37,7 @@ export default async function RevelationChapterPage({ params }: { params: Promis
       <nav className="chapter-nav" aria-label="Chapter navigation">
         {chapterNumber > 1 ? <Link href={`/revelation/${chapterNumber - 1}/`}>← Chapter {chapterNumber - 1}</Link> : <span />}
         <Link href="/revelation/">All chapters</Link>
-        {chapterNumber < 22 ? <Link href={`/revelation/${chapterNumber + 1}/`}>Chapter {chapterNumber + 1} →</Link> : <Link href="/tapestries/6/">Return to Tapestry VI →</Link>}
+        {chapterNumber < 22 ? <Link href={`/revelation/${chapterNumber + 1}/`}>Chapter {chapterNumber + 1} →</Link> : <Link href="/tapestries/6/">Return to Movement VI →</Link>}
       </nav>
     </article>
   );

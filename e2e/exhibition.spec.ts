@@ -1,5 +1,22 @@
 import { expect, test } from "@playwright/test";
 
+test("homepage downloads the complete illuminated Markdown edition", async ({ page }) => {
+  await page.goto("/");
+  const exportLink = page.getByRole("link", { name: "export.md" });
+  await expect(exportLink).toHaveAttribute("href", "/export.md");
+  await expect(exportLink).toHaveAttribute("download", "");
+
+  const response = await page.request.get("/export.md");
+  expect(response.ok()).toBe(true);
+  expect(response.headers()["content-type"]).toContain("text/markdown");
+  expect(response.headers()["content-disposition"]).toBe('attachment; filename="export.md"');
+  const markdown = await response.text();
+  expect(markdown).toContain("# The Revelation to John");
+  expect(markdown.match(/^!\[/gm)).toHaveLength(90);
+  expect(markdown).toContain("· T6-B07 · Saint John before God · Revelation 22:9–13");
+  expect(markdown).toContain("http://127.0.0.1:3101/releases/v1/web/1920/T1-00.webp");
+});
+
 test.beforeEach(async ({ page }) => {
   await page.route("**/releases/v1/web/**", (route) => route.fulfill({
     status: 200,
@@ -640,4 +657,76 @@ test("mobile presents top scenes before bottom scenes in one column", async ({ p
   expect(boxes[7].id).toBe("T6-B01");
   expect(new Set(boxes.map(({ x }) => Math.round(x))).size).toBe(1);
   expect(boxes.every((box, index) => index === 0 || box.y > boxes[index - 1].y)).toBe(true);
+});
+
+test("public taxonomy presents the prophecy as six movements", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("A prophecy in six movements");
+  await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Movements" })).toHaveAttribute("href", "/tapestries/1/");
+  await expect(page.getByRole("heading", { level: 2, name: "The six movements" })).toBeVisible();
+
+  await page.goto("/tapestries/2/");
+  await expect(page.locator(".viewer-heading .eyebrow")).toHaveText("Movement II");
+  await expect(page.locator(".movement-list > .eyebrow")).toHaveText("The prophecy unfolds");
+  const movementNavigation = page.getByRole("navigation", { name: "Movement navigation" });
+  await expect(movementNavigation).toContainText("Previous movement");
+  await expect(movementNavigation).toContainText("All movements");
+  await expect(movementNavigation).toContainText("Next movement");
+  await expect(page).toHaveTitle(/Movement II: The Trumpets Sound/);
+
+  await page.goto("/revelation/");
+  await expect(page.locator(".reader-hero")).toContainText("six movements");
+});
+
+test("mobile primary navigation keeps movements reachable", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.goto("/");
+  const movements = page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Movements" });
+  await expect(movements).toBeVisible();
+  await expect(movements).toHaveAttribute("href", "/tapestries/1/");
+});
+
+test("homepage opens as an illuminated movement ledger", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.goto("/");
+  const hero = page.getByRole("region", { name: "A prophecy in six movements" });
+  const feature = hero.locator("figure");
+  await expect(feature.getByRole("img", { name: /New Jerusalem/ })).toBeVisible();
+  await expect(hero.locator("dl dd")).toHaveText(["06", "22", "90"]);
+
+  const movementIndex = page.getByRole("region", { name: "The six movements" });
+  const entries = movementIndex.locator("ol > li");
+  await expect(entries).toHaveCount(6);
+  await expect(entries.locator("img")).toHaveCount(6);
+  await expect(entries.first().getByRole("link", { name: /Movement I.*The Scroll Opens/ })).toHaveAttribute("href", "/tapestries/1/");
+
+  const headingBox = await hero.getByRole("heading", { level: 1 }).boundingBox();
+  const featureBox = await feature.boundingBox();
+  expect(headingBox).not.toBeNull();
+  expect(featureBox).not.toBeNull();
+  expect(featureBox!.x).toBeGreaterThan(headingBox!.x + headingBox!.width);
+  await expect(feature.locator("img")).toHaveCSS("object-fit", "contain");
+});
+
+test("homepage illuminated ledger stacks cleanly on mobile", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.goto("/");
+  const hero = page.getByRole("region", { name: "A prophecy in six movements" });
+  const headingBox = await hero.getByRole("heading", { level: 1 }).boundingBox();
+  const featureBox = await hero.locator("figure").boundingBox();
+  expect(headingBox).not.toBeNull();
+  expect(featureBox).not.toBeNull();
+  expect(featureBox!.y).toBeGreaterThan(headingBox!.y + headingBox!.height);
+  await expect(page.getByRole("region", { name: "The six movements" }).locator("ol > li")).toHaveCount(6);
+});
+
+test("homepage movement links keep visible focus and reduced motion", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/");
+  const firstMovement = page.getByRole("region", { name: "The six movements" }).getByRole("link").first();
+  await firstMovement.focus();
+  await expect(firstMovement).toBeFocused();
+  await expect(firstMovement).toHaveCSS("outline-style", "solid");
+  await expect(firstMovement.locator("img")).toHaveCSS("transition-duration", "1e-05s");
+  await expect(firstMovement.locator("img")).toHaveCSS("transform", "none");
 });
