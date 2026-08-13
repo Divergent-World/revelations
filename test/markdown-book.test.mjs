@@ -70,3 +70,18 @@ test("rejects reader image keys that escape the canonical release tree", () => {
   } : scene);
   assert.throws(() => render({ scenes: invalidImage }), /canonical release key/);
 });
+
+for (const [mutation, reader] of [
+  ["encoded traversal", "releases/%2e%2e/private.webp"],
+  ["wrong release tree", "releases/v1/web/640/T1-00.webp"],
+  ["query string", "releases/v1/web/1920/T1-00.webp?download=1"],
+  ["fragment", "releases/v1/web/1920/T1-00.webp#artwork"],
+]) {
+  test(`rejects a reader image key with ${mutation}`, () => {
+    const invalidImage = scenes.map((scene, index) => index === 0 ? {
+      ...scene,
+      images: { ...scene.images, reader },
+    } : scene);
+    assert.throws(() => render({ scenes: invalidImage }), /canonical release key/);
+  });
+}

@@ -46,6 +46,7 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
   if (scenes.length !== 90) throw new Error(`Markdown book requires 90 scenes, received ${scenes.length}`);
 
   const sceneIds = new Set<string>();
+  const readerKeys = new Set<string>();
   const imageUrls = new Set<string>();
   const scenesAt = new Map<string, Array<{ scene: Scene; imageUrl: string }>>();
   for (const scene of scenes) {
@@ -54,11 +55,12 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
     const anchor = scene.scriptureSpans[0];
     const anchorKey = anchor && `${anchor.startChapter}:${anchor.startVerse}`;
     if (!anchorKey || !verseKeys.has(anchorKey)) throw new Error(`${scene.id}: first scripture anchor is missing from Revelation`);
-    if (!scene.images.reader.startsWith("releases/") || scene.images.reader.startsWith("/") || scene.images.reader.includes("..")) {
+    if (readerKeys.has(scene.images.reader)) throw new Error(`Duplicate reader image URL in Markdown book: ${scene.images.reader}`);
+    readerKeys.add(scene.images.reader);
+    if (scene.images.reader !== `releases/v1/web/1920/${scene.id}.webp`) {
       throw new Error(`${scene.id}: reader image must be a canonical release key`);
     }
     const imageUrl = new URL(scene.images.reader, `${origin}/`).href;
-    if (imageUrls.has(imageUrl)) throw new Error(`Duplicate reader image URL in Markdown book: ${imageUrl}`);
     imageUrls.add(imageUrl);
     scenesAt.set(anchorKey, [...(scenesAt.get(anchorKey) ?? []), { scene, imageUrl }]);
   }
