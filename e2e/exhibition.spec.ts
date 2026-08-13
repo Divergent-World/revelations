@@ -24,6 +24,21 @@ test("desktop preserves two authored rows of seven scenes", async ({ page }, tes
   await expect(page.locator('[data-row="bottom"] .scene-card').last()).toHaveAttribute("data-scene-id", "T3-B07");
 });
 
+test("tablet reader uses one column before seven-card labels become unreadable", async ({ page }) => {
+  await page.setViewportSize({ width: 761, height: 900 });
+  await page.goto("/tapestries/3/");
+  const layout = await page.locator('[data-row="top"]').evaluate((row) => ({
+    display: getComputedStyle(row).display,
+    cards: [...row.querySelectorAll<HTMLElement>(".scene-card")].map((card) => {
+      const { x, y } = card.getBoundingClientRect();
+      return { x, y };
+    }),
+  }));
+  expect(layout.display).toBe("block");
+  expect(new Set(layout.cards.map(({ x }) => Math.round(x))).size).toBe(1);
+  expect(layout.cards.every((card, index) => index === 0 || card.y > layout.cards[index - 1].y)).toBe(true);
+});
+
 test("preview frames preserve artwork without elongation or cropping", async ({ page }) => {
   await page.goto("/tapestries/1/");
   const geometry = await page.locator('[data-scene-id="T1-T01"]').evaluate((card) => {

@@ -134,7 +134,7 @@ body:has(.embed-frame) > .site-header, body:has(.embed-frame) > .site-footer, bo
 body:has(.embed-frame) main { min-height: 100vh; }
 .viewer-embedded { padding-top: 2rem; }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
   .site-header { min-height: 4.5rem; }
   .site-header nav a:first-child { display: none; }
   .site-footer { flex-direction: column; }
