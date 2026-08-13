@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { revelationChapters, scenesForVerse } from "@/lib/content";
+import { VerseText } from "@/components/VerseText";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return revelationChapters.map(({ chapter }) => ({ chapter: String(chapter) })); }
@@ -27,7 +28,7 @@ export default async function RevelationChapterPage({ params }: { params: Promis
           return (
             <div className="verse" id={`verse-${verse.number}`} key={verse.number}>
               <span className="verse-number">{verse.number}</span>
-              <p>{verse.text}</p>
+              <p><VerseText verse={verse} /></p>
               {scenes.length > 0 && <div className="verse-scenes" aria-label={`Artwork for verse ${verse.number}`}>{scenes.map((scene) => <Link key={scene.id} href={`/tapestries/${scene.tapestry}/?scene=${scene.id}`}>{scene.id} · {scene.title}</Link>)}</div>}
             </div>
           );

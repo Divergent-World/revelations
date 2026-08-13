@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 import { assetUrl, type Scene } from "@/lib/content";
-import { ArtworkImage } from "./ArtworkImage";
+import { VerseText } from "./VerseText";
+import { ZoomableArtwork } from "./ZoomableArtwork";
 
 export function SceneDialog({ scene, previous, next, onClose, onNavigate }: {
   scene: Scene;
@@ -45,7 +46,7 @@ export function SceneDialog({ scene, previous, next, onClose, onNavigate }: {
     <dialog ref={dialog} className="scene-dialog" onClose={onClose} aria-labelledby="scene-dialog-title">
       <button className="dialog-close" type="button" onClick={onClose} aria-label="Close scene">×</button>
       <div className="dialog-art">
-        <ArtworkImage key={scene.id} scene={scene} size="reader" eager />
+        <ZoomableArtwork key={scene.id} scene={scene} />
       </div>
       <article className="dialog-reading">
         <p className="eyebrow">Scene {scene.id}</p>
@@ -54,7 +55,7 @@ export function SceneDialog({ scene, previous, next, onClose, onNavigate }: {
         {scene.passages.map((passage) => (
           <section className="passage" key={passage.reference}>
             {scene.passages.length > 1 && <h3>{passage.reference}</h3>}
-            {passage.verses.map((verse) => <p key={`${verse.chapter}-${verse.verse}`}><sup>{verse.verse}</sup>{verse.text}</p>)}
+            {passage.verses.map((verse) => <p key={`${verse.chapter}-${verse.verse}`}><sup>{verse.verse}</sup><VerseText verse={verse} /></p>)}
           </section>
         ))}
         <div className="scene-meta">

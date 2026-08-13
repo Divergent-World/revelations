@@ -2,12 +2,14 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  annotateWordsOfJesus,
   canonicalImageNodes,
   displayReference,
   mapCanvasToSceneIds,
   parseRevelationAnchor,
   parseUsfmRevelation,
   parseVplRevelation,
+  validateWordsOfJesusRanges,
   validateSceneMetadata,
 } from "../scripts/lib/content.mjs";
 
@@ -155,4 +157,93 @@ test("parseUsfmRevelation strips study markup without changing verse words", () 
     { chapter: 1, verses: [{ number: 1, text: "This is “written text." }, { number: 2, text: "Second verse." }] },
     { chapter: 2, verses: [{ number: 1, text: "Another chapter." }] },
   ]);
+});
+
+const wordsOfJesusUsfm = String.raw`\c 1
+\v 1 Before \wj I am \w Jesus|lemma="Jesus"\w*\wj* after.
+\v 2 \wj First\wj* and \wj second\f + \ft note\f* phrase\wj*.
+\v 3 Ordinary text.`;
+
+const wordsOfJesusVpl = [{
+  chapter: 1,
+  verses: [
+    { number: 1, text: "Before I am Jesus after." },
+    { number: 2, text: "First and second phrase." },
+    { number: 3, text: "Ordinary text." },
+  ],
+}];
+
+test("annotateWordsOfJesus derives exact words of Jesus ranges without changing VPL text", () => {
+  const annotated = annotateWordsOfJesus(wordsOfJesusVpl, wordsOfJesusUsfm);
+
+  assert.deepEqual(annotated[0].verses[0].wordsOfJesus, [{ start: 7, end: 17 }]);
+  assert.equal(annotated[0].verses[0].text.slice(7, 17), "I am Jesus");
+  assert.deepEqual(annotated[0].verses[1].wordsOfJesus, [
+    { start: 0, end: 5 },
+    { start: 10, end: 23 },
+  ]);
+  assert.equal(annotated[0].verses[2].wordsOfJesus, undefined);
+  assert.deepEqual(wordsOfJesusVpl[0].verses[0], { number: 1, text: "Before I am Jesus after." });
+});
+
+test("annotateWordsOfJesus attaches a marked closing quote after a speech footnote", () => {
+  const usfm = String.raw`\c 1
+\v 1 \wj “Alpha,\wj*\f + \ft note\f*\wj ”\wj* says.`;
+  const vpl = [{ chapter: 1, verses: [{ number: 1, text: "“Alpha,” says." }] }];
+
+  assert.deepEqual(annotateWordsOfJesus(vpl, usfm)[0].verses[0].wordsOfJesus, [
+    { start: 0, end: 7 },
+    { start: 7, end: 8 },
+  ]);
+});
+
+test("annotateWordsOfJesus rejects words of Jesus wording mismatches", () => {
+  const vpl = structuredClone(wordsOfJesusVpl);
+  vpl[0].verses[0].text = "Different wording.";
+
+  assert.throws(
+    () => annotateWordsOfJesus(vpl, wordsOfJesusUsfm),
+    /Revelation 1:1.*wording mismatch/,
+  );
+});
+
+test("annotateWordsOfJesus rejects unterminated words of Jesus markers", () => {
+  const usfm = String.raw`\c 1
+\v 1 Before \wj speech.`;
+  const vpl = [{ chapter: 1, verses: [{ number: 1, text: "Before speech." }] }];
+
+  assert.throws(
+    () => annotateWordsOfJesus(vpl, usfm),
+    /Revelation 1:1.*unterminated \\wj/,
+  );
+});
+
+test("annotateWordsOfJesus rejects overlapping speech ranges", () => {
+  const usfm = String.raw`\c 1
+\v 1 \wj First \wj second\wj* phrase\wj*.`;
+  const vpl = [{ chapter: 1, verses: [{ number: 1, text: "First second phrase." }] }];
+
+  assert.throws(
+    () => annotateWordsOfJesus(vpl, usfm),
+    /Revelation 1:1.*overlapping \\wj/,
+  );
+});
+
+test("validateWordsOfJesusRanges rejects invalid and out-of-bounds speech ranges", () => {
+  assert.throws(
+    () => validateWordsOfJesusRanges({ text: "Jesus", wordsOfJesus: [{ start: 0, end: 6 }] }, "Revelation 1:1"),
+    /Revelation 1:1.*out of bounds/,
+  );
+  assert.throws(
+    () => validateWordsOfJesusRanges({ text: "Jesus", wordsOfJesus: [{ start: 0.5, end: 5 }] }, "Revelation 1:1"),
+    /Revelation 1:1.*integers/,
+  );
+  assert.throws(
+    () => validateWordsOfJesusRanges({ text: "Jesus said", wordsOfJesus: [{ start: 6, end: 10 }, { start: 0, end: 5 }] }, "Revelation 1:1"),
+    /Revelation 1:1.*sorted/,
+  );
+  assert.throws(
+    () => validateWordsOfJesusRanges({ text: "Jesus said", wordsOfJesus: [{ start: 0, end: 7 }, { start: 6, end: 10 }] }, "Revelation 1:1"),
+    /Revelation 1:1.*overlap/,
+  );
 });

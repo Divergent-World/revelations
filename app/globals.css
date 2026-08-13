@@ -67,9 +67,12 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .95; }
 .lead-scene { display: grid; grid-template-columns: minmax(14rem, 22rem) 1fr; gap: clamp(2rem, 6vw, 8rem); align-items: center; max-width: 90rem; padding: 0 clamp(1rem, 4vw, 4rem) 7rem; }
 .lead-scene .scene-card { --card-width: 20rem; }
 .movement-list ol { display: grid; grid-template-columns: repeat(2, minmax(10rem, 1fr)); gap: 1px; padding: 1px; list-style-position: inside; background: var(--line); }
-.movement-list li { padding: 1.4rem; background: var(--night); font: 1.3rem var(--font-display), serif; }
-.tapestry-stage { overflow-x: auto; overscroll-behavior-x: contain; padding: 2rem clamp(1rem, 4vw, 4rem) 4rem; scrollbar-color: var(--gold) #171a1f; }
-.tapestry-stage.zoom-0 { --card-width: 16rem; }
+.movement-list li { padding: 1.4rem; background: var(--night); }
+.movement-list li::marker { color: var(--gold); font: .7rem var(--font-sans), sans-serif; }
+.movement-list h2 { display: inline; margin: 0; font: 1.3rem/1.15 var(--font-display), serif; }
+.movement-list li p { margin: .8rem 0 0; color: var(--muted); font: .9rem/1.65 var(--font-sans), sans-serif; }
+.tapestry-stage { --stage-pad: clamp(1rem, 4vw, 4rem); overflow-x: auto; overscroll-behavior-x: contain; padding: 2rem var(--stage-pad) 4rem; scrollbar-color: var(--gold) #171a1f; }
+.tapestry-stage.zoom-0 { --card-width: calc((100vw - var(--stage-pad) - var(--stage-pad) - 4.5rem) / 7); }
 .tapestry-stage.zoom-1 { --card-width: 22rem; }
 .tapestry-stage.zoom-2 { --card-width: 30rem; }
 .tapestry-row { display: grid; grid-template-columns: repeat(7, var(--card-width)); gap: .75rem; width: max-content; }
@@ -93,14 +96,27 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .95; }
 .scene-dialog::backdrop { background: rgba(0, 0, 0, .82); backdrop-filter: blur(12px); }
 .scene-dialog[open] { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(22rem, .75fr); }
 .dialog-close { position: absolute; top: .75rem; right: .75rem; z-index: 2; width: 2.8rem; height: 2.8rem; color: var(--ink); background: rgba(0,0,0,.65); border: 1px solid var(--line); font-size: 1.5rem; cursor: pointer; }
-.dialog-art { min-height: 0; padding: 1.5rem; overflow: auto; background: #06070a; }
-.dialog-art img { width: 100%; height: auto; object-fit: contain; }
+.dialog-art { min-height: 0; padding: 1.5rem; overflow: hidden; background: #06070a; }
+.zoom-artwork { position: relative; width: 100%; height: 100%; min-height: 18rem; overflow: hidden; background: #090b0f; }
+.zoom-artwork__viewport { position: relative; width: 100%; height: 100%; overflow: hidden; touch-action: none; cursor: zoom-in; user-select: none; }
+.zoom-artwork__viewport[data-enlarged="true"] { cursor: grab; }
+.zoom-artwork__viewport[data-dragging="true"] { cursor: grabbing; }
+.zoom-artwork__image { width: 100%; height: 100%; object-fit: contain; transform: translate3d(var(--pan-x, 0), var(--pan-y, 0), 0) scale(var(--art-scale, 1)); transform-origin: center; will-change: transform; }
+.zoom-toolbar { position: absolute; right: .75rem; bottom: .75rem; z-index: 2; display: flex; align-items: center; overflow: hidden; color: var(--ink); background: rgba(8, 10, 14, .92); border: 1px solid rgba(223, 194, 123, .55); box-shadow: 0 .4rem 1.5rem rgba(0, 0, 0, .35); }
+.zoom-toolbar button, .zoom-toolbar__level { display: grid; min-width: 2.75rem; min-height: 2.75rem; place-items: center; padding: 0 .7rem; color: inherit; background: transparent; border: 0; border-right: 1px solid var(--line); }
+.zoom-toolbar button { cursor: pointer; }
+.zoom-toolbar button:last-child { border-right: 0; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; }
+.zoom-toolbar button:disabled { color: #777; cursor: default; }
+.zoom-toolbar__level { min-width: 3.5rem; font-size: .75rem; font-variant-numeric: tabular-nums; }
+.art-lens { position: absolute; z-index: 1; width: clamp(7rem, 16vw, 11rem); aspect-ratio: 1; overflow: hidden; pointer-events: none; background: #090b0f; border: 2px solid var(--gold); border-radius: 50%; box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .55); transform: translate(-50%, -50%); }
+.art-lens__image { position: absolute; max-width: none; object-fit: contain; }
 .dialog-reading { padding: clamp(2rem, 4vw, 4rem); overflow-y: auto; border-left: 1px solid var(--line); }
 .dialog-reading h2 { margin-bottom: .75rem; font-size: clamp(2.3rem, 4vw, 4rem); }
 .scripture-reference { color: var(--gold); }
 .passage { margin-top: 2.5rem; }
 .passage h3 { color: var(--gold); font-size: 1.4rem; }
 .passage p { color: #d5d2cb; font: 1.15rem/1.7 var(--font-display), serif; }
+.words-of-jesus { color: var(--gold); font-weight: inherit; }
 .passage sup { display: inline-block; width: 1.7rem; color: var(--gold); font: .65rem var(--font-sans), sans-serif; }
 .scene-meta { display: grid; gap: .75rem; margin-top: 3rem; padding-top: 1.5rem; color: var(--muted); border-top: 1px solid var(--line); font-size: .72rem; }
 .scene-meta p { margin: 0; }
@@ -131,7 +147,7 @@ body:has(.embed-frame) > .site-header, body:has(.embed-frame) > .site-footer, bo
 body:has(.embed-frame) main { min-height: 100vh; }
 .viewer-embedded { padding-top: 2rem; }
 
-@media (max-width: 760px) {
+@media (max-width: 960px) {
   .site-header { min-height: 4.5rem; }
   .site-header nav a:first-child { display: none; }
   .site-footer { flex-direction: column; }
@@ -148,11 +164,18 @@ body:has(.embed-frame) main { min-height: 100vh; }
   .tapestry-row { display: block; width: auto; }
   .tapestry-row + .tapestry-row { margin-top: 2.5rem; }
   .tapestry-row .scene-card { margin-bottom: 2.5rem; }
+  .tapestry-pagination, .chapter-nav { font-size: .62rem; }
+}
+
+@media (max-width: 760px), (pointer: coarse) and (orientation: landscape) and (max-height: 500px) {
   .scene-dialog { width: 100vw; height: 100svh; border: 0; }
   .scene-dialog[open] { display: block; overflow-y: auto; }
   .dialog-art { height: 62svh; }
   .dialog-reading { overflow: visible; border: 0; }
-  .tapestry-pagination, .chapter-nav { font-size: .62rem; }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .art-lens { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

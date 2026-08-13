@@ -7,7 +7,7 @@ import { getScene, scenesForTapestry, type Scene, type Tapestry } from "@/lib/co
 import { ArtworkImage } from "./ArtworkImage";
 import { SceneDialog } from "./SceneDialog";
 
-const zoomNames = ["near", "room", "detail"] as const;
+const zoomNames = ["Near", "Room", "Detail"] as const;
 
 function SceneCard({ scene, eager, onOpen }: { scene: Scene; eager?: boolean; onOpen: (scene: Scene, trigger: HTMLButtonElement) => void }) {
   return (
@@ -25,7 +25,7 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
   const lead = scenes[0];
   const top = scenes.filter(({ row }) => row === "top");
   const bottom = scenes.filter(({ row }) => row === "bottom");
-  const [zoom, setZoom] = useState(1);
+  const [zoom, setZoom] = useState(0);
   const [selected, setSelected] = useState<Scene>();
   const opener = useRef<HTMLButtonElement | null>(null);
 
@@ -70,7 +70,7 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
       <header className="viewer-heading">
         <div>
           <p className="eyebrow">Tapestry {tapestry.roman}</p>
-          <h1>{tapestry.movements.join(" · ")}</h1>
+          <h1>{tapestry.title}</h1>
           <p>{tapestry.summary}</p>
         </div>
         <div className="viewer-controls">
@@ -83,7 +83,14 @@ export function TapestryViewer({ tapestry, embedded = false }: { tapestry: Tapes
         <SceneCard scene={lead} eager onOpen={openScene} />
         <div className="movement-list">
           <p className="eyebrow">The movement</p>
-          <ol>{tapestry.movements.map((movement) => <li key={movement}>{movement}</li>)}</ol>
+          <ol>
+            {tapestry.movements.map(({ title, description }) => (
+              <li key={title}>
+                <h2>{title}</h2>
+                <p>{description}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

@@ -116,19 +116,72 @@ export function displayReference(spans) {
     .join("; ");
 }
 
-function cleanUsfmText(text) {
-  return text
+const SPEECH_START = "\u{f0000}";
+const SPEECH_END = "\u{f0001}";
+
+function cleanUsfmVerse(text, label) {
+  const stripped = text
     .replace(/\\f \+.*?\\f\*/g, "")
     .replace(/\\x \+.*?\\x\*/g, "")
     .replace(/\\\+?w ([^|\\]+?)(?:\|[^\\]+)?\\\+?w\*/g, "$1")
-    .replace(/\\(?:wj|add|nd|bk)\*?/g, "")
-    .replace(/\\[a-z0-9]+\*?/gi, "")
-    .replace(/\s+([,.;:?!])/g, "$1")
-    .replace(/\s+/g, " ")
-    .trim();
+    .replace(/\\wj\*/g, SPEECH_END)
+    .replace(/\\wj\b/g, SPEECH_START)
+    .replace(/\\(?:add|nd|bk)\*?/g, "")
+    .replace(/\\[a-z0-9]+\*?/gi, "");
+
+  const chars = [];
+  let activeSegment = null;
+  let segmentCount = 0;
+  for (const char of stripped) {
+    if (char === SPEECH_START) {
+      if (activeSegment !== null) throw new Error(`${label}: overlapping \\wj markers`);
+      activeSegment = segmentCount;
+      segmentCount += 1;
+    } else if (char === SPEECH_END) {
+      if (activeSegment === null) throw new Error(`${label}: closing \\wj marker without an opening marker`);
+      activeSegment = null;
+    } else {
+      chars.push({ char, segment: activeSegment });
+    }
+  }
+  if (activeSegment !== null) throw new Error(`${label}: unterminated \\wj marker`);
+
+  const normalized = [];
+  for (let index = 0; index < chars.length;) {
+    if (!/\s/.test(chars[index].char)) {
+      normalized.push(chars[index]);
+      index += 1;
+      continue;
+    }
+
+    let end = index + 1;
+    while (end < chars.length && /\s/.test(chars[end].char)) end += 1;
+    const next = chars[end]?.char;
+    if (normalized.length && next && !/[,.;:?!”]/.test(next)) {
+      const segment = chars.slice(index, end).every(({ segment }) => segment !== null && segment === chars[index].segment)
+        ? chars[index].segment
+        : null;
+      normalized.push({ char: " ", segment });
+    }
+    index = end;
+  }
+
+  const ranges = [];
+  let rangeStart = null;
+  let rangeSegment = null;
+  for (let index = 0; index <= normalized.length; index += 1) {
+    const segment = normalized[index]?.segment ?? null;
+    if (segment === rangeSegment) continue;
+    if (rangeSegment !== null) ranges.push({ start: rangeStart, end: index });
+    rangeStart = segment === null ? null : index;
+    rangeSegment = segment;
+  }
+  if (ranges.length !== segmentCount) throw new Error(`${label}: empty \\wj range`);
+
+  return { text: normalized.map(({ char }) => char).join(""), ranges };
 }
 
-export function parseUsfmRevelation(usfm) {
+function parseAnnotatedUsfmRevelation(usfm) {
   const chapters = [];
   let chapter;
   let verse;
@@ -144,14 +197,75 @@ export function parseUsfmRevelation(usfm) {
     }
     const verseMatch = line.match(/^\\v\s+(\d+)\s+(.*)$/);
     if (verseMatch && chapter) {
-      verse = { number: Number(verseMatch[1]), text: cleanUsfmText(verseMatch[2]) };
+      verse = { number: Number(verseMatch[1]), raw: verseMatch[2] };
       chapter.verses.push(verse);
       continue;
     }
-    if (verse && line && !line.startsWith("\\")) verse.text += ` ${cleanUsfmText(line)}`;
+    if (verse && (line && !line.startsWith("\\") || /^\\(?:p|q\d*|m|nb)\s+\S/.test(line))) {
+      verse.raw += ` ${line}`;
+    }
   }
 
-  return chapters;
+  return chapters.map(({ chapter: chapterNumber, verses }) => ({
+    chapter: chapterNumber,
+    verses: verses.map(({ number, raw }) => {
+      const { text, ranges } = cleanUsfmVerse(raw, `Revelation ${chapterNumber}:${number}`);
+      return { number, text, ranges };
+    }),
+  }));
+}
+
+export function parseUsfmRevelation(usfm) {
+  return parseAnnotatedUsfmRevelation(usfm).map(({ chapter, verses }) => ({
+    chapter,
+    verses: verses.map(({ number, text }) => ({ number, text })),
+  }));
+}
+
+export function annotateWordsOfJesus(vplChapters, usfm) {
+  const usfmChapters = parseAnnotatedUsfmRevelation(usfm);
+  if (usfmChapters.length !== vplChapters.length) {
+    throw new Error(`USFM chapter count mismatch: expected ${vplChapters.length}, found ${usfmChapters.length}`);
+  }
+
+  return vplChapters.map(({ chapter, verses }) => {
+    const usfmChapter = usfmChapters.find(({ chapter: number }) => number === chapter);
+    if (!usfmChapter) throw new Error(`Revelation ${chapter}: missing from USFM source`);
+    if (usfmChapter.verses.length !== verses.length) {
+      throw new Error(`Revelation ${chapter}: USFM verse count mismatch`);
+    }
+
+    return {
+      chapter,
+      verses: verses.map((verse) => {
+        const usfmVerse = usfmChapter.verses.find(({ number }) => number === verse.number);
+        const label = `Revelation ${chapter}:${verse.number}`;
+        if (!usfmVerse) throw new Error(`${label}: missing from USFM source`);
+        if (usfmVerse.text !== verse.text) {
+          throw new Error(`${label}: USFM wording mismatch with canonical VPL text`);
+        }
+        return usfmVerse.ranges.length ? { ...verse, wordsOfJesus: usfmVerse.ranges } : { ...verse };
+      }),
+    };
+  });
+}
+
+export function validateWordsOfJesusRanges(verse, label) {
+  if (verse.wordsOfJesus === undefined) return;
+  if (!Array.isArray(verse.wordsOfJesus)) throw new Error(`${label}: wordsOfJesus must be an array`);
+
+  let previous;
+  for (const range of verse.wordsOfJesus) {
+    if (!Number.isInteger(range?.start) || !Number.isInteger(range?.end)) {
+      throw new Error(`${label}: speech range start and end must be integers`);
+    }
+    if (range.start < 0 || range.start >= range.end || range.end > verse.text.length) {
+      throw new Error(`${label}: speech range is out of bounds`);
+    }
+    if (previous && range.start < previous.start) throw new Error(`${label}: speech ranges must be sorted`);
+    if (previous && range.start < previous.end) throw new Error(`${label}: speech ranges must not overlap`);
+    previous = range;
+  }
 }
 
 export function parseVplRevelation(vpl) {
