@@ -1,0 +1,267 @@
+{
+  "app/embed/layout.tsx": {
+    "mtime": 1786506409.5697358,
+    "ast_hash": "116d3d7ef9fb6c47f6bd8d00fcf8e8b4",
+    "semantic_hash": "116d3d7ef9fb6c47f6bd8d00fcf8e8b4"
+  },
+  "app/embed/tapestries/[id]/page.tsx": {
+    "mtime": 1786506409.5706685,
+    "ast_hash": "a78ceff3fff1e0e5dd5215fb18128b66",
+    "semantic_hash": "a78ceff3fff1e0e5dd5215fb18128b66"
+  },
+  "app/layout.tsx": {
+    "mtime": 1786506409.5720088,
+    "ast_hash": "4aef324f3202d99ee2b427985cd95eb3",
+    "semantic_hash": "4aef324f3202d99ee2b427985cd95eb3"
+  },
+  "app/page.tsx": {
+    "mtime": 1786599957.128213,
+    "ast_hash": "47aae7279f6ecaf689c92c11ad41ab74",
+    "semantic_hash": "47aae7279f6ecaf689c92c11ad41ab74"
+  },
+  "app/revelation/[chapter]/page.tsx": {
+    "mtime": 1786599957.1286535,
+    "ast_hash": "feae7590adc76072a8471c60edd0faf5",
+    "semantic_hash": "feae7590adc76072a8471c60edd0faf5"
+  },
+  "app/revelation/page.tsx": {
+    "mtime": 1786506409.5741253,
+    "ast_hash": "ff03d6eacf42a504ca70fcc6b62cfc61",
+    "semantic_hash": "ff03d6eacf42a504ca70fcc6b62cfc61"
+  },
+  "app/tapestries/[id]/page.tsx": {
+    "mtime": 1786599957.1290884,
+    "ast_hash": "915d75954c4bfcabcae0ef910030cf14",
+    "semantic_hash": "915d75954c4bfcabcae0ef910030cf14"
+  },
+  "components/ArtworkImage.tsx": {
+    "mtime": 1786599957.1297789,
+    "ast_hash": "0bf2b22bd94eb6ef9767324089c333e4",
+    "semantic_hash": "0bf2b22bd94eb6ef9767324089c333e4"
+  },
+  "components/SceneDialog.tsx": {
+    "mtime": 1786599957.1302328,
+    "ast_hash": "5ad8c814e4892ed16122c71982dec0a0",
+    "semantic_hash": "5ad8c814e4892ed16122c71982dec0a0"
+  },
+  "components/SiteFooter.tsx": {
+    "mtime": 1786506409.5766287,
+    "ast_hash": "4f9c75c888b0d7cc457c56763c62179f",
+    "semantic_hash": "4f9c75c888b0d7cc457c56763c62179f"
+  },
+  "components/SiteHeader.tsx": {
+    "mtime": 1786506409.5769212,
+    "ast_hash": "4cc7b18efa26c5d33b8411e950f99f4c",
+    "semantic_hash": "4cc7b18efa26c5d33b8411e950f99f4c"
+  },
+  "components/TapestryViewer.tsx": {
+    "mtime": 1786599957.1305273,
+    "ast_hash": "fe9b81b7eb62b86a0b9fcbda0e5af4a8",
+    "semantic_hash": "fe9b81b7eb62b86a0b9fcbda0e5af4a8"
+  },
+  "components/VerseText.tsx": {
+    "mtime": 1786599957.130824,
+    "ast_hash": "9ac0b2df7a97f164fc26e897735d8d5c",
+    "semantic_hash": "9ac0b2df7a97f164fc26e897735d8d5c"
+  },
+  "components/ZoomableArtwork.tsx": {
+    "mtime": 1786599957.1312358,
+    "ast_hash": "c65c18a7aa5c4da676c2bdf0d2cc599e",
+    "semantic_hash": "c65c18a7aa5c4da676c2bdf0d2cc599e"
+  },
+  "content/revelation.web.json": {
+    "mtime": 1786599957.1319869,
+    "ast_hash": "80e39296f81a3ee88e038ffe3e04939d",
+    "semantic_hash": "80e39296f81a3ee88e038ffe3e04939d"
+  },
+  "content/scene-metadata.json": {
+    "mtime": 1786588783.5676486,
+    "ast_hash": "ed4601ce402093a70a8e8d8fa30bcf71",
+    "semantic_hash": "ed4601ce402093a70a8e8d8fa30bcf71"
+  },
+  "content/source-map.json": {
+    "mtime": 1786593653.9643145,
+    "ast_hash": "2693ea2e9064133dbffdf7688e895164",
+    "semantic_hash": "2693ea2e9064133dbffdf7688e895164"
+  },
+  "content/tapestries.json": {
+    "mtime": 1786599957.1333137,
+    "ast_hash": "39c7755bded77c9c92fd70872014838b",
+    "semantic_hash": "39c7755bded77c9c92fd70872014838b"
+  },
+  "e2e/exhibition.spec.ts": {
+    "mtime": 1786599957.1354825,
+    "ast_hash": "4d1725723c7a810236179593d15fa06b",
+    "semantic_hash": "4d1725723c7a810236179593d15fa06b"
+  },
+  "lib/content.ts": {
+    "mtime": 1786599957.1358602,
+    "ast_hash": "47e47f2873f41f378d492be710330f82",
+    "semantic_hash": "47e47f2873f41f378d492be710330f82"
+  },
+  "next-env.d.ts": {
+    "mtime": 1786588535.4828684,
+    "ast_hash": "8195d2c60ce847a459ae9d308d6a5724",
+    "semantic_hash": "8195d2c60ce847a459ae9d308d6a5724"
+  },
+  "next.config.ts": {
+    "mtime": 1786506409.5815969,
+    "ast_hash": "53cfbe96e401a57dd75f6990877bdf63",
+    "semantic_hash": "53cfbe96e401a57dd75f6990877bdf63"
+  },
+  "package.json": {
+    "mtime": 1786508312.4185958,
+    "ast_hash": "6f8e0b3a6b3381e5704d3a8c1b19070d",
+    "semantic_hash": "6f8e0b3a6b3381e5704d3a8c1b19070d"
+  },
+  "playwright.config.ts": {
+    "mtime": 1786506409.5829184,
+    "ast_hash": "5b5c35545b60334a9468adde76a4f466",
+    "semantic_hash": "5b5c35545b60334a9468adde76a4f466"
+  },
+  "scripts/build-release.mjs": {
+    "mtime": 1786506409.5832953,
+    "ast_hash": "70962aee31ec7b5a63503ca4ec137565",
+    "semantic_hash": "70962aee31ec7b5a63503ca4ec137565"
+  },
+  "scripts/dev-local.mjs": {
+    "mtime": 1786508312.4189298,
+    "ast_hash": "e90f07846a05f97531028eee6e4e258c",
+    "semantic_hash": "e90f07846a05f97531028eee6e4e258c"
+  },
+  "scripts/generate-content.mjs": {
+    "mtime": 1786599957.1362822,
+    "ast_hash": "088d075054c6a55077f7b8f1d2d21f88",
+    "semantic_hash": "088d075054c6a55077f7b8f1d2d21f88"
+  },
+  "scripts/lib/content.mjs": {
+    "mtime": 1786599957.1368935,
+    "ast_hash": "b120a9587940e5def5d1ee7eb00cfb9d",
+    "semantic_hash": "b120a9587940e5def5d1ee7eb00cfb9d"
+  },
+  "scripts/lib/dev-local.mjs": {
+    "mtime": 1786508312.4191895,
+    "ast_hash": "196960bde0e248b19b74ac9f6b4adcaf",
+    "semantic_hash": "196960bde0e248b19b74ac9f6b4adcaf"
+  },
+  "scripts/lib/release.mjs": {
+    "mtime": 1786506409.585988,
+    "ast_hash": "586233422d0f9037e90b8adc1d8acdc0",
+    "semantic_hash": "586233422d0f9037e90b8adc1d8acdc0"
+  },
+  "scripts/serve-static.mjs": {
+    "mtime": 1786508312.419516,
+    "ast_hash": "f9ee2bd1e286f51396fd8fc4fe88600a",
+    "semantic_hash": "f9ee2bd1e286f51396fd8fc4fe88600a"
+  },
+  "scripts/upload-r2.mjs": {
+    "mtime": 1786506409.587021,
+    "ast_hash": "1b44de2d65d99be34f5b47337defebb1",
+    "semantic_hash": "1b44de2d65d99be34f5b47337defebb1"
+  },
+  "scripts/validate-content.mjs": {
+    "mtime": 1786599957.1383207,
+    "ast_hash": "8e35e8601fd9730f0352030a34811388",
+    "semantic_hash": "8e35e8601fd9730f0352030a34811388"
+  },
+  "scripts/validate-release.mjs": {
+    "mtime": 1786506409.5877287,
+    "ast_hash": "59ff519447258d58b49dcb8007e98ac8",
+    "semantic_hash": "59ff519447258d58b49dcb8007e98ac8"
+  },
+  "test/content-lib.test.mjs": {
+    "mtime": 1786599957.1389847,
+    "ast_hash": "00454b7874665e74d9ed946f401ffe30",
+    "semantic_hash": "00454b7874665e74d9ed946f401ffe30"
+  },
+  "test/content.test.mjs": {
+    "mtime": 1786599957.1393704,
+    "ast_hash": "6bfc0ed2de18c7ef6d62342c00443629",
+    "semantic_hash": "6bfc0ed2de18c7ef6d62342c00443629"
+  },
+  "test/dev-local.test.mjs": {
+    "mtime": 1786508312.419766,
+    "ast_hash": "900e77c15fcfccbde8eedf0bb0947c1b",
+    "semantic_hash": "900e77c15fcfccbde8eedf0bb0947c1b"
+  },
+  "test/release-lib.test.mjs": {
+    "mtime": 1786506409.5885885,
+    "ast_hash": "0d23448e45fa0a83cd12abf20d16b605",
+    "semantic_hash": "0d23448e45fa0a83cd12abf20d16b605"
+  },
+  "tsconfig.json": {
+    "mtime": 1786506409.588945,
+    "ast_hash": "047e9c474e1b2550f235964ce6351ade",
+    "semantic_hash": "047e9c474e1b2550f235964ce6351ade"
+  },
+  "AGENTS.md": {
+    "mtime": 1786506409.5670366,
+    "ast_hash": "01e8142356e15c3404e0d84c48187cd0",
+    "semantic_hash": "01e8142356e15c3404e0d84c48187cd0"
+  },
+  "CLAUDE.md": {
+    "mtime": 1786506409.5672328,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "CONTRIBUTING.md": {
+    "mtime": 1786506409.567506,
+    "ast_hash": "38ba7569e72bb92042d1f4edb8bde3d5",
+    "semantic_hash": "38ba7569e72bb92042d1f4edb8bde3d5"
+  },
+  "LICENSE-ARTWORK.md": {
+    "mtime": 1786506409.5687435,
+    "ast_hash": "8614d3c4354bfde0915454bf4f29450c",
+    "semantic_hash": "8614d3c4354bfde0915454bf4f29450c"
+  },
+  "README.md": {
+    "mtime": 1786599957.1272922,
+    "ast_hash": "4292018225e5a7e578074aaf43cc7089",
+    "semantic_hash": "4292018225e5a7e578074aaf43cc7089"
+  },
+  "docs/deployment.md": {
+    "mtime": 1786506409.5796134,
+    "ast_hash": "9794254c768ea38d84a4f2f027a43429",
+    "semantic_hash": "9794254c768ea38d84a4f2f027a43429"
+  },
+  "docs/superpowers/plans/2026-08-12-artwork-layout.md": {
+    "mtime": 1786508312.4175563,
+    "ast_hash": "33bba17ce660191ad621477c5e30c451",
+    "semantic_hash": "33bba17ce660191ad621477c5e30c451"
+  },
+  "docs/superpowers/plans/2026-08-12-expanded-tapestry-movements.md": {
+    "mtime": 1786599957.1340635,
+    "ast_hash": "0ab13c7d8712595892e6d17cb1daa959",
+    "semantic_hash": "0ab13c7d8712595892e6d17cb1daa959"
+  },
+  "docs/superpowers/plans/2026-08-12-scene-metadata-v3.md": {
+    "mtime": 1786588783.5742939,
+    "ast_hash": "b440ceb75d531d5fc6d9927f4119d4a9",
+    "semantic_hash": "b440ceb75d531d5fc6d9927f4119d4a9"
+  },
+  "docs/superpowers/plans/2026-08-12-tapestry-reader-refinements.md": {
+    "mtime": 1786599957.1343985,
+    "ast_hash": "9896804b3337eb20e5ea9b4fbf2f29bf",
+    "semantic_hash": "9896804b3337eb20e5ea9b4fbf2f29bf"
+  },
+  "docs/superpowers/specs/2026-08-12-artwork-layout-design.md": {
+    "mtime": 1786508312.4178483,
+    "ast_hash": "38e340f4e3ff10cb7cf291f14958e5e9",
+    "semantic_hash": "38e340f4e3ff10cb7cf291f14958e5e9"
+  },
+  "docs/superpowers/specs/2026-08-12-expanded-tapestry-movements-design.md": {
+    "mtime": 1786599957.134748,
+    "ast_hash": "f96750f00718d8a578b188158ab2772a",
+    "semantic_hash": "f96750f00718d8a578b188158ab2772a"
+  },
+  "docs/superpowers/specs/2026-08-12-scene-metadata-v3-design.md": {
+    "mtime": 1786588783.5750046,
+    "ast_hash": "f682a172d4deca8e5b1ffc3f8ace926b",
+    "semantic_hash": "f682a172d4deca8e5b1ffc3f8ace926b"
+  },
+  "docs/superpowers/specs/2026-08-12-tapestry-reader-refinements-design.md": {
+    "mtime": 1786599957.135079,
+    "ast_hash": "4f5ad7e31f5b42e69bdc94aa277d0715",
+    "semantic_hash": "4f5ad7e31f5b42e69bdc94aa277d0715"
+  }
+}
