@@ -23,7 +23,7 @@ In another terminal, change to the folder containing `export.md`.
 ### Microsoft Word / Google Docs (red-letter edition)
 
 ```bash
-pandoc export.md --from=gfm+yaml_metadata_block+bracketed_spans --standalone --toc --reference-doc=red-letter-reference.docx -o revelations.docx
+pandoc export.md --from=markdown+yaml_metadata_block+bracketed_spans+link_attributes --standalone --toc --reference-doc=red-letter-reference.docx -o revelations.docx
 ```
 
 Upload `revelations.docx` to Google Drive, right-click it, and choose **Open with → Google Docs**. The 90 JPEG illuminations and red-letter formatting are retained; edit normally. To make a PDF there, choose **File → Download → PDF Document (.pdf)**.
@@ -31,7 +31,7 @@ Upload `revelations.docx` to Google Drive, right-click it, and choose **Open wit
 ### EPUB
 
 ```bash
-pandoc export.md --from=gfm+yaml_metadata_block+bracketed_spans --standalone --toc --split-level=2 -o revelations.epub
+pandoc export.md --from=markdown+yaml_metadata_block+bracketed_spans+link_attributes --standalone --toc --split-level=2 -o revelations.epub
 ```
 
 Pandoc downloads the linked images during conversion and includes them in the EPUB.
@@ -45,7 +45,7 @@ brew install weasyprint
 ```
 
 ```bash
-pandoc export.md --from=gfm+yaml_metadata_block+bracketed_spans --to=html5 --standalone --toc --pdf-engine=weasyprint -o revelations.pdf
+pandoc export.md --from=markdown+yaml_metadata_block+bracketed_spans+link_attributes --to=html5 --standalone --toc --pdf-engine=weasyprint -o revelations.pdf
 ```
 
 If you do not want to install WeasyPrint, use the DOCX → Google Docs → Download as PDF path above.

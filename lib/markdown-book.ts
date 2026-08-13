@@ -7,6 +7,8 @@ export type MarkdownBookInput = {
 };
 
 const romans = ["", "I", "II", "III", "IV", "V", "VI"];
+const maxPrintWidth = 6.25;
+const maxPrintHeight = 7.25;
 
 function cleanOrigin(value: string) {
   let url: URL;
@@ -23,6 +25,14 @@ function cleanOrigin(value: string) {
 
 function escapeMarkdown(value: string) {
   return value.replaceAll("\\", "\\\\").replaceAll("[", "\\[").replaceAll("]", "\\]").replaceAll("*", "\\*").replaceAll("_", "\\_");
+}
+
+function printImageDimensions(width: number, height: number) {
+  const scale = Math.min(maxPrintWidth / width, maxPrintHeight / height);
+  return {
+    width: (width * scale).toFixed(2),
+    height: (height * scale).toFixed(2),
+  };
 }
 
 function renderVerseText(verse: ScriptureChapter["verses"][number]) {
@@ -108,8 +118,9 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
         emitted.add(scene.id);
         const roman = romans[scene.tapestry];
         if (!roman) throw new Error(`${scene.id}: movement number must be between 1 and 6`);
+        const dimensions = printImageDimensions(scene.width, scene.height);
         lines.push(
-          `![${escapeMarkdown(scene.alt)}](${imageUrl})`,
+          `![${escapeMarkdown(scene.alt)}](${imageUrl}){width=${dimensions.width}in height=${dimensions.height}in}`,
           "",
           `*Movement ${roman} · ${scene.id} · ${escapeMarkdown(scene.title)} · ${escapeMarkdown(scene.displayReference)}*`,
           `*Artwork © ${escapeMarkdown(scene.attribution)} · ${escapeMarkdown(scene.license)}*`,
