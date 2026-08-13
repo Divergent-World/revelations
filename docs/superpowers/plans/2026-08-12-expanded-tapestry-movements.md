@@ -36,7 +36,8 @@
 Inside the existing `for (const tapestry of tapestries)` loop in `scripts/validate-content.mjs`, add:
 
 ```js
-assert.ok([4, 5].includes(tapestry.movements.length), `Tapestry ${tapestry.id} must contain 4 or 5 movements`);
+const expectedMovementCounts = [4, 4, 5, 5, 5, 5];
+assert.equal(tapestry.movements.length, expectedMovementCounts[tapestry.id - 1], `Tapestry ${tapestry.id} has the wrong movement count`);
 for (const [index, movement] of tapestry.movements.entries()) {
   assert.equal(typeof movement.label, "string", `Tapestry ${tapestry.id} movement ${index + 1} needs a label`);
   assert.ok(movement.label.trim(), `Tapestry ${tapestry.id} movement ${index + 1} label must not be empty`);
