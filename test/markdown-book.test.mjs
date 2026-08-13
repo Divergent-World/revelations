@@ -47,6 +47,11 @@ test("emits print-safe image boxes with each scene's native aspect ratio", () =>
   }
 });
 
+test("embeds a print-only aspect-ratio guard for PDF conversion", () => {
+  const markdown = render();
+  assert.match(markdown, /@media print \{ img \{ height: auto !important; max-width: 100%; object-fit: contain; \} \}/);
+});
+
 test("annotates every canonical words-of-Jesus range without changing scripture", () => {
   const markdown = render();
   const annotation = /\[([^\]]*)\]\{\.words-of-jesus style="color: #9B1C31" custom-style="Words of Jesus"\}/g;
