@@ -108,7 +108,8 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .95; }
 .zoom-toolbar button:last-child { border-right: 0; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; }
 .zoom-toolbar button:disabled { color: #777; cursor: default; }
 .zoom-toolbar output { min-width: 3.5rem; font-size: .75rem; font-variant-numeric: tabular-nums; }
-.art-lens { position: absolute; z-index: 1; width: clamp(7rem, 16vw, 11rem); aspect-ratio: 1; overflow: hidden; pointer-events: none; background-repeat: no-repeat; background-size: 250% 250%; border: 2px solid var(--gold); border-radius: 50%; box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .55); transform: translate(-50%, -50%); }
+.art-lens { position: absolute; z-index: 1; width: clamp(7rem, 16vw, 11rem); aspect-ratio: 1; overflow: hidden; pointer-events: none; background: #090b0f; border: 2px solid var(--gold); border-radius: 50%; box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .55); transform: translate(-50%, -50%); }
+.art-lens__image { position: absolute; max-width: none; object-fit: contain; }
 .dialog-reading { padding: clamp(2rem, 4vw, 4rem); overflow-y: auto; border-left: 1px solid var(--line); }
 .dialog-reading h2 { margin-bottom: .75rem; font-size: clamp(2.3rem, 4vw, 4rem); }
 .scripture-reference { color: var(--gold); }

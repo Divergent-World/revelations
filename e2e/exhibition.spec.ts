@@ -137,13 +137,87 @@ test("artwork zoom click toggle and hover lens follow pointer mode", async ({ pa
   await page.goto("/tapestries/1/?scene=T1-T01");
 
   const viewport = page.getByRole("button", { name: "Zoom artwork" });
-  await viewport.hover({ position: { x: 100, y: 100 } });
+  await viewport.hover({ position: { x: 100, y: 200 } });
   await expect(page.locator(".art-lens")).toBeVisible();
-  await viewport.click({ position: { x: 100, y: 100 } });
+  await viewport.click({ position: { x: 100, y: 200 } });
   await expect(page.getByText("2×", { exact: true })).toBeVisible();
   await expect(page.locator(".art-lens")).toBeHidden();
-  await viewport.click({ position: { x: 100, y: 100 } });
+  await viewport.click({ position: { x: 100, y: 200 } });
   await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await expect(page.locator(".art-lens")).toBeVisible();
+});
+
+test("artwork zoom ignores non-primary mouse buttons", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.goto("/tapestries/1/?scene=T1-T01");
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+
+  await viewport.click({ button: "right", position: { x: 100, y: 100 } });
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  await viewport.click({ button: "middle", position: { x: 100, y: 100 } });
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+});
+
+test("artwork zoom treats lost pointer capture as cancellation", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  await page.goto("/tapestries/1/?scene=T1-T01");
+  await page.getByRole("button", { name: "Zoom in" }).click();
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  const box = await viewport.boundingBox();
+  expect(box).not.toBeNull();
+  await viewport.evaluate((element) => {
+    element.addEventListener("pointerdown", (event) => { element.setAttribute("data-test-pointer", String((event as PointerEvent).pointerId)); }, { once: true });
+  });
+  await page.mouse.move(box!.x + box!.width / 2, box!.y + box!.height / 2);
+  await page.mouse.down();
+  await expect(viewport).toHaveAttribute("data-dragging", "true");
+  await viewport.dispatchEvent("lostpointercapture", {
+    pointerId: Number(await viewport.getAttribute("data-test-pointer")),
+    pointerType: "mouse",
+    button: 0,
+    isPrimary: true,
+  });
+  await expect(viewport).toHaveAttribute("data-dragging", "false");
+  await page.mouse.up();
+  await expect(page.getByText("1.5×", { exact: true })).toBeVisible();
+});
+
+test("artwork zoom lens preserves the fitted region beneath the pointer", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile");
+  const artwork = '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><path fill="#369" d="M0 0h300v200H0z"/></svg>';
+  await page.route("**/T1-T01.webp", (route) => route.fulfill({ status: 200, contentType: "image/svg+xml", body: artwork }));
+  await page.goto("/tapestries/1/?scene=T1-T01");
+
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  const box = await viewport.boundingBox();
+  expect(box).not.toBeNull();
+  const pointer = { x: box!.width * .3, y: box!.height * .45 };
+  await viewport.hover({ position: pointer });
+
+  const geometry = await page.locator(".art-lens").evaluate((lens) => {
+    const viewport = lens.parentElement!;
+    const image = lens.querySelector("img")!;
+    const viewportBox = viewport.getBoundingClientRect();
+    const lensBox = lens.getBoundingClientRect();
+    const imageBox = image.getBoundingClientRect();
+    const ratio = Number(image.getAttribute("width")) / Number(image.getAttribute("height"));
+    const fittedWidth = Math.min(viewportBox.width, viewportBox.height * ratio);
+    const fittedHeight = fittedWidth / ratio;
+    const pointerX = lensBox.x + lensBox.width / 2;
+    const pointerY = lensBox.y + lensBox.height / 2;
+    return {
+      imageRatio: imageBox.width / imageBox.height,
+      objectFit: getComputedStyle(image).objectFit,
+      sourceX: (pointerX - viewportBox.x - (viewportBox.width - fittedWidth) / 2) / fittedWidth,
+      sourceY: (pointerY - viewportBox.y - (viewportBox.height - fittedHeight) / 2) / fittedHeight,
+      lensX: (pointerX - imageBox.x) / imageBox.width,
+      lensY: (pointerY - imageBox.y) / imageBox.height,
+    };
+  });
+  expect(geometry.imageRatio).toBeCloseTo(1.5, 4);
+  expect(geometry.objectFit).toBe("contain");
+  expect(geometry.lensX).toBeCloseTo(geometry.sourceX, 3);
+  expect(geometry.lensY).toBeCloseTo(geometry.sourceY, 3);
 });
 
 test("artwork zoom keyboard shortcuts adjust and reset the focused viewport", async ({ page }, testInfo) => {
@@ -176,7 +250,16 @@ test("artwork zoom resets between scenes and disables only after both images fai
   await page.route("**/web/1920/T1-T02.webp", (route) => route.fulfill({ status: 404 }));
   await page.getByRole("button", { name: "Next →" }).click();
   await expect(page.getByText("1×", { exact: true })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Zoom in" })).toBeEnabled();
+  const preview = page.locator(".zoom-artwork__viewport > .zoom-artwork__image");
+  await expect(preview).toHaveAttribute("src", /\/web\/640\/T1-T02\.webp$/);
+  await expect.poll(() => preview.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  await viewport.hover({ position: { x: 100, y: 200 } });
+  const lensPreview = page.locator(".art-lens img");
+  await expect(lensPreview).toHaveAttribute("src", /\/web\/640\/T1-T02\.webp$/);
+  await expect.poll(() => lensPreview.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)).toBe(true);
+  await page.getByRole("button", { name: "Zoom in" }).click();
+  await expect(page.getByText("1.5×", { exact: true })).toBeVisible();
 
   await page.getByRole("button", { name: "Next →" }).click();
   const unavailable = page.getByRole("dialog").locator(".image-fallback");
@@ -234,8 +317,8 @@ test("artwork zoom handles native touch pinch and pan without click toggle", asy
   await client.send("Input.dispatchTouchEvent", {
     type: "touchMove",
     touchPoints: [
-      { x: center.x - 100, y: center.y, id: 0 },
-      { x: center.x + 100, y: center.y, id: 1 },
+      { x: center.x - 70, y: center.y + 20, id: 0 },
+      { x: center.x + 130, y: center.y + 20, id: 1 },
     ],
   });
   await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
@@ -243,21 +326,38 @@ test("artwork zoom handles native touch pinch and pan without click toggle", asy
 
   const beforePan = await viewport.locator("img").evaluate((image) => {
     const matrix = new DOMMatrix(getComputedStyle(image).transform);
-    return { transform: getComputedStyle(image).transform, x: matrix.e, y: matrix.f };
+    return { scale: matrix.a, x: matrix.e, y: matrix.f };
   });
-  expect(beforePan.x).toBeGreaterThan(1);
-  expect(beforePan.y).toBeGreaterThan(1);
+  const initialRelative = { x: center.x - box!.x - box!.width / 2, y: center.y - box!.y - box!.height / 2 };
+  const movedRelative = { x: initialRelative.x + 30, y: initialRelative.y + 20 };
+  const fittedWidth = Math.min(box!.width, box!.height * 2 / 3);
+  const fittedHeight = fittedWidth * 3 / 2;
+  const maxX = Math.max(0, (fittedWidth * 2 - box!.width) / 2);
+  const maxY = Math.max(0, (fittedHeight * 2 - box!.height) / 2);
+  const expectedX = Math.min(maxX, Math.max(-maxX, movedRelative.x - initialRelative.x * 2));
+  const expectedY = Math.min(maxY, Math.max(-maxY, movedRelative.y - initialRelative.y * 2));
+  expect(beforePan.scale).toBeCloseTo(2, 4);
+  expect(beforePan.x).toBeCloseTo(expectedX, 1);
+  expect(beforePan.y).toBeCloseTo(expectedY, 1);
+  expect((movedRelative.x - beforePan.x) / beforePan.scale).toBeCloseTo(initialRelative.x, 1);
+  expect((movedRelative.y - beforePan.y) / beforePan.scale).toBeCloseTo(initialRelative.y, 1);
   await client.send("Input.dispatchTouchEvent", {
     type: "touchStart",
     touchPoints: [{ x: center.x, y: center.y, id: 0 }],
   });
   await client.send("Input.dispatchTouchEvent", {
     type: "touchMove",
-    touchPoints: [{ x: center.x + 50, y: center.y + 30, id: 0 }],
+    touchPoints: [{ x: center.x + 25, y: center.y + 10, id: 0 }],
   });
   await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
-  const afterPan = await viewport.locator("img").evaluate((image) => getComputedStyle(image).transform);
-  expect(afterPan).not.toBe(beforePan.transform);
+  const afterPan = await viewport.locator("img").evaluate((image) => {
+    const matrix = new DOMMatrix(getComputedStyle(image).transform);
+    return { x: matrix.e, y: matrix.f };
+  });
+  expect(afterPan.x).toBeCloseTo(Math.min(maxX, beforePan.x + 25), 1);
+  expect(afterPan.y).toBeCloseTo(Math.min(maxY, beforePan.y + 10), 1);
+  expect(afterPan.x).toBeGreaterThan(beforePan.x);
+  expect(afterPan.y).toBeGreaterThan(beforePan.y);
   await expect(page.getByText("2×", { exact: true })).toBeVisible();
   expect(await page.evaluate(() => window.scrollY)).toBe(pageScroll);
 });

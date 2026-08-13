@@ -2,13 +2,14 @@
 
 import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from "react";
 
-import { assetUrl, type Scene } from "@/lib/content";
+import type { Scene } from "@/lib/content";
 import { ArtworkImage } from "./ArtworkImage";
 
 const MIN_SCALE = 1;
 const MAX_SCALE = 4;
 const SCALE_STEP = 0.5;
 const DRAG_THRESHOLD = 4;
+const LENS_SCALE = 2.5;
 
 type Point = { x: number; y: number };
 type Transform = Point & { scale: number };
@@ -23,16 +24,22 @@ const clamp = (value: number, min: number, max: number) => Math.min(max, Math.ma
 const distance = (a: Point, b: Point) => Math.hypot(a.x - b.x, a.y - b.y);
 const midpoint = (a: Point, b: Point) => ({ x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 });
 
-function boundedTransform(next: Transform, viewport: HTMLDivElement | null, scene: Scene): Transform {
-  const scale = clamp(next.scale, MIN_SCALE, MAX_SCALE);
-  if (!viewport || scale === MIN_SCALE) return { scale, x: 0, y: 0 };
+function fittedArtwork(viewport: HTMLDivElement, scene: Scene) {
   const { clientWidth: width, clientHeight: height } = viewport;
   const artworkRatio = scene.width / scene.height;
   const viewportRatio = width / height;
   const fittedWidth = artworkRatio > viewportRatio ? width : height * artworkRatio;
   const fittedHeight = artworkRatio > viewportRatio ? width / artworkRatio : height;
-  const maxX = Math.max(0, (fittedWidth * scale - width) / 2);
-  const maxY = Math.max(0, (fittedHeight * scale - height) / 2);
+  return { x: (width - fittedWidth) / 2, y: (height - fittedHeight) / 2, width: fittedWidth, height: fittedHeight };
+}
+
+function boundedTransform(next: Transform, viewport: HTMLDivElement | null, scene: Scene): Transform {
+  const scale = clamp(next.scale, MIN_SCALE, MAX_SCALE);
+  if (!viewport || scale === MIN_SCALE) return { scale, x: 0, y: 0 };
+  const artwork = fittedArtwork(viewport, scene);
+  const { clientWidth: width, clientHeight: height } = viewport;
+  const maxX = Math.max(0, (artwork.width * scale - width) / 2);
+  const maxY = Math.max(0, (artwork.height * scale - height) / 2);
   return { scale, x: clamp(next.x, -maxX, maxX), y: clamp(next.y, -maxY, maxY) };
 }
 
@@ -109,14 +116,20 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
     setLens(undefined);
   }
 
+  function lensPoint(viewport: HTMLDivElement, clientX: number, clientY: number) {
+    const rect = viewport.getBoundingClientRect();
+    const point = { x: clientX - rect.left, y: clientY - rect.top };
+    const artwork = fittedArtwork(viewport, scene);
+    return point.x >= artwork.x && point.x <= artwork.x + artwork.width && point.y >= artwork.y && point.y <= artwork.y + artwork.height ? point : undefined;
+  }
+
   function updateLens(event: PointerEvent<HTMLDivElement>) {
     if (event.pointerType !== "mouse" || transformRef.current.scale !== MIN_SCALE || unavailable) return;
-    const rect = event.currentTarget.getBoundingClientRect();
-    setLens({ x: event.clientX - rect.left, y: event.clientY - rect.top });
+    setLens(lensPoint(event.currentTarget, event.clientX, event.clientY));
   }
 
   function onPointerDown(event: PointerEvent<HTMLDivElement>) {
-    if (unavailable) return;
+    if (unavailable || (event.pointerType === "mouse" && (event.button !== 0 || !event.isPrimary))) return;
     if (pointers.current.size === 0) moved.current = false;
     const point = { x: event.clientX, y: event.clientY };
     pointers.current.set(event.pointerId, point);
@@ -164,6 +177,7 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
   }
 
   function finishPointer(event: PointerEvent<HTMLDivElement>, cancelled = false) {
+    if (!pointers.current.has(event.pointerId)) return;
     const wasPinching = pointers.current.size > 1 || Boolean(pinch.current);
     pointers.current.delete(event.pointerId);
     if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
@@ -178,7 +192,9 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
     setDragging(false);
     drag.current = undefined;
     if (!cancelled && !wasPinching && !moved.current && event.pointerType === "mouse") {
-      zoomAround(transformRef.current.scale === MIN_SCALE ? 2 : MIN_SCALE, { x: event.clientX, y: event.clientY });
+      const scale = transformRef.current.scale === MIN_SCALE ? 2 : MIN_SCALE;
+      zoomAround(scale, { x: event.clientX, y: event.clientY });
+      if (scale === MIN_SCALE) setLens(lensPoint(event.currentTarget, event.clientX, event.clientY));
     }
     moved.current = false;
   }
@@ -201,9 +217,7 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
   }
 
   const scaleLabel = `${Number(transform.scale.toFixed(1))}×`;
-  const lensPosition = lens && viewportRef.current
-    ? { x: lens.x / viewportRef.current.clientWidth * 100, y: lens.y / viewportRef.current.clientHeight * 100 }
-    : undefined;
+  const lensArtwork = lens && viewportRef.current ? fittedArtwork(viewportRef.current, scene) : undefined;
 
   return (
     <div className="zoom-artwork">
@@ -223,6 +237,7 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
         onPointerMove={onPointerMove}
         onPointerUp={(event) => finishPointer(event)}
         onPointerCancel={(event) => finishPointer(event, true)}
+        onLostPointerCapture={(event) => finishPointer(event, true)}
       >
         <ArtworkImage
           scene={scene}
@@ -234,17 +249,25 @@ export function ZoomableArtwork({ scene }: { scene: Scene }) {
           onLoad={() => setUnavailable(false)}
           onUnavailable={() => { setUnavailable(true); reset(); }}
         />
-        {lens && transform.scale === MIN_SCALE && !unavailable && (
+        {lens && lensArtwork && transform.scale === MIN_SCALE && !unavailable && (
           <span
             className="art-lens"
             aria-hidden="true"
-            style={{
-              left: lens.x,
-              top: lens.y,
-              backgroundImage: `url(${assetUrl(scene.images.reader)}), url(${assetUrl(scene.images.preview)})`,
-              backgroundPosition: `${lensPosition?.x ?? 50}% ${lensPosition?.y ?? 50}%`,
-            }}
-          />
+            style={{ left: lens.x, top: lens.y }}
+          >
+            <ArtworkImage
+              className="art-lens__image"
+              scene={scene}
+              size="reader"
+              draggable={false}
+              style={{
+                width: lensArtwork.width * LENS_SCALE,
+                height: lensArtwork.height * LENS_SCALE,
+                left: `calc(50% - ${(lens.x - lensArtwork.x) * LENS_SCALE}px)`,
+                top: `calc(50% - ${(lens.y - lensArtwork.y) * LENS_SCALE}px)`,
+              }}
+            />
+          </span>
         )}
       </div>
       <div className="zoom-toolbar" role="group" aria-label="Artwork zoom controls">
