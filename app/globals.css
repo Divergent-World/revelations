@@ -104,6 +104,7 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .95; }
 .passage { margin-top: 2.5rem; }
 .passage h3 { color: var(--gold); font-size: 1.4rem; }
 .passage p { color: #d5d2cb; font: 1.15rem/1.7 var(--font-display), serif; }
+.words-of-jesus { color: var(--gold); font-weight: inherit; }
 .passage sup { display: inline-block; width: 1.7rem; color: var(--gold); font: .65rem var(--font-sans), sans-serif; }
 .scene-meta { display: grid; gap: .75rem; margin-top: 3rem; padding-top: 1.5rem; color: var(--muted); border-top: 1px solid var(--line); font-size: .72rem; }
 .scene-meta p { margin: 0; }

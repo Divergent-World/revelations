@@ -159,6 +159,24 @@ test("chapter verses link back to matching scenes", async ({ page }) => {
   await expect(verse.getByRole("link", { name: /First Horseman/ })).toHaveAttribute("href", "/tapestries/1/?scene=T1-B01");
 });
 
+test("words of Jesus are highlighted in scene and chapter passages", async ({ page }) => {
+  await page.goto("/tapestries/1/?scene=T1-00");
+  const verse = page.getByRole("dialog").locator(".passage p").filter({ hasText: "I am the Alpha and the Omega" });
+  const wordsOfJesus = verse.locator(".words-of-jesus");
+  await expect(wordsOfJesus).toHaveText(["“I am the Alpha and the Omega,", "”", "“who is and who was and who is to come, the Almighty.”"]);
+  await expect(verse).toContainText("says the Lord God");
+  await expect(verse).toHaveCSS("color", "rgb(213, 210, 203)");
+  await expect(wordsOfJesus.first()).toHaveCSS("color", "rgb(214, 187, 120)");
+
+  await page.goto("/revelation/1/");
+  const chapterVerse = page.locator("#verse-8");
+  const chapterWordsOfJesus = chapterVerse.locator(".words-of-jesus");
+  await expect(chapterWordsOfJesus).toHaveText(["“I am the Alpha and the Omega,", "”", "“who is and who was and who is to come, the Almighty.”"]);
+  await expect(chapterVerse).toContainText("says the Lord God");
+  await expect(chapterVerse.locator("p")).toHaveCSS("color", "rgb(212, 209, 203)");
+  await expect(chapterWordsOfJesus.first()).toHaveCSS("color", "rgb(214, 187, 120)");
+});
+
 test("mobile presents top scenes before bottom scenes in one column", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "mobile");
   await page.goto("/tapestries/6/");
