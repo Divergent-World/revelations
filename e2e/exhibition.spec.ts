@@ -362,6 +362,101 @@ test("artwork zoom handles native touch pinch and pan without click toggle", asy
   expect(await page.evaluate(() => window.scrollY)).toBe(pageScroll);
 });
 
+test("artwork zoom clamps native touch pinch at exactly 1× and 4×", async ({ page, context }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.setViewportSize({ width: 820, height: 1000 });
+  await page.goto("/tapestries/1/?scene=T1-00");
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  const box = await viewport.boundingBox();
+  expect(box).not.toBeNull();
+  const center = { x: box!.x + box!.width / 2, y: box!.y + box!.height / 2 };
+  const client = await context.newCDPSession(page);
+
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [
+      { x: center.x - 100, y: center.y, id: 0 },
+      { x: center.x + 100, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [
+      { x: center.x - 2, y: center.y, id: 0 },
+      { x: center.x + 2, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+  await expect(page.getByText("1×", { exact: true })).toBeVisible();
+  expect(await viewport.locator("> .zoom-artwork__image").evaluate((image) => new DOMMatrix(getComputedStyle(image).transform).a)).toBe(1);
+
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [
+      { x: center.x - 20, y: center.y, id: 0 },
+      { x: center.x + 20, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [
+      { x: center.x - 100, y: center.y, id: 0 },
+      { x: center.x + 100, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+  await expect(page.getByText("4×", { exact: true })).toBeVisible();
+  expect(await viewport.locator("> .zoom-artwork__image").evaluate((image) => new DOMMatrix(getComputedStyle(image).transform).a)).toBe(4);
+});
+
+test("artwork zoom clamps native one-finger pan at every fitted edge", async ({ page, context }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.setViewportSize({ width: 820, height: 1000 });
+  await page.goto("/tapestries/1/?scene=T1-00");
+  const viewport = page.getByRole("button", { name: "Zoom artwork" });
+  const image = viewport.locator("> .zoom-artwork__image");
+  const box = await viewport.boundingBox();
+  expect(box).not.toBeNull();
+  const size = await viewport.evaluate((element) => ({ width: element.clientWidth, height: element.clientHeight }));
+  const center = { x: box!.x + box!.width / 2, y: box!.y + box!.height / 2 };
+  const client = await context.newCDPSession(page);
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [
+      { x: center.x - 50, y: center.y, id: 0 },
+      { x: center.x + 50, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchMove",
+    touchPoints: [
+      { x: center.x - 100, y: center.y, id: 0 },
+      { x: center.x + 100, y: center.y, id: 1 },
+    ],
+  });
+  await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+  await expect(page.getByText("2×", { exact: true })).toBeVisible();
+
+  const fittedWidth = Math.min(size.width, size.height * 2 / 3);
+  const fittedHeight = fittedWidth * 3 / 2;
+  const maxX = (fittedWidth * 2 - size.width) / 2;
+  const maxY = (fittedHeight * 2 - size.height) / 2;
+  async function drag(start: { x: number; y: number }, end: { x: number; y: number }) {
+    await client.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ ...start, id: 0 }] });
+    await client.send("Input.dispatchTouchEvent", { type: "touchMove", touchPoints: [{ ...end, id: 0 }] });
+    await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+    return image.evaluate((element) => {
+      const matrix = new DOMMatrix(getComputedStyle(element).transform);
+      return { x: matrix.e, y: matrix.f };
+    });
+  }
+
+  expect((await drag(center, { x: 819, y: center.y })).x).toBe(maxX);
+  expect((await drag({ x: box!.x + box!.width - 1, y: center.y }, { x: 1, y: center.y })).x).toBe(-maxX);
+  expect((await drag(center, { x: center.x, y: 999 })).y).toBe(maxY);
+  expect((await drag({ x: center.x, y: box!.y + box!.height - 1 }, { x: center.x, y: 1 })).y).toBe(-maxY);
+});
+
 test("scene deep links open, navigate, and follow browser history", async ({ page }) => {
   await page.goto("/tapestries/1/?scene=T1-T01");
   await expect(page.getByRole("dialog")).toBeVisible();
