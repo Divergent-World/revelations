@@ -6,8 +6,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "Revelations — The Apocalypse Tapestries", template: "%s — Revelations" },
-  description: "A six-part visual reading of the Book of Revelation by Ali Rahman / Divergent World.",
+  title: { default: "Revelations — A Prophecy in Six Movements", template: "%s — Revelations" },
+  description: "An illuminated reading of the Book of Revelation as a prophecy in six movements by Ali Rahman / Divergent World.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

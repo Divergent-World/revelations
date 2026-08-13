@@ -1,6 +1,6 @@
 # Revelations
 
-An open-source, static exhibition of six Apocalypse Tapestries by Ali Rahman / Divergent World. The Next.js portal presents 90 canonical scenes beside the public-domain World English Bible text of Revelation.
+An open-source, static exhibition of the Book of Revelation as a prophecy in six movements by Ali Rahman / Divergent World. The Next.js portal presents 90 canonical scenes beside the public-domain World English Bible text of Revelation.
 
 ## Local development
 

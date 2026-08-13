@@ -8,7 +8,7 @@ export default function RevelationIndexPage() {
       <header className="reader-hero">
         <p className="eyebrow">World English Bible</p>
         <h1>The Revelation to John</h1>
-        <p>Read the complete twenty-two-chapter text. Illuminated verse markers return you to scenes in the six tapestries.</p>
+        <p>Read the complete twenty-two-chapter text. Illuminated verse markers return you to scenes across the six movements.</p>
       </header>
       <ol className="chapter-grid">
         {revelationChapters.map(({ chapter, verses }) => (

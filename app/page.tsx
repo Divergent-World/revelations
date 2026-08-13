@@ -6,21 +6,21 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <p className="eyebrow">The Apocalypse Tapestries</p>
-        <h1>A vision in six movements</h1>
+        <p className="eyebrow">The Revelation to John</p>
+        <h1>A prophecy in six movements</h1>
         <p className="hero-copy">
           Ninety scenes follow John from Patmos through throne, judgment, dragon, Babylon, and the radiant city at the end of the world.
         </p>
         <div className="hero-actions">
-          <Link className="button button-primary" href="/tapestries/1/">Enter the exhibition</Link>
+          <Link className="button button-primary" href="/tapestries/1/">Enter Movement I</Link>
           <Link className="button" href="/revelation/">Read Revelation</Link>
         </div>
       </section>
 
-      <section className="tapestry-index" aria-labelledby="six-tapestries">
+      <section className="tapestry-index" aria-labelledby="six-movements">
         <div className="section-heading">
           <p className="eyebrow">I — VI</p>
-          <h2 id="six-tapestries">The six tapestries</h2>
+          <h2 id="six-movements">The six movements</h2>
         </div>
         <ol className="tapestry-list">
           {allTapestries.map((tapestry) => (

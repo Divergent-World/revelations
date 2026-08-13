@@ -641,3 +641,22 @@ test("mobile presents top scenes before bottom scenes in one column", async ({ p
   expect(new Set(boxes.map(({ x }) => Math.round(x))).size).toBe(1);
   expect(boxes.every((box, index) => index === 0 || box.y > boxes[index - 1].y)).toBe(true);
 });
+
+test("public taxonomy presents the prophecy as six movements", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("A prophecy in six movements");
+  await expect(page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Movements" })).toHaveAttribute("href", "/tapestries/1/");
+  await expect(page.getByRole("heading", { level: 2, name: "The six movements" })).toBeVisible();
+
+  await page.goto("/tapestries/2/");
+  await expect(page.locator(".viewer-heading .eyebrow")).toHaveText("Movement II");
+  await expect(page.locator(".movement-list > .eyebrow")).toHaveText("The prophecy unfolds");
+  const movementNavigation = page.getByRole("navigation", { name: "Movement navigation" });
+  await expect(movementNavigation).toContainText("Previous movement");
+  await expect(movementNavigation).toContainText("All movements");
+  await expect(movementNavigation).toContainText("Next movement");
+  await expect(page).toHaveTitle(/Movement II: The Trumpets Sound/);
+
+  await page.goto("/revelation/");
+  await expect(page.locator(".reader-hero")).toContainText("six movements");
+});

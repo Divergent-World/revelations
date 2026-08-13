@@ -27,3 +27,13 @@ test("movement narrative retains approved spacing", () => {
     /cosmic level — land, sea, rivers, sky, light itself/,
   );
 });
+
+test("public editorial copy avoids the retired tapestry taxonomy", () => {
+  const editorialCopy = tapestries.flatMap(({ title, summary, movements }) => [
+    title,
+    summary,
+    ...movements.flatMap(({ title: movementTitle, description }) => [movementTitle, description]),
+  ]).join("\n");
+
+  assert.doesNotMatch(editorialCopy, /\btapestr(?:y|ies)\b/i);
+});
