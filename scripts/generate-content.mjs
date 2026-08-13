@@ -3,7 +3,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
-import { displayReference, mapCanvasToSceneIds, parseRevelationAnchor, parseVplRevelation, relativeObjectKey } from "./lib/content.mjs";
+import { displayReference, mapCanvasToSceneIds, parseVplRevelation, relativeObjectKey, validateSceneMetadata } from "./lib/content.mjs";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
 const vaultRoot = path.resolve(process.env.APOCALYPSE_VAULT ?? path.join(repoRoot, "..", "Apocalypse Tapestry"));
@@ -28,13 +28,6 @@ const movements = [
   ["Bowls of wrath", "Babylon revealed", "Babylon falls", "The true wedding"],
   ["The victorious rider", "Evil overthrown", "Final judgment", "New Jerusalem and communion"],
 ];
-
-function extractMasterIndex(markdown) {
-  const blocks = [...markdown.matchAll(/```\s*([\s\S]*?)```/g)].map((match) => match[1].trim());
-  const block = blocks.find((value) => value.startsWith("[") && value.includes('"slot_id"'));
-  if (!block) throw new Error("Master Index JSON block was not found");
-  return JSON.parse(block);
-}
 
 function versesForSpans(chapters, spans) {
   return spans.map((span) => ({
@@ -61,8 +54,15 @@ async function main() {
   const revelation = parseVplRevelation(vpl);
   if (revelation.length !== 22) throw new Error(`Expected 22 Revelation chapters, found ${revelation.length}`);
 
-  const master = extractMasterIndex(await readFile(path.join(vaultRoot, "INDEX", "Master Index.md"), "utf8"));
-  const metadata = new Map(master.map((slot) => [slot.slot_id, slot]));
+  const expectedSceneIds = romans.flatMap((_, index) => {
+    const tapestry = index + 1;
+    return [
+      `T${tapestry}-00`,
+      ...["T", "B"].flatMap((row) => Array.from({ length: 7 }, (__, position) => `T${tapestry}-${row}${String(position + 1).padStart(2, "0")}`)),
+    ];
+  });
+  const compactMetadata = JSON.parse(await readFile(path.join(contentDir, "scene-metadata.json"), "utf8"));
+  const metadata = validateSceneMetadata(compactMetadata, expectedSceneIds, revelation);
   const sourceMap = [];
   const scenes = [];
   const tapestries = [];
@@ -78,19 +78,22 @@ async function main() {
     for (const [sceneId, nodeId] of assignments) {
       const node = nodes.get(nodeId);
       const slot = metadata.get(sceneId);
-      if (!node || !slot) throw new Error(`${sceneId}: canvas node or Master Index metadata missing`);
+      if (!node || !slot) throw new Error(`${sceneId}: canvas node or scene metadata missing`);
       const sourcePath = node.file.replace(/^Apocalypse Tapestry\//, "");
       const absolutePath = path.join(vaultRoot, sourcePath);
       const image = await sharp(absolutePath).metadata();
       const checksum = await hashFile(absolutePath);
-      const spans = parseRevelationAnchor(slot.rev_anchor);
+      const spans = slot.spans;
+      const sceneSlot = sceneId.split("-")[1];
+      const row = sceneSlot === "00" ? "lead" : sceneSlot.startsWith("T") ? "top" : "bottom";
+      const position = sceneSlot === "00" ? 0 : Number(sceneSlot.slice(1));
       const originalKey = relativeObjectKey(sceneId, sourcePath);
       const originalExtension = path.extname(sourcePath).toLowerCase();
       const scene = {
         id: sceneId,
         tapestry: tapestryNumber,
-        row: slot.row,
-        position: slot.pos,
+        row,
+        position,
         title: slot.title,
         scriptureSpans: spans,
         displayReference: displayReference(spans),

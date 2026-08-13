@@ -57,6 +57,49 @@ export function parseRevelationAnchor(anchor) {
   return anchor.split(";").map((part) => parsePart(part));
 }
 
+export function validateSceneMetadata(records, expectedIds, chapters) {
+  const expected = new Set(expectedIds);
+  const chapterVerseCounts = new Map(chapters.map(({ chapter, verses }) => [chapter, verses.length]));
+  const metadata = new Map();
+
+  for (const record of records) {
+    if (!record || typeof record !== "object" || Array.isArray(record)) throw new Error("metadata record must be an object");
+    const unsupported = Object.keys(record).find((key) => !["id", "title", "anchor"].includes(key));
+    if (unsupported) throw new Error(`${record.id ?? "metadata record"}: unsupported metadata field ${unsupported}`);
+    if (!expected.has(record.id)) throw new Error(`unknown scene ID ${record.id}`);
+    if (metadata.has(record.id)) throw new Error(`duplicate scene ID ${record.id}`);
+    if (typeof record.title !== "string" || !record.title.trim()) throw new Error(`${record.id}: title must not be empty`);
+    if (typeof record.anchor !== "string" || !record.anchor.trim()) throw new Error(`${record.id}: anchor must be a non-empty string`);
+    const spans = parseRevelationAnchor(record.anchor);
+
+    for (const span of spans) {
+      const startCount = chapterVerseCounts.get(span.startChapter);
+      const endCount = chapterVerseCounts.get(span.endChapter);
+      if (!startCount) throw new Error(`${record.id}: Revelation chapter ${span.startChapter} is out of bounds`);
+      if (!endCount) throw new Error(`${record.id}: Revelation chapter ${span.endChapter} is out of bounds`);
+      if (span.startVerse < 1 || span.startVerse > startCount) {
+        throw new Error(`${record.id}: Revelation ${span.startChapter}:${span.startVerse} is out of bounds`);
+      }
+      if (span.endVerse !== null && (span.endVerse < 1 || span.endVerse > endCount)) {
+        throw new Error(`${record.id}: Revelation ${span.endChapter}:${span.endVerse} is out of bounds`);
+      }
+      if (
+        span.endChapter < span.startChapter ||
+        (span.endChapter === span.startChapter && span.endVerse !== null && span.endVerse < span.startVerse)
+      ) {
+        throw new Error(`${record.id}: reversed Revelation span`);
+      }
+    }
+
+    metadata.set(record.id, { ...record, title: record.title.trim(), spans });
+  }
+
+  for (const id of expected) {
+    if (!metadata.has(id)) throw new Error(`missing scene ID ${id}`);
+  }
+  return metadata;
+}
+
 export function displayReference(spans) {
   return spans
     .map((span) => {

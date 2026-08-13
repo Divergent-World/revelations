@@ -1199,19 +1199,19 @@
       "tapestry": 1,
       "row": "bottom",
       "position": 7,
-      "title": "Sealing of the 144,000",
+      "title": "Angels Holding the Four Winds",
       "scriptureSpans": [
         {
           "startChapter": 7,
           "startVerse": 1,
           "endChapter": 7,
-          "endVerse": 8
+          "endVerse": 3
         }
       ],
-      "displayReference": "Revelation 7:1–8",
+      "displayReference": "Revelation 7:1–3",
       "passages": [
         {
-          "reference": "Revelation 7:1–8",
+          "reference": "Revelation 7:1–3",
           "verses": [
             {
               "chapter": 7,
@@ -1227,7 +1227,41 @@
               "chapter": 7,
               "verse": 3,
               "text": "saying, “Don’t harm the earth, the sea, or the trees, until we have sealed the bondservants of our God on their foreheads!”"
-            },
+            }
+          ]
+        }
+      ],
+      "alt": "Angels Holding the Four Winds, illustrating Revelation 7:1–3.",
+      "images": {
+        "preview": "releases/v1/web/640/T1-B07.webp",
+        "reader": "releases/v1/web/1920/T1-B07.webp",
+        "original": "releases/v1/originals/T1-B07.png"
+      },
+      "width": 5056,
+      "height": 3372,
+      "checksum": "ac5fbb11eed91dd2695447a9d22ec147ee030c7c026a5a1e37589d95ec988609",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-00",
+      "tapestry": 2,
+      "row": "lead",
+      "position": 0,
+      "title": "Saint John reading the Apocalypse (Second Vision)",
+      "scriptureSpans": [
+        {
+          "startChapter": 7,
+          "startVerse": 4,
+          "endChapter": 7,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 7:4–8",
+      "passages": [
+        {
+          "reference": "Revelation 7:4–8",
+          "verses": [
             {
               "chapter": 7,
               "verse": 4,
@@ -1256,61 +1290,7 @@
           ]
         }
       ],
-      "alt": "Sealing of the 144,000, illustrating Revelation 7:1–8.",
-      "images": {
-        "preview": "releases/v1/web/640/T1-B07.webp",
-        "reader": "releases/v1/web/1920/T1-B07.webp",
-        "original": "releases/v1/originals/T1-B07.png"
-      },
-      "width": 5056,
-      "height": 3372,
-      "checksum": "ac5fbb11eed91dd2695447a9d22ec147ee030c7c026a5a1e37589d95ec988609",
-      "attribution": "Ali Rahman / Divergent World",
-      "license": "CC BY-SA 4.0"
-    },
-    {
-      "id": "T2-00",
-      "tapestry": 2,
-      "row": "lead",
-      "position": 0,
-      "title": "Saint John reading the Apocalypse (Second Vision)",
-      "scriptureSpans": [
-        {
-          "startChapter": 7,
-          "startVerse": 9,
-          "endChapter": 7,
-          "endVerse": 12
-        }
-      ],
-      "displayReference": "Revelation 7:9–12",
-      "passages": [
-        {
-          "reference": "Revelation 7:9–12",
-          "verses": [
-            {
-              "chapter": 7,
-              "verse": 9,
-              "text": "After these things I looked, and behold, a great multitude which no man could count, out of every nation and of all tribes, peoples, and languages, standing before the throne and before the Lamb, dressed in white robes, with palm branches in their hands."
-            },
-            {
-              "chapter": 7,
-              "verse": 10,
-              "text": "They cried with a loud voice, saying, “Salvation be to our God, who sits on the throne, and to the Lamb!”"
-            },
-            {
-              "chapter": 7,
-              "verse": 11,
-              "text": "All the angels were standing around the throne, the elders, and the four living creatures; and they fell on their faces before his throne, and worshiped God,"
-            },
-            {
-              "chapter": 7,
-              "verse": 12,
-              "text": "saying, “Amen! Blessing, glory, wisdom, thanksgiving, honor, power, and might, be to our God forever and ever! Amen.”"
-            }
-          ]
-        }
-      ],
-      "alt": "Saint John reading the Apocalypse (Second Vision), illustrating Revelation 7:9–12.",
+      "alt": "Saint John reading the Apocalypse (Second Vision), illustrating Revelation 7:4–8.",
       "images": {
         "preview": "releases/v1/web/640/T2-00.webp",
         "reader": "releases/v1/web/1920/T2-00.webp",
@@ -1327,6 +1307,65 @@
       "tapestry": 2,
       "row": "top",
       "position": 1,
+      "title": "Sealing of the 144,000",
+      "scriptureSpans": [
+        {
+          "startChapter": 7,
+          "startVerse": 4,
+          "endChapter": 7,
+          "endVerse": 8
+        }
+      ],
+      "displayReference": "Revelation 7:4–8",
+      "passages": [
+        {
+          "reference": "Revelation 7:4–8",
+          "verses": [
+            {
+              "chapter": 7,
+              "verse": 4,
+              "text": "I heard the number of those who were sealed, one hundred forty-four thousand, sealed out of every tribe of the children of Israel:"
+            },
+            {
+              "chapter": 7,
+              "verse": 5,
+              "text": "of the tribe of Judah twelve thousand were sealed, of the tribe of Reuben twelve thousand, of the tribe of Gad twelve thousand,"
+            },
+            {
+              "chapter": 7,
+              "verse": 6,
+              "text": "of the tribe of Asher twelve thousand, of the tribe of Naphtali twelve thousand, of the tribe of Manasseh twelve thousand,"
+            },
+            {
+              "chapter": 7,
+              "verse": 7,
+              "text": "of the tribe of Simeon twelve thousand, of the tribe of Levi twelve thousand, of the tribe of Issachar twelve thousand,"
+            },
+            {
+              "chapter": 7,
+              "verse": 8,
+              "text": "of the tribe of Zebulun twelve thousand, of the tribe of Joseph twelve thousand, and of the tribe of Benjamin twelve thousand were sealed."
+            }
+          ]
+        }
+      ],
+      "alt": "Sealing of the 144,000, illustrating Revelation 7:4–8.",
+      "images": {
+        "preview": "releases/v1/web/640/T2-T01.webp",
+        "reader": "releases/v1/web/1920/T2-T01.webp",
+        "original": "releases/v1/originals/T2-T01.png"
+      },
+      "width": 5056,
+      "height": 3392,
+      "checksum": "5ae050a9e722d910b83b7b539b9d18b7ba4569d1b693030c19a9078a574a7d3d",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T2-T02",
+      "tapestry": 2,
+      "row": "top",
+      "position": 2,
       "title": "Adoration of the Lamb by the 144-thousand",
       "scriptureSpans": [
         {
@@ -1391,21 +1430,21 @@
       ],
       "alt": "Adoration of the Lamb by the 144-thousand, illustrating Revelation 7:9–17.",
       "images": {
-        "preview": "releases/v1/web/640/T2-T01.webp",
-        "reader": "releases/v1/web/1920/T2-T01.webp",
-        "original": "releases/v1/originals/T2-T01.png"
+        "preview": "releases/v1/web/640/T2-T02.webp",
+        "reader": "releases/v1/web/1920/T2-T02.webp",
+        "original": "releases/v1/originals/T2-T02.png"
       },
       "width": 5056,
       "height": 3392,
-      "checksum": "5ae050a9e722d910b83b7b539b9d18b7ba4569d1b693030c19a9078a574a7d3d",
+      "checksum": "b1aa162fad1d918df01d163d95efeb311fc8cf293db32c3b028de19ca51db087",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-T02",
+      "id": "T2-T03",
       "tapestry": 2,
       "row": "top",
-      "position": 2,
+      "position": 3,
       "title": "Angels receiving seven trumpets",
       "scriptureSpans": [
         {
@@ -1430,21 +1469,21 @@
       ],
       "alt": "Angels receiving seven trumpets, illustrating Revelation 8:2.",
       "images": {
-        "preview": "releases/v1/web/640/T2-T02.webp",
-        "reader": "releases/v1/web/1920/T2-T02.webp",
-        "original": "releases/v1/originals/T2-T02.png"
+        "preview": "releases/v1/web/640/T2-T03.webp",
+        "reader": "releases/v1/web/1920/T2-T03.webp",
+        "original": "releases/v1/originals/T2-T03.png"
       },
       "width": 5056,
       "height": 3392,
-      "checksum": "b1aa162fad1d918df01d163d95efeb311fc8cf293db32c3b028de19ca51db087",
+      "checksum": "f830bedf1e1bdbc6bdb9d2b77b3f237bc3aa2b60b81db888df532824e75fa584",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-T03",
+      "id": "T2-T04",
       "tapestry": 2,
       "row": "top",
-      "position": 3,
+      "position": 4,
       "title": "Angel receiving the incense",
       "scriptureSpans": [
         {
@@ -1474,21 +1513,21 @@
       ],
       "alt": "Angel receiving the incense, illustrating Revelation 8:3–4.",
       "images": {
-        "preview": "releases/v1/web/640/T2-T03.webp",
-        "reader": "releases/v1/web/1920/T2-T03.webp",
-        "original": "releases/v1/originals/T2-T03.png"
+        "preview": "releases/v1/web/640/T2-T04.webp",
+        "reader": "releases/v1/web/1920/T2-T04.webp",
+        "original": "releases/v1/originals/T2-T04.png"
       },
-      "width": 5056,
-      "height": 3392,
-      "checksum": "f830bedf1e1bdbc6bdb9d2b77b3f237bc3aa2b60b81db888df532824e75fa584",
+      "width": 1536,
+      "height": 1024,
+      "checksum": "fda2817193eeadf2a30db4b4580d786e4bae8fb2f092856326258c3ed5dba4b0",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-T04",
+      "id": "T2-T05",
       "tapestry": 2,
       "row": "top",
-      "position": 4,
+      "position": 5,
       "title": "Angel empty the incense",
       "scriptureSpans": [
         {
@@ -1513,21 +1552,21 @@
       ],
       "alt": "Angel empty the incense, illustrating Revelation 8:5.",
       "images": {
-        "preview": "releases/v1/web/640/T2-T04.webp",
-        "reader": "releases/v1/web/1920/T2-T04.webp",
-        "original": "releases/v1/originals/T2-T04.png"
+        "preview": "releases/v1/web/640/T2-T05.webp",
+        "reader": "releases/v1/web/1920/T2-T05.webp",
+        "original": "releases/v1/originals/T2-T05.png"
       },
-      "width": 1536,
-      "height": 1024,
-      "checksum": "fda2817193eeadf2a30db4b4580d786e4bae8fb2f092856326258c3ed5dba4b0",
+      "width": 5464,
+      "height": 3072,
+      "checksum": "4746c6da0e97b1651793f52584a6578b4be4ca09adf7d6c42302760e27b7a393",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-T05",
+      "id": "T2-T06",
       "tapestry": 2,
       "row": "top",
-      "position": 5,
+      "position": 6,
       "title": "First trumpet",
       "scriptureSpans": [
         {
@@ -1552,21 +1591,21 @@
       ],
       "alt": "First trumpet, illustrating Revelation 8:7.",
       "images": {
-        "preview": "releases/v1/web/640/T2-T05.webp",
-        "reader": "releases/v1/web/1920/T2-T05.webp",
-        "original": "releases/v1/originals/T2-T05.png"
+        "preview": "releases/v1/web/640/T2-T06.webp",
+        "reader": "releases/v1/web/1920/T2-T06.webp",
+        "original": "releases/v1/originals/T2-T06.png"
       },
-      "width": 5464,
-      "height": 3072,
-      "checksum": "4746c6da0e97b1651793f52584a6578b4be4ca09adf7d6c42302760e27b7a393",
+      "width": 3840,
+      "height": 2160,
+      "checksum": "46a3457123d3d758d0ac722d1937a1cc11df1b140bc142c97b0f3b61e1440ad2",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-T06",
+      "id": "T2-T07",
       "tapestry": 2,
       "row": "top",
-      "position": 6,
+      "position": 7,
       "title": "Second Trumpet: fire on the sea",
       "scriptureSpans": [
         {
@@ -1596,21 +1635,21 @@
       ],
       "alt": "Second Trumpet: fire on the sea, illustrating Revelation 8:8–9.",
       "images": {
-        "preview": "releases/v1/web/640/T2-T06.webp",
-        "reader": "releases/v1/web/1920/T2-T06.webp",
-        "original": "releases/v1/originals/T2-T06.png"
+        "preview": "releases/v1/web/640/T2-T07.webp",
+        "reader": "releases/v1/web/1920/T2-T07.webp",
+        "original": "releases/v1/originals/T2-T07.png"
       },
       "width": 3840,
       "height": 2160,
-      "checksum": "46a3457123d3d758d0ac722d1937a1cc11df1b140bc142c97b0f3b61e1440ad2",
+      "checksum": "e90d9190276183d2c814d76167201cf51886536e84feb7781e6c8afa2a3890bc",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-T07",
+      "id": "T2-B01",
       "tapestry": 2,
-      "row": "top",
-      "position": 7,
+      "row": "bottom",
+      "position": 1,
       "title": "Third Trumpet: Star Wormwood",
       "scriptureSpans": [
         {
@@ -1640,21 +1679,21 @@
       ],
       "alt": "Third Trumpet: Star Wormwood, illustrating Revelation 8:10–11.",
       "images": {
-        "preview": "releases/v1/web/640/T2-T07.webp",
-        "reader": "releases/v1/web/1920/T2-T07.webp",
-        "original": "releases/v1/originals/T2-T07.png"
+        "preview": "releases/v1/web/640/T2-B01.webp",
+        "reader": "releases/v1/web/1920/T2-B01.webp",
+        "original": "releases/v1/originals/T2-B01.png"
       },
-      "width": 3840,
-      "height": 2160,
-      "checksum": "e90d9190276183d2c814d76167201cf51886536e84feb7781e6c8afa2a3890bc",
+      "width": 5504,
+      "height": 3072,
+      "checksum": "b21f768b298d3234017743c55a711e298c04e646dce9e02a140ee43795bd6452",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-B01",
+      "id": "T2-B02",
       "tapestry": 2,
       "row": "bottom",
-      "position": 1,
+      "position": 2,
       "title": "Fourth Trumpet: sun and moon are darkened",
       "scriptureSpans": [
         {
@@ -1679,21 +1718,21 @@
       ],
       "alt": "Fourth Trumpet: sun and moon are darkened, illustrating Revelation 8:12.",
       "images": {
-        "preview": "releases/v1/web/640/T2-B01.webp",
-        "reader": "releases/v1/web/1920/T2-B01.webp",
-        "original": "releases/v1/originals/T2-B01.png"
+        "preview": "releases/v1/web/640/T2-B02.webp",
+        "reader": "releases/v1/web/1920/T2-B02.webp",
+        "original": "releases/v1/originals/T2-B02.png"
       },
-      "width": 5504,
-      "height": 3072,
-      "checksum": "b21f768b298d3234017743c55a711e298c04e646dce9e02a140ee43795bd6452",
+      "width": 3840,
+      "height": 2160,
+      "checksum": "fa34d364b19c5e2851dddc2bb41a4083ff5d8b51379b9fcd4a308d13c26ae3f6",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-B02",
+      "id": "T2-B03",
       "tapestry": 2,
       "row": "bottom",
-      "position": 2,
+      "position": 3,
       "title": "Fifth Trumpet: Locusts come up from the pit",
       "scriptureSpans": [
         {
@@ -1768,21 +1807,21 @@
       ],
       "alt": "Fifth Trumpet: Locusts come up from the pit, illustrating Revelation 9:1–11.",
       "images": {
-        "preview": "releases/v1/web/640/T2-B02.webp",
-        "reader": "releases/v1/web/1920/T2-B02.webp",
-        "original": "releases/v1/originals/T2-B02.png"
+        "preview": "releases/v1/web/640/T2-B03.webp",
+        "reader": "releases/v1/web/1920/T2-B03.webp",
+        "original": "releases/v1/originals/T2-B03.png"
       },
       "width": 3840,
       "height": 2160,
-      "checksum": "fa34d364b19c5e2851dddc2bb41a4083ff5d8b51379b9fcd4a308d13c26ae3f6",
+      "checksum": "d034deb74812b836ccbba8a934a7fcee83bae71c0c3aaa27c3b86dfb8a25be2d",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-B03",
+      "id": "T2-B04",
       "tapestry": 2,
       "row": "bottom",
-      "position": 3,
+      "position": 4,
       "title": "Sixth Trumpet: Four angels are released",
       "scriptureSpans": [
         {
@@ -1817,21 +1856,21 @@
       ],
       "alt": "Sixth Trumpet: Four angels are released, illustrating Revelation 9:13–15.",
       "images": {
-        "preview": "releases/v1/web/640/T2-B03.webp",
-        "reader": "releases/v1/web/1920/T2-B03.webp",
-        "original": "releases/v1/originals/T2-B03.png"
+        "preview": "releases/v1/web/640/T2-B04.webp",
+        "reader": "releases/v1/web/1920/T2-B04.webp",
+        "original": "releases/v1/originals/T2-B04.png"
       },
-      "width": 3840,
-      "height": 2160,
-      "checksum": "d034deb74812b836ccbba8a934a7fcee83bae71c0c3aaa27c3b86dfb8a25be2d",
+      "width": 5504,
+      "height": 3072,
+      "checksum": "74b760b3565b0e8b69b92271375fbe3a1b867c30bf39e8f8745d5033b4bb09ce",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-B04",
+      "id": "T2-B05",
       "tapestry": 2,
       "row": "bottom",
-      "position": 4,
+      "position": 5,
       "title": "Horsemen on Fire-Breathing Horses",
       "scriptureSpans": [
         {
@@ -1871,21 +1910,21 @@
       ],
       "alt": "Horsemen on Fire-Breathing Horses, illustrating Revelation 9:16–19.",
       "images": {
-        "preview": "releases/v1/web/640/T2-B04.webp",
-        "reader": "releases/v1/web/1920/T2-B04.webp",
-        "original": "releases/v1/originals/T2-B04.png"
+        "preview": "releases/v1/web/640/T2-B05.webp",
+        "reader": "releases/v1/web/1920/T2-B05.webp",
+        "original": "releases/v1/originals/T2-B05.png"
       },
       "width": 5504,
       "height": 3072,
-      "checksum": "74b760b3565b0e8b69b92271375fbe3a1b867c30bf39e8f8745d5033b4bb09ce",
+      "checksum": "47a4aaf07d30efbade8d0e2d1532b3ea8697d4da606eb109be6755a987558255",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-B05",
+      "id": "T2-B06",
       "tapestry": 2,
       "row": "bottom",
-      "position": 5,
+      "position": 6,
       "title": "Angel with seven thunders",
       "scriptureSpans": [
         {
@@ -1925,21 +1964,21 @@
       ],
       "alt": "Angel with seven thunders, illustrating Revelation 10:1–4.",
       "images": {
-        "preview": "releases/v1/web/640/T2-B05.webp",
-        "reader": "releases/v1/web/1920/T2-B05.webp",
-        "original": "releases/v1/originals/T2-B05.png"
+        "preview": "releases/v1/web/640/T2-B06.webp",
+        "reader": "releases/v1/web/1920/T2-B06.webp",
+        "original": "releases/v1/originals/T2-B06.png"
       },
       "width": 5504,
       "height": 3072,
-      "checksum": "47a4aaf07d30efbade8d0e2d1532b3ea8697d4da606eb109be6755a987558255",
+      "checksum": "cfc1691da7a59eddc858a8cf721da1e172b19c52e766c0034952e88c4a4ef374",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T2-B06",
+      "id": "T2-B07",
       "tapestry": 2,
       "row": "bottom",
-      "position": 6,
+      "position": 7,
       "title": "John eating the book",
       "scriptureSpans": [
         {
@@ -1978,50 +2017,6 @@
         }
       ],
       "alt": "John eating the book, illustrating Revelation 10:8–11.",
-      "images": {
-        "preview": "releases/v1/web/640/T2-B06.webp",
-        "reader": "releases/v1/web/1920/T2-B06.webp",
-        "original": "releases/v1/originals/T2-B06.png"
-      },
-      "width": 5504,
-      "height": 3072,
-      "checksum": "cfc1691da7a59eddc858a8cf721da1e172b19c52e766c0034952e88c4a4ef374",
-      "attribution": "Ali Rahman / Divergent World",
-      "license": "CC BY-SA 4.0"
-    },
-    {
-      "id": "T2-B07",
-      "tapestry": 2,
-      "row": "bottom",
-      "position": 7,
-      "title": "Measuring the Temple",
-      "scriptureSpans": [
-        {
-          "startChapter": 11,
-          "startVerse": 1,
-          "endChapter": 11,
-          "endVerse": 2
-        }
-      ],
-      "displayReference": "Revelation 11:1–2",
-      "passages": [
-        {
-          "reference": "Revelation 11:1–2",
-          "verses": [
-            {
-              "chapter": 11,
-              "verse": 1,
-              "text": "A reed like a rod was given to me. Someone said, “Rise and measure God’s temple, and the altar, and those who worship in it."
-            },
-            {
-              "chapter": 11,
-              "verse": 2,
-              "text": "Leave out the court which is outside of the temple, and don’t measure it, for it has been given to the nations. They will tread the holy city under foot for forty-two months."
-            }
-          ]
-        }
-      ],
-      "alt": "Measuring the Temple, illustrating Revelation 11:1–2.",
       "images": {
         "preview": "releases/v1/web/640/T2-B07.webp",
         "reader": "releases/v1/web/1920/T2-B07.webp",
@@ -2082,6 +2077,50 @@
       "tapestry": 3,
       "row": "top",
       "position": 1,
+      "title": "Measuring the Temple",
+      "scriptureSpans": [
+        {
+          "startChapter": 11,
+          "startVerse": 1,
+          "endChapter": 11,
+          "endVerse": 2
+        }
+      ],
+      "displayReference": "Revelation 11:1–2",
+      "passages": [
+        {
+          "reference": "Revelation 11:1–2",
+          "verses": [
+            {
+              "chapter": 11,
+              "verse": 1,
+              "text": "A reed like a rod was given to me. Someone said, “Rise and measure God’s temple, and the altar, and those who worship in it."
+            },
+            {
+              "chapter": 11,
+              "verse": 2,
+              "text": "Leave out the court which is outside of the temple, and don’t measure it, for it has been given to the nations. They will tread the holy city under foot for forty-two months."
+            }
+          ]
+        }
+      ],
+      "alt": "Measuring the Temple, illustrating Revelation 11:1–2.",
+      "images": {
+        "preview": "releases/v1/web/640/T3-T01.webp",
+        "reader": "releases/v1/web/1920/T3-T01.webp",
+        "original": "releases/v1/originals/T3-T01.png"
+      },
+      "width": 5504,
+      "height": 3072,
+      "checksum": "aba5373aadc149db1614fef42fbbc4ecda0d3f983e2b8ce4ca7cce2f35286499",
+      "attribution": "Ali Rahman / Divergent World",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "T3-T02",
+      "tapestry": 3,
+      "row": "top",
+      "position": 2,
       "title": "Two witnesses",
       "scriptureSpans": [
         {
@@ -2121,21 +2160,21 @@
       ],
       "alt": "Two witnesses, illustrating Revelation 11:3–6.",
       "images": {
-        "preview": "releases/v1/web/640/T3-T01.webp",
-        "reader": "releases/v1/web/1920/T3-T01.webp",
-        "original": "releases/v1/originals/T3-T01.png"
+        "preview": "releases/v1/web/640/T3-T02.webp",
+        "reader": "releases/v1/web/1920/T3-T02.webp",
+        "original": "releases/v1/originals/T3-T02.png"
       },
       "width": 5504,
       "height": 3072,
-      "checksum": "aba5373aadc149db1614fef42fbbc4ecda0d3f983e2b8ce4ca7cce2f35286499",
+      "checksum": "1958171e34baa1b60ebfa0e9ee1751a96f671b2b6095610d0ee14c27819d5ade",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-T02",
+      "id": "T3-T03",
       "tapestry": 3,
       "row": "top",
-      "position": 2,
+      "position": 3,
       "title": "Death of Two witnesses",
       "scriptureSpans": [
         {
@@ -2160,21 +2199,21 @@
       ],
       "alt": "Death of Two witnesses, illustrating Revelation 11:7.",
       "images": {
-        "preview": "releases/v1/web/640/T3-T02.webp",
-        "reader": "releases/v1/web/1920/T3-T02.webp",
-        "original": "releases/v1/originals/T3-T02.png"
+        "preview": "releases/v1/web/640/T3-T03.webp",
+        "reader": "releases/v1/web/1920/T3-T03.webp",
+        "original": "releases/v1/originals/T3-T03.png"
       },
-      "width": 5504,
-      "height": 3072,
-      "checksum": "1958171e34baa1b60ebfa0e9ee1751a96f671b2b6095610d0ee14c27819d5ade",
+      "width": 3840,
+      "height": 2160,
+      "checksum": "1e5b557becbaffab33955a46bfc4feb70f1e2e55062e31aa17537408dd597fbd",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-T03",
+      "id": "T3-T04",
       "tapestry": 3,
       "row": "top",
-      "position": 3,
+      "position": 4,
       "title": "Unburied Bodies of Two Witnesses",
       "scriptureSpans": [
         {
@@ -2209,21 +2248,21 @@
       ],
       "alt": "Unburied Bodies of Two Witnesses, illustrating Revelation 11:8–10.",
       "images": {
-        "preview": "releases/v1/web/640/T3-T03.webp",
-        "reader": "releases/v1/web/1920/T3-T03.webp",
-        "original": "releases/v1/originals/T3-T03.png"
+        "preview": "releases/v1/web/640/T3-T04.webp",
+        "reader": "releases/v1/web/1920/T3-T04.webp",
+        "original": "releases/v1/originals/T3-T04.png"
       },
-      "width": 3840,
-      "height": 2160,
-      "checksum": "1e5b557becbaffab33955a46bfc4feb70f1e2e55062e31aa17537408dd597fbd",
+      "width": 5504,
+      "height": 3072,
+      "checksum": "8730750e7d14aea4d450b09b97db7b38e424337848767ddc3a1d10874573998e",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-T04",
+      "id": "T3-T05",
       "tapestry": 3,
       "row": "top",
-      "position": 4,
+      "position": 5,
       "title": "Ascension of Two witnesses",
       "scriptureSpans": [
         {
@@ -2253,21 +2292,21 @@
       ],
       "alt": "Ascension of Two witnesses, illustrating Revelation 11:11–12.",
       "images": {
-        "preview": "releases/v1/web/640/T3-T04.webp",
-        "reader": "releases/v1/web/1920/T3-T04.webp",
-        "original": "releases/v1/originals/T3-T04.png"
+        "preview": "releases/v1/web/640/T3-T05.webp",
+        "reader": "releases/v1/web/1920/T3-T05.webp",
+        "original": "releases/v1/originals/T3-T05.png"
       },
       "width": 5504,
       "height": 3072,
-      "checksum": "8730750e7d14aea4d450b09b97db7b38e424337848767ddc3a1d10874573998e",
+      "checksum": "ff30898015aa7026a846c97377c911bb1384b9d03698a832571bcafffebcf882",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-T05",
+      "id": "T3-T06",
       "tapestry": 3,
       "row": "top",
-      "position": 5,
+      "position": 6,
       "title": "Seventh Trumpet: Adoration in heaven",
       "scriptureSpans": [
         {
@@ -2312,21 +2351,21 @@
       ],
       "alt": "Seventh Trumpet: Adoration in heaven, illustrating Revelation 11:15–19.",
       "images": {
-        "preview": "releases/v1/web/640/T3-T05.webp",
-        "reader": "releases/v1/web/1920/T3-T05.webp",
-        "original": "releases/v1/originals/T3-T05.png"
+        "preview": "releases/v1/web/640/T3-T06.webp",
+        "reader": "releases/v1/web/1920/T3-T06.webp",
+        "original": "releases/v1/originals/T3-T06.png"
       },
       "width": 5504,
       "height": 3072,
-      "checksum": "ff30898015aa7026a846c97377c911bb1384b9d03698a832571bcafffebcf882",
+      "checksum": "4a927045c9aba28d16db83668720beaf85fa1912210da3d45d24a209ec9b2559",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-T06",
+      "id": "T3-T07",
       "tapestry": 3,
       "row": "top",
-      "position": 6,
+      "position": 7,
       "title": "Woman and the dragon",
       "scriptureSpans": [
         {
@@ -2376,21 +2415,21 @@
       ],
       "alt": "Woman and the dragon, illustrating Revelation 12:1–6.",
       "images": {
-        "preview": "releases/v1/web/640/T3-T06.webp",
-        "reader": "releases/v1/web/1920/T3-T06.webp",
-        "original": "releases/v1/originals/T3-T06.png"
+        "preview": "releases/v1/web/640/T3-T07.webp",
+        "reader": "releases/v1/web/1920/T3-T07.webp",
+        "original": "releases/v1/originals/T3-T07.png"
       },
       "width": 5504,
       "height": 3072,
-      "checksum": "4a927045c9aba28d16db83668720beaf85fa1912210da3d45d24a209ec9b2559",
+      "checksum": "ae0a38b521a46d7ffe44e2043ca47a3d8b9929c306fa3e9e4fd3328a3e89b8f0",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-T07",
+      "id": "T3-B01",
       "tapestry": 3,
-      "row": "top",
-      "position": 7,
+      "row": "bottom",
+      "position": 1,
       "title": "Saint Michael and the dragon",
       "scriptureSpans": [
         {
@@ -2425,21 +2464,21 @@
       ],
       "alt": "Saint Michael and the dragon, illustrating Revelation 12:7–9.",
       "images": {
-        "preview": "releases/v1/web/640/T3-T07.webp",
-        "reader": "releases/v1/web/1920/T3-T07.webp",
-        "original": "releases/v1/originals/T3-T07.png"
+        "preview": "releases/v1/web/640/T3-B01.webp",
+        "reader": "releases/v1/web/1920/T3-B01.webp",
+        "original": "releases/v1/originals/T3-B01.png"
       },
-      "width": 5504,
-      "height": 3072,
-      "checksum": "ae0a38b521a46d7ffe44e2043ca47a3d8b9929c306fa3e9e4fd3328a3e89b8f0",
+      "width": 3840,
+      "height": 2160,
+      "checksum": "bb74f057a6fe566ae0f6d581fdad4eb4e0d21c82ff9b56d1d22e2230e825abc3",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-B01",
+      "id": "T3-B02",
       "tapestry": 3,
       "row": "bottom",
-      "position": 1,
+      "position": 2,
       "title": "Woman receiving the wings",
       "scriptureSpans": [
         {
@@ -2469,21 +2508,21 @@
       ],
       "alt": "Woman receiving the wings, illustrating Revelation 12:13–14.",
       "images": {
-        "preview": "releases/v1/web/640/T3-B01.webp",
-        "reader": "releases/v1/web/1920/T3-B01.webp",
-        "original": "releases/v1/originals/T3-B01.png"
+        "preview": "releases/v1/web/640/T3-B02.webp",
+        "reader": "releases/v1/web/1920/T3-B02.webp",
+        "original": "releases/v1/originals/T3-B02.png"
       },
       "width": 3840,
       "height": 2160,
-      "checksum": "bb74f057a6fe566ae0f6d581fdad4eb4e0d21c82ff9b56d1d22e2230e825abc3",
+      "checksum": "d1076d6c79081ee04e7b27383219d13e3e68f1bdae6148e28b2c05374d66303e",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-B02",
+      "id": "T3-B03",
       "tapestry": 3,
       "row": "bottom",
-      "position": 2,
+      "position": 3,
       "title": "Dragon persecutes the woman",
       "scriptureSpans": [
         {
@@ -2518,21 +2557,21 @@
       ],
       "alt": "Dragon persecutes the woman, illustrating Revelation 12:15–17.",
       "images": {
-        "preview": "releases/v1/web/640/T3-B02.webp",
-        "reader": "releases/v1/web/1920/T3-B02.webp",
-        "original": "releases/v1/originals/T3-B02.png"
+        "preview": "releases/v1/web/640/T3-B03.webp",
+        "reader": "releases/v1/web/1920/T3-B03.webp",
+        "original": "releases/v1/originals/T3-B03.png"
       },
       "width": 3840,
       "height": 2160,
-      "checksum": "d1076d6c79081ee04e7b27383219d13e3e68f1bdae6148e28b2c05374d66303e",
+      "checksum": "3415e1f85ad46d713d1035abc304cf626e947cbea94d6a43a780cd813ab1c573",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-B03",
+      "id": "T3-B04",
       "tapestry": 3,
       "row": "bottom",
-      "position": 3,
+      "position": 4,
       "title": "Servants of God fighting with the dragon",
       "scriptureSpans": [
         {
@@ -2557,21 +2596,21 @@
       ],
       "alt": "Servants of God fighting with the dragon, illustrating Revelation 12:17.",
       "images": {
-        "preview": "releases/v1/web/640/T3-B03.webp",
-        "reader": "releases/v1/web/1920/T3-B03.webp",
-        "original": "releases/v1/originals/T3-B03.png"
+        "preview": "releases/v1/web/640/T3-B04.webp",
+        "reader": "releases/v1/web/1920/T3-B04.webp",
+        "original": "releases/v1/originals/T3-B04.png"
       },
-      "width": 3840,
-      "height": 2160,
-      "checksum": "3415e1f85ad46d713d1035abc304cf626e947cbea94d6a43a780cd813ab1c573",
+      "width": 5504,
+      "height": 3072,
+      "checksum": "d0cefe37c4864f01fd21a7791d6dbc75a00c38b32e94a3debabe3b57c6092758",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-B04",
+      "id": "T3-B05",
       "tapestry": 3,
       "row": "bottom",
-      "position": 4,
+      "position": 5,
       "title": "The dragon gives power to the beast",
       "scriptureSpans": [
         {
@@ -2601,21 +2640,21 @@
       ],
       "alt": "The dragon gives power to the beast, illustrating Revelation 13:1–2.",
       "images": {
-        "preview": "releases/v1/web/640/T3-B04.webp",
-        "reader": "releases/v1/web/1920/T3-B04.webp",
-        "original": "releases/v1/originals/T3-B04.png"
+        "preview": "releases/v1/web/640/T3-B05.webp",
+        "reader": "releases/v1/web/1920/T3-B05.webp",
+        "original": "releases/v1/originals/T3-B05.png"
       },
-      "width": 5504,
-      "height": 3072,
-      "checksum": "d0cefe37c4864f01fd21a7791d6dbc75a00c38b32e94a3debabe3b57c6092758",
+      "width": 3840,
+      "height": 2160,
+      "checksum": "83e5e36331ef1f393394dd24acd35dbe9ea402b5ceaefa6dc96f59c9f4d6c38a",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-B05",
+      "id": "T3-B06",
       "tapestry": 3,
       "row": "bottom",
-      "position": 5,
+      "position": 6,
       "title": "Adoration of the dragon",
       "scriptureSpans": [
         {
@@ -2645,21 +2684,21 @@
       ],
       "alt": "Adoration of the dragon, illustrating Revelation 13:3–4.",
       "images": {
-        "preview": "releases/v1/web/640/T3-B05.webp",
-        "reader": "releases/v1/web/1920/T3-B05.webp",
-        "original": "releases/v1/originals/T3-B05.png"
+        "preview": "releases/v1/web/640/T3-B06.webp",
+        "reader": "releases/v1/web/1920/T3-B06.webp",
+        "original": "releases/v1/originals/T3-B06.png"
       },
       "width": 3840,
       "height": 2160,
-      "checksum": "83e5e36331ef1f393394dd24acd35dbe9ea402b5ceaefa6dc96f59c9f4d6c38a",
+      "checksum": "ce463e3ef1e2ff9b29bd276f67bcb2851dca8629efe3ed9fd6330effab3a06e3",
       "attribution": "Ali Rahman / Divergent World",
       "license": "CC BY-SA 4.0"
     },
     {
-      "id": "T3-B06",
+      "id": "T3-B07",
       "tapestry": 3,
       "row": "bottom",
-      "position": 6,
+      "position": 7,
       "title": "Adoration of the beast",
       "scriptureSpans": [
         {
@@ -2703,55 +2742,6 @@
         }
       ],
       "alt": "Adoration of the beast, illustrating Revelation 13:4–8.",
-      "images": {
-        "preview": "releases/v1/web/640/T3-B06.webp",
-        "reader": "releases/v1/web/1920/T3-B06.webp",
-        "original": "releases/v1/originals/T3-B06.png"
-      },
-      "width": 3840,
-      "height": 2160,
-      "checksum": "ce463e3ef1e2ff9b29bd276f67bcb2851dca8629efe3ed9fd6330effab3a06e3",
-      "attribution": "Ali Rahman / Divergent World",
-      "license": "CC BY-SA 4.0"
-    },
-    {
-      "id": "T3-B07",
-      "tapestry": 3,
-      "row": "bottom",
-      "position": 7,
-      "title": "Mark of the Beast",
-      "scriptureSpans": [
-        {
-          "startChapter": 13,
-          "startVerse": 16,
-          "endChapter": 13,
-          "endVerse": 18
-        }
-      ],
-      "displayReference": "Revelation 13:16–18",
-      "passages": [
-        {
-          "reference": "Revelation 13:16–18",
-          "verses": [
-            {
-              "chapter": 13,
-              "verse": 16,
-              "text": "He causes all, the small and the great, the rich and the poor, and the free and the slave, to be given marks on their right hands or on their foreheads;"
-            },
-            {
-              "chapter": 13,
-              "verse": 17,
-              "text": "and that no one would be able to buy or to sell unless he has that mark, which is the name of the beast or the number of his name."
-            },
-            {
-              "chapter": 13,
-              "verse": 18,
-              "text": "Here is wisdom. He who has understanding, let him calculate the number of the beast, for it is the number of a man. His number is six hundred sixty-six."
-            }
-          ]
-        }
-      ],
-      "alt": "Mark of the Beast, illustrating Revelation 13:16–18.",
       "images": {
         "preview": "releases/v1/web/640/T3-B07.webp",
         "reader": "releases/v1/web/1920/T3-B07.webp",

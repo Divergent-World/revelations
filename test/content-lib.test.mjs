@@ -8,7 +8,82 @@ import {
   parseRevelationAnchor,
   parseUsfmRevelation,
   parseVplRevelation,
+  validateSceneMetadata,
 } from "../scripts/lib/content.mjs";
+
+const twoVerseChapter = [{ chapter: 1, verses: [{ number: 1 }, { number: 2 }] }];
+
+test("validateSceneMetadata normalizes exact scene metadata", () => {
+  const metadata = validateSceneMetadata(
+    [{ id: "T1-00", title: "Reader", anchor: "Rev 1:1–2" }],
+    ["T1-00"],
+    twoVerseChapter,
+  );
+  assert.deepEqual([...metadata.values()], [{
+    id: "T1-00",
+    title: "Reader",
+    anchor: "Rev 1:1–2",
+    spans: [{ startChapter: 1, startVerse: 1, endChapter: 1, endVerse: 2 }],
+  }]);
+});
+
+test("validateSceneMetadata rejects duplicate scene IDs", () => {
+  const record = { id: "T1-00", title: "Reader", anchor: "Rev 1:1" };
+  assert.throws(() => validateSceneMetadata([record, record], ["T1-00"], twoVerseChapter), /duplicate scene ID T1-00/);
+});
+
+test("validateSceneMetadata rejects missing and unknown scene IDs", () => {
+  assert.throws(() => validateSceneMetadata([], ["T1-00"], twoVerseChapter), /missing scene ID T1-00/);
+  assert.throws(
+    () => validateSceneMetadata([{ id: "T9-00", title: "Unknown", anchor: "Rev 1:1" }], ["T1-00"], twoVerseChapter),
+    /unknown scene ID T9-00/,
+  );
+});
+
+test("validateSceneMetadata rejects empty titles and malformed anchors", () => {
+  assert.throws(
+    () => validateSceneMetadata([{ id: "T1-00", title: " ", anchor: "Rev 1:1" }], ["T1-00"], twoVerseChapter),
+    /T1-00: title must not be empty/,
+  );
+  assert.throws(
+    () => validateSceneMetadata([{ id: "T1-00", title: "Reader", anchor: "Chapter one" }], ["T1-00"], twoVerseChapter),
+    /Unsupported Revelation anchor/,
+  );
+  assert.throws(
+    () => validateSceneMetadata([{ id: "T1-00", title: "Reader" }], ["T1-00"], twoVerseChapter),
+    /T1-00: anchor must be a non-empty string/,
+  );
+  assert.throws(
+    () => validateSceneMetadata([null], ["T1-00"], twoVerseChapter),
+    /metadata record must be an object/,
+  );
+});
+
+test("validateSceneMetadata rejects unrelated authoring fields", () => {
+  assert.throws(
+    () => validateSceneMetadata(
+      [{ id: "T1-00", title: "Reader", anchor: "Rev 1:1", status: "survives" }],
+      ["T1-00"],
+      twoVerseChapter,
+    ),
+    /T1-00: unsupported metadata field status/,
+  );
+});
+
+test("validateSceneMetadata rejects reversed and out-of-bounds spans", () => {
+  assert.throws(
+    () => validateSceneMetadata([{ id: "T1-00", title: "Reader", anchor: "Rev 1:2–1" }], ["T1-00"], twoVerseChapter),
+    /T1-00: reversed Revelation span/,
+  );
+  assert.throws(
+    () => validateSceneMetadata([{ id: "T1-00", title: "Reader", anchor: "Rev 1:3" }], ["T1-00"], twoVerseChapter),
+    /T1-00: Revelation 1:3 is out of bounds/,
+  );
+  assert.throws(
+    () => validateSceneMetadata([{ id: "T1-00", title: "Reader", anchor: "Rev 2" }], ["T1-00"], twoVerseChapter),
+    /T1-00: Revelation chapter 2 is out of bounds/,
+  );
+});
 
 test("parseRevelationAnchor normalizes ranges and multiple references", () => {
   assert.deepEqual(parseRevelationAnchor("Rev 1:11; Rev 2–3"), [
