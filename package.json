@@ -7,7 +7,7 @@
     "dev:local": "node scripts/dev-local.mjs",
     "build": "npm run content:validate && next build",
     "start": "node scripts/serve-static.mjs",
-    "test": "node --test",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test",
     "test:e2e": "npm run build && playwright test",
     "content:generate": "node scripts/generate-content.mjs",
     "content:validate": "node scripts/validate-content.mjs",
