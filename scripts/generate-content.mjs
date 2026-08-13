@@ -10,6 +10,14 @@ const vaultRoot = path.resolve(process.env.APOCALYPSE_VAULT ?? path.join(repoRoo
 const vplPath = process.env.WEB_VPL_PATH ?? "/private/tmp/engwebp_vpl.txt";
 const contentDir = path.join(repoRoot, "content");
 const romans = ["I", "II", "III", "IV", "V", "VI"];
+const tapestryTitles = [
+  "The Scroll Opens",
+  "The Trumpets Sound",
+  "The Dragon Makes War",
+  "The Earth Is Reaped",
+  "Babylon Falls",
+  "All Things Made New",
+];
 
 const summaries = [
   "Christ is revealed as king, the Lamb is found worthy, and the opened scroll sets judgment in motion.",
@@ -264,8 +272,9 @@ async function main() {
     tapestries.push({
       id: tapestryNumber,
       roman,
+      title: tapestryTitles[index],
       summary: summaries[index],
-      movements: movements[index],
+      movements: movements[index].map(({ label, ...movement }) => movement),
       leadSceneId: `T${tapestryNumber}-00`,
       sceneIds,
     });

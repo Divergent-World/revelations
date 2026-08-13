@@ -11,6 +11,13 @@ test.beforeEach(async ({ page }) => {
 test("desktop preserves two authored rows of seven scenes", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === "mobile");
   await page.goto("/tapestries/3/");
+  const near = page.getByRole("button", { name: "Near" });
+  await expect(near).toHaveText("Near");
+  await expect(near).toHaveAttribute("aria-pressed", "true");
+  const overflow = await page.locator(".tapestry-stage").evaluate(
+    (node) => node.scrollWidth - node.clientWidth,
+  );
+  expect(overflow).toBeLessThanOrEqual(1);
   await expect(page.locator('[data-row="top"] .scene-card')).toHaveCount(7);
   await expect(page.locator('[data-row="bottom"] .scene-card')).toHaveCount(7);
   await expect(page.locator('[data-row="top"] .scene-card').first()).toHaveAttribute("data-scene-id", "T3-T01");
@@ -80,7 +87,7 @@ test("scene links can be copied and closing returns focus to the opener", async 
 test("keyboard controls zoom and navigate an open scene", async ({ page }) => {
   await page.goto("/tapestries/2/");
   await page.keyboard.press("+");
-  await expect(page.getByRole("button", { name: "detail" })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByRole("button", { name: "Room" })).toHaveAttribute("aria-pressed", "true");
   await page.locator('[data-scene-id="T2-T01"] button').click();
   await page.keyboard.press("ArrowRight");
   await expect(page).toHaveURL(/scene=T2-T02/);
@@ -90,7 +97,7 @@ test("keyboard controls zoom and navigate an open scene", async ({ page }) => {
 
 test("tapestry movements present the full narrative beside the reader", async ({ page }) => {
   await page.goto("/tapestries/2/");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("The faithful sealed · Trumpets prepared · Creation struck · The abyss and war unleashed");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("The Trumpets Sound");
   const movements = page.locator(".movement-list li");
   await expect(movements).toHaveCount(4);
   await expect(movements.first()).toContainText("God marks out His people");

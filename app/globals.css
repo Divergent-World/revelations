@@ -71,8 +71,8 @@ h2 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: .95; }
 .movement-list li::marker { color: var(--gold); font: .7rem var(--font-sans), sans-serif; }
 .movement-list h2 { display: inline; margin: 0; font: 1.3rem/1.15 var(--font-display), serif; }
 .movement-list li p { margin: .8rem 0 0; color: var(--muted); font: .9rem/1.65 var(--font-sans), sans-serif; }
-.tapestry-stage { overflow-x: auto; overscroll-behavior-x: contain; padding: 2rem clamp(1rem, 4vw, 4rem) 4rem; scrollbar-color: var(--gold) #171a1f; }
-.tapestry-stage.zoom-0 { --card-width: 16rem; }
+.tapestry-stage { --stage-pad: clamp(1rem, 4vw, 4rem); overflow-x: auto; overscroll-behavior-x: contain; padding: 2rem var(--stage-pad) 4rem; scrollbar-color: var(--gold) #171a1f; }
+.tapestry-stage.zoom-0 { --card-width: calc((100vw - var(--stage-pad) - var(--stage-pad) - 4.5rem) / 7); }
 .tapestry-stage.zoom-1 { --card-width: 22rem; }
 .tapestry-stage.zoom-2 { --card-width: 30rem; }
 .tapestry-row { display: grid; grid-template-columns: repeat(7, var(--card-width)); gap: .75rem; width: max-content; }

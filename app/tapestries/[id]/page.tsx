@@ -9,7 +9,7 @@ export function generateStaticParams() { return allTapestries.map(({ id }) => ({
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const tapestry = getTapestry(Number((await params).id));
-  return { title: tapestry ? `Tapestry ${tapestry.roman}` : "Tapestry" };
+  return { title: tapestry ? `Tapestry ${tapestry.roman}: ${tapestry.title}` : "Tapestry" };
 }
 
 export default async function TapestryPage({ params }: { params: Promise<{ id: string }> }) {
