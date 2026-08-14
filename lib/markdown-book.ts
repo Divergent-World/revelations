@@ -7,6 +7,8 @@ export type MarkdownBookInput = {
 };
 
 const romans = ["", "I", "II", "III", "IV", "V", "VI"];
+const maxPrintWidth = 6.25;
+const maxPrintHeight = 7.25;
 
 function cleanOrigin(value: string) {
   let url: URL;
@@ -23,6 +25,31 @@ function cleanOrigin(value: string) {
 
 function escapeMarkdown(value: string) {
   return value.replaceAll("\\", "\\\\").replaceAll("[", "\\[").replaceAll("]", "\\]").replaceAll("*", "\\*").replaceAll("_", "\\_");
+}
+
+function printImageDimensions(width: number, height: number) {
+  const scale = Math.min(maxPrintWidth / width, maxPrintHeight / height);
+  return {
+    width: (width * scale).toFixed(2),
+    height: (height * scale).toFixed(2),
+  };
+}
+
+function renderVerseText(verse: ScriptureChapter["verses"][number]) {
+  const ranges = verse.wordsOfJesus ?? [];
+  if (ranges.length === 0) return verse.text;
+
+  let cursor = 0;
+  const parts: string[] = [];
+  for (const range of ranges) {
+    parts.push(
+      verse.text.slice(cursor, range.start),
+      `[${verse.text.slice(range.start, range.end)}]{.words-of-jesus style="color: #9B1C31" custom-style="Words of Jesus"}`,
+    );
+    cursor = range.end;
+  }
+  parts.push(verse.text.slice(cursor));
+  return parts.join("");
 }
 
 export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownBookInput) {
@@ -60,7 +87,7 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
     if (scene.images.reader !== `releases/v1/web/1920/${scene.id}.webp`) {
       throw new Error(`${scene.id}: reader image must be a canonical release key`);
     }
-    const imageUrl = new URL(scene.images.reader, `${origin}/`).href;
+    const imageUrl = new URL(`releases/v1/book/images/${scene.id}.jpg`, `${origin}/`).href;
     imageUrls.add(imageUrl);
     scenesAt.set(anchorKey, [...(scenesAt.get(anchorKey) ?? []), { scene, imageUrl }]);
   }
@@ -72,6 +99,11 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
     'creator: "Ali Rahman / Divergent World"',
     'lang: "en"',
     'rights: "Artwork CC BY-SA 4.0; Scripture World English Bible, public domain"',
+    "header-includes:",
+    "  - |",
+    "    <style>",
+    "    @media print { img { height: auto !important; max-width: 100%; object-fit: contain; } }",
+    "    </style>",
     "---",
     "",
     "# The Revelation to John",
@@ -91,15 +123,16 @@ export function renderMarkdownBook({ chapters, scenes, assetBaseUrl }: MarkdownB
         emitted.add(scene.id);
         const roman = romans[scene.tapestry];
         if (!roman) throw new Error(`${scene.id}: movement number must be between 1 and 6`);
+        const dimensions = printImageDimensions(scene.width, scene.height);
         lines.push(
-          `![${escapeMarkdown(scene.alt)}](${imageUrl})`,
+          `![${escapeMarkdown(scene.alt)}](${imageUrl}){width=${dimensions.width}in height=${dimensions.height}in}`,
           "",
           `*Movement ${roman} · ${scene.id} · ${escapeMarkdown(scene.title)} · ${escapeMarkdown(scene.displayReference)}*`,
           `*Artwork © ${escapeMarkdown(scene.attribution)} · ${escapeMarkdown(scene.license)}*`,
           "",
         );
       }
-      lines.push(`**${chapter.chapter}:${verse.number}** ${verse.text}`, "");
+      lines.push(`**${chapter.chapter}:${verse.number}** ${renderVerseText(verse)}`, "");
     }
   }
 
