@@ -32,8 +32,8 @@
 .movementCopy small, .enter { color: var(--gold); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; }
 .movementCopy strong { font: clamp(1.5rem, 2.8vw, 2.5rem)/1 var(--font-display), serif; font-weight: 500; }
 .movementCopy > span { max-width: 44rem; color: var(--muted); font-size: .88rem; line-height: 1.65; }
-.movementArt { display: grid; height: 10rem; place-items: center; overflow: hidden; background: #080a0d; border: 1px solid rgba(255, 255, 255, .07); }
-.movementArt img, .movementArt > div { width: 100%; height: 100%; object-fit: contain; transition: transform .35s ease; }
+.movementArt { position: relative; display: block; height: 10rem; overflow: hidden; background: #080a0d; border: 1px solid rgba(255, 255, 255, .07); }
+.movementArt img, .movementArt > div { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transition: transform .35s ease; }
 .enter { justify-self: end; text-align: right; }
 .movementList a:hover .movementArt img, .movementList a:focus-visible .movementArt img { transform: scale(1.025); }
 .movementList a:hover .movementCopy strong, .movementList a:focus-visible .movementCopy strong { color: var(--gold); }
